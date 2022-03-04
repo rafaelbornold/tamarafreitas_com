@@ -1,0 +1,42 @@
+@media screen and (max-width: 890px){
+    
+    .component-formacion_benefits-content-description{
+
+        p{
+    
+            padding-left: 45px;
+    
+        }
+    }
+    
+    .component-formacion_benefits-content-title-summary{
+
+        border-bottom: 1px solid var(--rosa-escuro);
+    }
+
+}
+
+@media screen and (max-width: 450px){
+
+
+    .component-formacion_benefits-content-title{
+        
+
+    
+        .component-formacion_benefits-content-title-summary{
+    
+    
+            h6{
+        
+                font-size: 18px;
+        
+            }
+    
+    
+        }
+
+
+    }
+
+}
+

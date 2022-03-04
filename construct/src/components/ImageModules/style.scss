@@ -1,0 +1,24 @@
+.component_image_module-pic-img {
+  position: relative;
+
+  width: 100%;
+  padding-top: 72%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  .component_image_module-pic-img-border{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #BC7D81;
+}
+
+}

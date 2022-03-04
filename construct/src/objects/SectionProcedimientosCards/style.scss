@@ -1,0 +1,43 @@
+.section-procedimientos_cards-main{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: 32px;
+    padding-bottom: 44px;
+    background-color: var(--branco-escuro);
+    
+}
+
+.section-procedimientos_cards-content-wrapper{
+
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    padding: 0 20px 0 20px;
+
+
+}
+
+.section-procedimientos_cards-description{
+
+    p{
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--font-black-color)
+
+    }
+}
+
+
+.section-procedimientos_cards-card-wrap{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: flex-start;
+    justify-content: space-around;
+}

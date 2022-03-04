@@ -1,0 +1,39 @@
+.section-citas_reservas-main{
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    padding-top: 79px;
+    padding-bottom: 48px;
+    background-color: var(--branco-escuro);
+    
+}
+
+.section-citas_reservas-wrap{
+   
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap:24px;
+    row-gap: 38px;
+
+    padding: 0 20px 0 20px;
+
+}
+
+.section-citas_reservas-text{
+    
+    width: 48%;
+    min-width: 290px;
+    flex-grow: 1;
+    
+    p{
+        font-family: Arial;
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--font-black-color);
+
+    }
+}

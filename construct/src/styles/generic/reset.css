@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border:0;
+    font-size: 100%;
+    font: inherit;
+    /* font-family: 'Open Sans', sans-serif;
+    font-weight: 500; */
+    text-decoration: none;
+    vertical-align: baseline;
+
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+html{
+    height: 100%;
+    /* overflow-x:hidden; */
+}
+
+body{
+    height: 100%;
+    /* overflow-x: hidden; */
+}
+
+#root{
+    overflow-x: hidden;
+}
+
+ol, ul, li {
+	list-style: none;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}

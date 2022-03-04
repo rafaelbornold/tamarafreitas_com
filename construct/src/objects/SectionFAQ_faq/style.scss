@@ -1,0 +1,167 @@
+.section-FAQ_faq-main{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: 80px;
+    padding-bottom: 94px;
+    background-color: var(--branco-escuro);
+    
+}
+
+.section-FAQ_faq-wrap{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 33px;
+
+}
+
+.section-FAQ_faq-list-wrap{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--branco-claro);
+
+    padding: 15px;
+    margin: 0 0 30px 0;
+
+}
+
+
+.section-FAQ_faq-list-content{
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 83px;
+    row-gap: 19px;
+    padding: 0 30px 0 30px;
+
+
+    //////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    ///// personalizando componente ListShowHide /////
+    //////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+
+    .component-formacion_benefits-content-title{
+             
+        .component-formacion_benefits-content-title-number{
+            min-width: 31px;
+            text-align: center;
+        }
+    
+        span{
+
+            font-size: 30px;
+            padding-left: 5px;
+            padding-right: 10px;
+    
+        }
+    
+
+        .component-formacion_benefits-content-title-summary{
+        
+            h6{
+        
+                font-size: 18px;
+                padding: 0 0 3px 5px;
+        
+            }
+    
+        }
+    
+    
+    }
+    
+    
+    .component-formacion_benefits-content-description{
+    
+        p{
+    
+            font-size: 12px;
+            line-height: 20px;
+            margin: 0px 0 0 35px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--font-black-color);
+
+    
+        }
+    
+    }
+
+    @media screen and (max-width: 890px){
+
+        
+        .component-formacion_benefits-content-description{
+    
+            p{
+        
+                padding-left: 0;
+        
+            }
+        }
+        
+        .component-formacion_benefits-content-title-summary{
+    
+            border-bottom: 0;
+        }
+    
+    }
+    
+    
+    //////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+
+    
+}
+
+.section-FAQ_faq-form-wrap{
+
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    column-gap: 30px;
+    row-gap: 20px;
+    width: 100%;
+
+    padding: 0 30px 0 30px;
+
+
+}
+
+.section-FAQ_faq-form{
+
+    width: 65%;
+    display:flex;
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 20px;
+    flex-flow: row wrap;
+    flex-grow: 1;
+
+
+    margin: 10px 0 20px 0;
+
+    input[type="text"]{
+
+        height: 48px;
+        padding-left: 20px;
+        border: 1px solid var(--rosa-escuro);
+        min-width: 290px;
+        flex-grow: 1;
+        
+
+        
+    }
+
+}
+
+

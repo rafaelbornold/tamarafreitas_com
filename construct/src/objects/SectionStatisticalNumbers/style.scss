@@ -1,0 +1,24 @@
+.section_statistical_numbers-main{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 30px;
+
+    background-color: var(--rosa-claro);
+    
+}
+
+.section_statistical_numbers-wrapper{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+

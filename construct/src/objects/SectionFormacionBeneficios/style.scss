@@ -1,0 +1,43 @@
+.section-formacion_benefits-main{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: 80px;
+    padding-bottom: 94px;
+    background-color: var(--branco-escuro);
+    
+}
+
+.section-formacion_benefits-wrap{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 33px;
+
+}
+
+.section-formacion_benefits-list-wrap{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.section-formacion_benefits-list-content{
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 83px;
+    row-gap: 19px;
+    padding: 0 30px 0 30px;
+    
+}
+
+

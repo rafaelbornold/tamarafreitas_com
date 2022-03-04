@@ -1,0 +1,117 @@
+.section-SectionProcedimientoDetails-bigtitle-01-wrap{
+    display: none;
+}
+
+.section-SectionProcedimientoDetails-bigtitle-02-wrap{
+    display: inherit;
+
+}
+
+////////////////////////////
+////////////////////////////
+////////////////////////////
+
+.section-SectionProcedimientoDetails-main{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 34px 20px 38px 20px;
+    background-color: var(--branco-escuro);
+    
+    .section-SectionProcedimientoDetails-wrapper{
+
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-flow: row wrap;
+        column-gap: 60px;
+        row-gap: 0px;
+        z-index: 0;
+
+        
+        .section-SectionProcedimientoDetails-content{
+                    
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-grow: 1;
+            width: 46%;
+
+            .article-SectionProcedimientoDetails-wrap{
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            
+                width: 100%;
+                height: 100%;
+            
+                h2{
+            
+                    margin-bottom: 17px;
+                    font-family: AppleGaramond-Bold;
+                    font-size: 18px;
+                
+                }
+            
+                p{
+            
+                    margin-top: 30px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: var(--font-black-color);
+                    font-size: 16px;
+                    line-height: 25px;
+                
+                }
+            }
+                
+        }
+
+        .section-SectionProcedimientoDetails-img{
+        
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            min-height: 275px;
+            flex-grow: 1;
+            width: 46%;
+
+
+            .image-section-SectionProcedimientoDetails-wrapper{
+
+                display: flex;
+                align-items: flex-start;
+                width: 100%;
+                height: 100%;
+            
+                .image-section-SectionProcedimientoDetails-picture{
+
+                    width: 100%;
+                    height:100%;
+                
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center ;
+
+                }
+
+
+            }
+
+
+        }
+        
+        
+
+    }
+    
+
+}
+
+
+
+

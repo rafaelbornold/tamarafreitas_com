@@ -1,0 +1,53 @@
+.proximos_cursos-main{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: 68px;
+    padding-bottom: 54px;
+    background-color: var(--rosa-claro);
+    
+}
+
+.proximos_cursos-wrapper{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.proximos_cursos-title{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 34px;
+
+}
+
+.proximos_cursos-title h1{
+
+    text-align: center;
+
+}
+
+
+.proximos_cursos-content {
+
+   display: flex;
+   justify-content: center;
+   padding-left: 25px;
+   padding-right: 25px;
+
+    p{
+        margin-bottom: 34px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--font-black-color);
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+

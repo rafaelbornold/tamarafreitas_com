@@ -1,0 +1,62 @@
+.header-secondary{
+    
+    position: relative;
+
+    width: 100%;
+    height: 240px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 5px solid var(--cinza-escuro);
+
+    z-index: 0;
+
+}
+
+.header-secondary-background{
+    
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../../images/backgrounds/Grupo 6285.png");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -80px;
+    opacity: .7;
+}
+
+.header-secondary p{
+    
+    z-index: 1;
+    
+    text-align: center;
+    color: white;
+    font-family: "AceSans-Thin";
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 42px;
+    padding-left: 15px;
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 708px){
+
+    .header-secondary-background{
+        background-position-y: 0;
+
+    }
+}
+
+@media screen and (max-width: 450px){
+
+    .header-secondary p{
+        font-family: "AceSans-Light";
+        font-size: 32px;
+    
+    }
+}

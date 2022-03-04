@@ -1,0 +1,54 @@
+@media screen and (max-width: 768px){
+
+    .menu{
+
+        transform: translate(200px,0);
+        width: 30px;
+        padding-top: 40px;
+        padding-bottom: 10px;
+
+
+        transition: 1s;
+
+        a {
+            min-width: 250px;
+            justify-content: left;
+            height: 55px;
+        }
+
+    }
+
+    .nav-link-active > span{
+
+        border-bottom: 2px solid var(--font-black-color);
+    
+    }
+
+
+    .menu-active {
+
+        transform: translate(0,0);
+        width: 250px;
+        background-color: var(--cinza-claro);
+        transition: 1s;
+
+        span{
+            color: var(--font-black-color);
+        }
+
+    }    
+
+
+    .menu ul {
+   
+        flex-direction: column;
+        align-items: flex-start;
+    
+    }
+
+    .hamburger-box{
+        display: block;
+        margin-right: 20px;
+    }
+    
+}

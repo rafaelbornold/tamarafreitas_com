@@ -1,0 +1,34 @@
+.component-CitasResercasCard-wrap{
+
+    width: 198px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 14px;
+    flex-grow: 1;
+
+
+}
+
+
+.component-CitasResercasCard-list{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    span{
+        width: 100%;
+
+        font-family: Arial;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;
+        color:var(--font-black-color);
+    
+    }
+
+}

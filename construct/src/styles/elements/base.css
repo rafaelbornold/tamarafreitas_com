@@ -1,0 +1,24 @@
+.container{
+    width: 100%;
+    height: 100%;
+    max-width: 973px;
+}
+
+
+.display-flex-center-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-flex-center-start{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.display-flex-center-end{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}

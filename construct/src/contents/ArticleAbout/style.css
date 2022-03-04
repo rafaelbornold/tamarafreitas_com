@@ -1,0 +1,56 @@
+.resumed-about{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.resumed-about h2{
+
+    margin-bottom: 17px;
+    font-family: AppleGaramond-Bold;
+    font-size: 18px;
+
+}
+
+.resumed-about p{
+
+    margin-top: 30px;
+    font-family: Arial;
+    color: var(--font-black-color);
+    font-size: 18px;
+    line-height: 26px;
+
+}
+
+.image-separator{
+
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 22px;
+    padding: 5px;
+
+    width: 100%;
+    height: 116px;
+
+    background-color: var(--cinza-claro);
+
+}
+
+.image-separator img{
+
+    height: 100%;
+
+}
+
+.resumed-about-button{
+
+    margin-top: 37px;
+
+}

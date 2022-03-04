@@ -1,0 +1,130 @@
+.section_maestro-bigtitle-01-wrap{
+    display: none;
+    margin-bottom: 20px;
+
+}
+
+.section_maestro-bigtitle-02-wrap{
+    display: inherit;
+    margin-bottom: 20px;
+
+}
+
+////////////////////////////
+////////////////////////////
+////////////////////////////
+
+.section_maestro-main{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: 25px;
+    padding-bottom: 0;
+    background-color: var(--preto-medio);
+    
+    .section_maestro-wrapper{
+
+        margin-top: 15px;
+        padding: 0 20px 0 20px;
+        display: grid;
+        grid-gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(285px, 6fr));
+        z-index: 0;
+
+        
+        .section_maestro-content{
+            grid: 4fr;      
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .article_maestro-wrap{
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                padding-bottom: 80px;
+                width: 100%;
+                height: 100%;
+            
+                h2{
+            
+                    margin-bottom: 17px;
+                    font-family: AppleGaramond-Bold;
+                    font-size: 18px;
+                
+                }
+            
+                h6{
+            
+                    margin-top: 16px;
+                    line-height: 34px;
+                    font-family: AppleGaramond-Bold;
+                    font-size: 14px;
+                    color: var(--rosa-claro);
+                
+                }
+            
+
+                p{
+            
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: var(--rosa-claro);
+                    font-size: 16px;
+                    line-height: 25px;
+                
+                }
+            }
+                
+        }
+
+        .section_maestro-img{
+            grid: 2fr;      
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            min-height: 275px;
+
+            .image-section_maestro-wrapper{
+
+                position: relative;
+                display: flex;
+                align-items: flex-start;
+                width: 100%;
+                height: 100%;
+            
+                .image-section_maestro-picture{
+
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height:105%;
+                
+                    background-image: url(../../images/pictures/montages/maestro.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center ;
+
+                }
+
+
+            }
+
+
+        }
+        
+        
+
+    }
+    
+
+}
+
+
+
+

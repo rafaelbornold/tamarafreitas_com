@@ -1,0 +1,150 @@
+.wrapper-button{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+
+.button span{
+   
+    font-family: "AceSans-Light";
+    font-size: 20px;
+    text-align: center;
+}
+
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+
+.btn-01{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 48px;
+    width: 250px;
+    border: 1px solid var(--rosa-escuro);
+    
+    background-color: var(--rosa-claro);
+
+    color: var(--rosa-escuro);
+
+    transition: 0.3s;
+
+}
+
+.btn-01:hover{
+    
+    transition: 0.5s;
+    background-color: var(--rosa-escuro);
+    color: var(--rosa-claro);
+
+}
+
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+
+.btn-02{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 48px;
+    border: 1px solid white;
+    
+    background-color: none;
+
+    color: white;
+
+    transition: 0.3s;
+
+}
+
+.btn-02:hover{
+    
+    transition: 0.5s;
+    background-color: var(--branco-claro);
+    color: var(--rosa-escuro);
+
+}
+
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+
+.btn-03{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 48px;
+    border: 1px solid var(--rosa-escuro);
+    
+    background-color: var(--rosa-escuro);
+
+    color: white;
+    
+    transition: 0.3s;
+
+}
+
+.btn-03:hover{
+    
+    transition: 0.5s;
+    background-color: var(--cinza-dark);
+    color: white;
+
+}
+
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+
+.btn-04{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 48px;
+    border: 1px solid var(--rosa-escuro);
+    
+    background-color: none;
+
+    color: var(--rosa-escuro);
+    
+    transition: 0.3s;
+
+}
+
+.btn-04:hover{
+    
+    transition: 0.5s;
+    background-color: var(--rosa-escuro);
+    color: var(--rosa-claro);
+
+
+}
+
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+
+
+
+

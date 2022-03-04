@@ -1,0 +1,41 @@
+.estructura-video-container{
+    
+    position: relative;
+
+}
+
+.estructura-display{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto ;
+}
+
+.estructura-wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.estructurs-video_wrap_border{
+    width: 100%;
+}
+
+.estructura-video_wrap{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.estructura-home-videos video{
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+}
+
+#estructura-video_cover{
+    display: none;
+}

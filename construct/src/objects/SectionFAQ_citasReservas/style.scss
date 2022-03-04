@@ -1,0 +1,125 @@
+.section-FAQ_citasReservas-main{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: 80px;
+    padding-bottom: 94px;
+    background-color: var(--branco-escuro);
+    
+}
+
+.section-FAQ_citasReservas-wrap{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 33px;
+
+}
+
+.section-FAQ_citasReservas-list-wrap{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--branco-claro);
+
+    padding: 15px;
+
+}
+
+
+.section-FAQ_citasReservas-list-content{
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 83px;
+    row-gap: 19px;
+    padding: 0 30px 0 30px;
+
+
+    //////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    ///// personalizando componente ListShowHide /////
+    //////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+
+    .component-formacion_benefits-content-title{
+             
+        .component-formacion_benefits-content-title-number{
+            min-width: 31px;
+            text-align: center;
+        }
+    
+        span{
+
+            font-size: 30px;
+            padding-left: 5px;
+            padding-right: 10px;
+    
+        }
+    
+
+        .component-formacion_benefits-content-title-summary{
+        
+            h6{
+        
+                font-size: 18px;
+                padding: 0 0 3px 5px;
+        
+            }
+    
+        }
+    
+    
+    }
+    
+    
+    .component-formacion_benefits-content-description{
+    
+        p{
+    
+            font-size: 12px;
+            line-height: 20px;
+            margin: 0px 0 0 35px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--font-black-color);
+
+    
+        }
+    
+    }
+
+    @media screen and (max-width: 890px){
+
+        
+        .component-formacion_benefits-content-description{
+    
+            p{
+        
+                padding-left: 0;
+        
+            }
+        }
+        
+        .component-formacion_benefits-content-title-summary{
+    
+            border-bottom: 0;
+        }
+    
+    }
+    
+    
+    //////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+    //////////////////////////////////////////////////
+
+    
+}
+
+

@@ -1,0 +1,110 @@
+.section-formacion_details-main{
+
+
+    padding: 35px 0 50px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--rosa-claro);
+
+    .section-formacion-details-wrap{
+
+        width: 100%;
+        padding: 0 20px 0 20px;
+
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        .section-formacion_details-img-wrap{
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 20px;
+
+        }
+
+        .section-formacion_details-description-wrap{
+
+            margin: 0px 0 0px 0;
+            max-width: 500px;
+
+            p{
+
+                font-family: Arial;
+                font-size: 16px;
+                line-height: 26px;
+                color: var(--font-black-color);
+
+            }
+
+        }
+
+    }
+  
+}
+
+
+.section-formacion_details-infos-component-wrap{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .section-formacion_details-infos-component{
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    
+        .section-formacion_details-infos-component-title{
+
+            display: flex; 
+    
+            img{
+    
+                margin-right: 15px;
+    
+            }
+    
+            h4{
+    
+                font-family: Arial;
+                font-weight: normal;
+                font-size: 16px;
+                color: var(--rosa-escuro);
+        
+            }
+    
+        }
+
+        .section-formacion_details-infos-component-content{
+    
+            span{
+    
+                font-family: Arial;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 34px;
+                color: var(--font-black-color);
+    
+                padding-left: 31px
+    
+            }
+    
+        }
+
+
+
+    }
+
+
+
+}

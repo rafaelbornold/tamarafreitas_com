@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@font-face {
+    Font-family: AceSans-Thin; 
+    src: url('./fonts/Ace_Sans/OTF/100-AceSans-Thin.otf');
+    }
+
+@font-face {
+    Font-family: AceSans-Extralight; 
+    src: url('./fonts/Ace_Sans/OTF/200-AceSans-Extralight.otf');
+    }
+
+@font-face {
+    Font-family: AceSans-Light; 
+    src: url('./fonts/Ace_Sans/OTF/300-AceSans-Light.otf');
+    }
+
+@font-face {
+    font-family: AceSans; 
+    src: url('./fonts/Ace_Sans/OTF/400-AceSans.otf');
+    }
+
+@font-face {
+    font-family: AceSans-Medium; 
+    src: url('./fonts/Ace_Sans/OTF/500-AceSans-Medium.otf');
+    }
+
+@font-face {
+    font-family: AceSans-Bold; 
+    src: url('./fonts/Ace_Sans/OTF/600-AceSans-Bold.otf');
+    }
+
+@font-face {
+    font-family: AceSans-Extrabold; 
+    src: url('./fonts/Ace_Sans/OTF/700-AceSans-Extrabold.otf');
+    }
+
+@font-face {
+    font-family: AceSans-Black; 
+    src: url('./fonts/Ace_Sans/OTF/800-AceSans-Black.otf');
+    }
+
+
+@font-face {
+    font-family: AppleGaramond; 
+    src: url('./fonts/apple_garamond/AppleGaramond.ttf');
+    }
+
+@font-face {
+    font-family: AppleGaramond-Light; 
+    src: url('./fonts/apple_garamond/AppleGaramond-Light.ttf');
+    }
+
+@font-face {
+    font-family: AppleGaramond-Bold; 
+    src: url('./fonts/apple_garamond/AppleGaramond-Bold.ttf');
+    }
+
+@font-face {
+    font-family: AppleGaramond-Italic; 
+    src: url('./fonts/apple_garamond/AppleGaramond-Italic.ttf');
+    }
+
+@font-face {
+    font-family: AppleGaramond-LightItalic; 
+    src: url('./fonts/apple_garamond/AppleGaramond-LightItalic.ttf');
+    }
+
+@font-face {
+    font-family: AppleGaramond-BoldItalic; 
+    src: url('./fonts/apple_garamond/AppleGaramond-BoldItalic.ttf');
+    }
+
+
+    

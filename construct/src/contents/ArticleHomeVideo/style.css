@@ -1,0 +1,101 @@
+.video-container{
+    
+    position: relative;
+
+    z-index: 3;
+
+}
+
+.home-video-content{
+
+    position: absolute;
+    width: 32%;
+    min-width: 210px;
+    max-height: 290px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+
+
+
+
+    min-height: 190px;
+
+}
+
+.logo{
+    width: 100%;
+    padding-top: 100%;
+
+    background-image: url("../../images/logos/logo_redondo_fundo_escuro.png");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+
+    background-color: rgba(0, 0, 0, 0);
+
+
+
+}
+
+.display2{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto ;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.A3{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.video_wrap_border{
+    width: 100%;
+}
+
+.video_wrap{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.video_wrap video{
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    min-height: 535px;
+}
+
+#video_cover{
+    display: none;
+}
+
+
+.wrapper-button{
+
+    width: 160%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+
+}
+
+.wrapper-button a{
+
+    margin: 16px;
+}

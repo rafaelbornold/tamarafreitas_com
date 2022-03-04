@@ -1,0 +1,44 @@
+@media screen and (max-width: 679px){
+
+    .component_formacion-module{
+      
+        .component_formacion-module-content-header2-wrap{
+      
+
+            display: block;
+      
+          }
+
+        .component_formacion-module-pic-wrap{
+
+            width: 100%;
+            padding: 20px 40px 20px 40px;
+            }
+
+        .component_formacion-module-content-wrap{
+
+            width: 100%;
+            
+          .component_formacion-module-content-header1-wrap{
+      
+            display: none;
+      
+          }
+      
+        }
+
+    }
+
+
+    .component_formacion-module-content-footer-wrap{
+      
+        .component_formacion-module-content-footer-buttons{
+      
+          justify-content: space-between;
+      
+        }
+      
+      }
+      
+
+}
