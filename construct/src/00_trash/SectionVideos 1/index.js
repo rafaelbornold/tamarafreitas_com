@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 
-import './style.scss';
-
-import  data   from './data';
-
+import Button from "../../components/Button";
 import BigTitle from '../../components/BigTitle';
-import CarouselSlides from "../../components/CarouselSlides"
+import VideoLink from "../../videos/Tamara_videoInicial_01_original_sierra.mp4";
+import CarouselSlidesVideos from "../../components/CarouselSlidesVideos"
 
+import ReactPlayer from 'react-player';
+
+
+
+import './style.css';
+import { CarouselSlides } from '../../components/CarouselSlides/indes';
 
 const SectionVideos = () => {
     return ( 
@@ -23,11 +27,8 @@ const SectionVideos = () => {
                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. </p>
             </div>
 
-            <CarouselSlides 
-                data={data} 
-                cardWidth="254" 
-                cardHeight="350"
-                cardGap="30"/>
+            <CarouselSlides cardsData="CardsExample" />
+       
         </div>
 
     </section>

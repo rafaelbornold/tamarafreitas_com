@@ -1,0 +1,92 @@
+$CardHeight: 350px;
+$CardWidth: 254px;
+
+
+.carousel-container {
+
+  position: relative;
+  // height: $CardHeight;
+  max-width: 973px;
+  margin: 0 auto;
+  overflow: hidden;
+  touch-action: pan-y;
+
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+}
+
+.carousel-card {
+  // flex: 0 0 calc(#{($CardWidth + 30)}); // gap: 30px
+  // margin: 0 15px 0 15px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.carousel-card-inner {
+  flex-direction: column;
+  // width: $CardWidth;
+  // height: $CardHeight;
+  margin: 10px 0 10px 0;
+  box-shadow: 0 0 5px 2px #0003;
+  border-radius: 2px;
+  cursor: pointer;}
+
+.carousel-title {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+.carousel-text {
+  padding: 1em;
+  font-size: 14px;
+  white-space: pre-wrap;
+  text-align: left;
+  font-family: sans-serif;
+}
+
+.carousel-pagination-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.carousel-pagination {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 180px;
+  padding: 0;
+}
+
+.carousel-pagination li {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(50, 50, 50, 0.5);
+}
+
+.carousel-pagination .current {
+  border-radius: 0;
+  background: white;
+}

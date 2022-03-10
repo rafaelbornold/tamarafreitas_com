@@ -16,7 +16,7 @@ content["procedimientos"] = [
     
                 procedimiento: "DepilacionConHilo",
     
-                image: require('../../images/pictures/procedimientos/depilacionhilo/ImagenPNG.png'),
+                image: require('../../images/pictures/procedimientos/Visagismo/new001/5C36E196-B6FC-4088-BE17-28D883400DED.JPEG'),
     
                 title: "DEPILACIÓN CON HILO",
     
@@ -39,7 +39,7 @@ content["procedimientos"] = [
     
                 procedimiento: "DisenoDeCejas",
     
-                image: require('../../images/pictures/procedimientos/designCejas/Captura.png'),
+                image: require('../../images/pictures/procedimientos/Visagismo/new001/3CAD3240-FAFC-4304-9DE8-512D51F63B23.JPEG'),
     
                 title: "DISEÑO DE CEJAS",
     
@@ -65,7 +65,7 @@ content["procedimientos"] = [
     
                 procedimiento: "Pestanas",
     
-                image: require('../../images/pictures/procedimientos/lashlifting/IMG_9469.png'),
+                image: require('../../images/pictures/procedimientos/LashLifting/new001/20200713_144046.jpg'),
     
                 title: "PESTAÑAS",
     
@@ -82,7 +82,7 @@ content["procedimientos"] = [
     
                 procedimiento: "Micropigmentacion",
     
-                image: require('../../images/pictures/procedimientos/microblading/ImagenPNG.png'),
+                image: require('../../images/pictures/procedimientos/MicroCejas/new001/0B9951F3-2702-4FF7-9F40-8670CFD36EDA.JPEG'),
     
                 title: "MICROPIGMENTACIÓN",
     
@@ -105,7 +105,7 @@ content["procedimientos"] = [
     
                 procedimiento: "Microblading",
     
-                image: require('../../images/pictures/procedimientos/acquatellLips/ImagenPNG.png'),
+                image: require('../../images/pictures/procedimientos/MicroLabios/new001/4EDFEA3A-3DC0-4554-9D99-FB1D976DF16F.jpeg'),
     
                 title: "MICROBLADING",
     

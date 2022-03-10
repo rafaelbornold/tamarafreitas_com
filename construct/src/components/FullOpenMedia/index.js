@@ -5,9 +5,6 @@ import ReactDOM from 'react-dom';
 
 import './style.scss';
 
-import VideoLink from "../../videos/Tamara_videoInicial_01_original_sierra.mp4";
-
-
 export function ViewMedia(src, mediaType){
 
 
