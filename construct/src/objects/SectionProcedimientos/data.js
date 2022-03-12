@@ -1,6 +1,6 @@
 const data = [
     {
-      title: "Video 1",
+      title: "DEPILACIÓN CON HILO",
       textSummary: `Lorem ipsum`,
       textContent: `Lorem ipsum dolor sit amet`,
       mediaType: "video",
@@ -8,7 +8,7 @@ const data = [
       viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
     },
     {
-      title: "Video 2",
+      title: "Diseño de Cejas",
       textSummary: `Lorem ipsum`,
       textContent: `Lorem ipsum dolor sit amet`,
       mediaType: "video",
@@ -16,7 +16,7 @@ const data = [
       viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
     },
     {
-      title: "Video 3",
+      title: "Pestañas",
       textSummary: `Lorem ipsum`,
       textContent: `Lorem ipsum dolor sit amet`,
       background: require('../../images/bgpadrao.png'),
@@ -24,7 +24,15 @@ const data = [
       viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
     },
     {
-      title: "Video 4",
+      title: "Micropigmentación",
+      textSummary: `Lorem ipsum`,
+      textContent: `Lorem ipsum dolor sit amet`,
+      background: require('../../images/bgpadrao.png'),
+      mediaType: "video",
+      viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+    },
+    {
+      title: "Microblading",
       textSummary: `Lorem ipsum`,
       textContent: `Lorem ipsum dolor sit amet`,
       background: require('../../images/bgpadrao.png'),

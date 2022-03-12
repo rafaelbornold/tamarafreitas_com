@@ -1,50 +1,51 @@
 export const content = new Object();
 
-content["DepilacionConHilo"] = [
-    
-        {
-            image: require('../../images/bgpadrao.png'),
-    
-            title: "DEPILACIÓN CON HILO",
-
-        },
-    
-  ];
-
-  content["DisenoDeCejas"] = [
-    
-    {
-        image: require('../../images/bgpadrao.png'),
-
-        title: "Diseño de Cejas",
-
-    },
-
-];content["Pestanas"] = [
-    
-    {
-        image: require('../../images/bgpadrao.png'),
-
-        title: "Pestañas",
-
-    },
-
-];content["Micropigmentacion"] = [
-    
-    {
-        image: require('../../images/bgpadrao.png'),
-
-        title: "Micropigmentación",
-
-    },
-
-];content["Microblading"] = [
-    
-    {
-        image: require('../../images/bgpadrao.png'),
-
-        title: "Microblading",
-
-    },
-
+content["procedimiento"] = [
+  {
+    title: "PROCEDIMIENTO",
+  },
 ];
+
+content["data"] = [
+  {
+    title: "VIDEO 1",
+    textSummary: `Lorem ipsum`,
+    textContent: `Lorem ipsum dolor sit amet`,
+    mediaType: "video",
+    background: require('../../images/bgpadrao.png'),
+    viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+  },
+  {
+    title: "VIDEO 2",
+    textSummary: `Lorem ipsum`,
+    textContent: `Lorem ipsum dolor sit amet`,
+    mediaType: "video",
+    background: require('../../images/bgpadrao.png'),
+    viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+  },
+  {
+    title: "VIDEO 3",
+    textSummary: `Lorem ipsum`,
+    textContent: `Lorem ipsum dolor sit amet`,
+    background: require('../../images/bgpadrao.png'),
+    mediaType: "video",
+    viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+  },
+  {
+    title: "VIDEO 4",
+    textSummary: `Lorem ipsum`,
+    textContent: `Lorem ipsum dolor sit amet`,
+    background: require('../../images/bgpadrao.png'),
+    mediaType: "video",
+    viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+  },
+  {
+    title: "VIDEO 5",
+    textSummary: `Lorem ipsum`,
+    textContent: `Lorem ipsum dolor sit amet`,
+    background: require('../../images/bgpadrao.png'),
+    mediaType: "video",
+    viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+  },
+  ];
+  

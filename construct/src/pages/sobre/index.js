@@ -11,7 +11,6 @@ import SectionProcedimientos from '../../objects/SectionProcedimientos';
 import SectionReviews from '../../objects/SectionReviews';
 import SectionStatisticalNumbers from '../../objects/SectionStatisticalNumbers';
 import SectionMission from '../../objects/SectionMission';
-import SectionEquipo from '../../objects/SectionEquipo';
 
 
 
@@ -23,7 +22,6 @@ const Sobre = () => {
     <HeaderSecondary text="ACERCA DE TAMARA FREITAS"/>
     <SectionSobreDetails />
     <SectionMission />
-    <SectionEquipo />
     <SectionReviews />
     <SectionProcedimientos backgroundClass="branco-escuro__rosa-medio" />
     <SectionStatisticalNumbers />

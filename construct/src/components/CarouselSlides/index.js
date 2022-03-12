@@ -10,6 +10,7 @@ import NonPassiveTouchTarget from "./NonPassiveTouchTarget";
 import  { FullOpenMedia, ViewMedia }  from '../FullOpenMedia';
 
 import "./styles.scss";
+import CarouselCardInner from "./CarouselCardInner";
 
 
 ///////////////////////////////
@@ -19,15 +20,18 @@ import "./styles.scss";
 const CarouselSlides = (props) => {
 
   var data = props.data;
+  console.log((parseInt(props.maxWidthSlide) / 100));
+  var maxWidthSlide = !props.maxWidthSlide ? 852 : props.maxWidthSlide;
   var cardWidth = parseInt(props.cardWidth);
   var cardHeight = parseInt(props.cardHeight);
   var cardGap = parseInt(props.cardGap);
+  var cardStyle = props.carsStyle;
 
   const enableLoop = true;
   const enableAutoplay = false;
   const cardSize = cardWidth + cardGap;
   const cardPadCount = enableLoop ? 4 : 0;
-  var carousel_maxWidth = 852;
+  var carousel_maxWidth = maxWidthSlide;
   var carouselWidth = clamp(window.innerWidth, 0, carousel_maxWidth);
   
 
@@ -127,10 +131,10 @@ const CarouselSlides = (props) => {
       >
         <div className="carousel-card-inner-wrap" style={{ width: cardWidth , height: cardHeight }}>
           
-          <div className="carousel-card-inner-content"  style={{ backgroundImage: `url(${item.background})`}}>
-            <div className="carousel-title">{item.title}</div>
-            <div className="carousel-text">{item.text}</div>
-          </div>
+          <CarouselCardInner 
+            data={item}
+            style={cardStyle}
+          />
           
         </div>
         

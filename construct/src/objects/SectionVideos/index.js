@@ -26,8 +26,10 @@ const SectionVideos = () => {
             <CarouselSlides 
                 data={data} 
                 cardWidth="254" 
-                cardHeight="350"
-                cardGap="30"/>
+                cardHeight="308"
+                cardGap="30"
+                carsStyle="carousel-card-style-01"
+            />
         </div>
 
     </section>

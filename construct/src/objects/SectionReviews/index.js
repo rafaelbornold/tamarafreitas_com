@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 
-import BigTitle from '../../components/BigTitle';
-import CarouselSlidesReviews from "../../components/CarouselSlidesReviews"
+import  data   from './data';
 
-import './style.css';
+import BigTitle from '../../components/BigTitle';
+import CarouselSlides from "../../components/CarouselSlides"
+
+
+import './style.scss';
 
 const SectionReviews = () => {
     return ( 
@@ -16,7 +19,15 @@ const SectionReviews = () => {
                 <BigTitle text="TESTIMONIOS"/>
             </div>
 
-            <CarouselSlidesReviews />
+            <CarouselSlides 
+                data={data} 
+                cardWidth="290" 
+                cardHeight="335"
+                maxWidthSlide="100%"
+                cardGap="0"
+                carsStyle="carousel-card-style-01"
+            />
+
        
         </div>
 

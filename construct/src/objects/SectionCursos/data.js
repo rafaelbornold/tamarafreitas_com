@@ -1,6 +1,6 @@
 const data = [
     {
-      title: "Video 1",
+      title: "Intensive Microblading",
       textSummary: `Lorem ipsum`,
       textContent: `Lorem ipsum dolor sit amet`,
       mediaType: "video",
@@ -8,7 +8,7 @@ const data = [
       viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
     },
     {
-      title: "Video 2",
+      title: "Advanced Microblading",
       textSummary: `Lorem ipsum`,
       textContent: `Lorem ipsum dolor sit amet`,
       mediaType: "video",
@@ -16,7 +16,7 @@ const data = [
       viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
     },
     {
-      title: "Video 3",
+      title: "Lash Lifting Pro",
       textSummary: `Lorem ipsum`,
       textContent: `Lorem ipsum dolor sit amet`,
       background: require('../../images/bgpadrao.png'),
@@ -24,7 +24,7 @@ const data = [
       viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
     },
     {
-      title: "Video 4",
+      title: "DUO Masterclass",
       textSummary: `Lorem ipsum`,
       textContent: `Lorem ipsum dolor sit amet`,
       background: require('../../images/bgpadrao.png'),

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
-import BigTitle from '../../components/BigTitle';
-import CarouselSlidesQueAprenderas from "../../components/CarouselSlidesQueAprenderas"
+import  data   from './data';
 
+import BigTitle from '../../components/BigTitle';
+import CarouselSlides from "../../components/CarouselSlides"
 
 import './style.scss';
 
@@ -17,8 +18,14 @@ const SectionCursos = (props) => {
                 <BigTitle text="QUE APRENDERÁS"/>
             </div>
 
-            <CarouselSlidesQueAprenderas formacion={props.formacion} />
-       
+            <CarouselSlides 
+                data={data} 
+                cardWidth="254" 
+                cardHeight="424"
+                cardGap="30"
+                carsStyle="carousel-card-style-01"
+                formacion={props.formacion}
+            />
         </div>
 
     </section>

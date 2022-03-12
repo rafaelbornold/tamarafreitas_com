@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
-import BigTitle from '../../components/BigTitle';
-import CarouselSlidesCursos from "../../components/CarouselSlidesCursos"
+import  data   from './data';
 
+import BigTitle from '../../components/BigTitle';
+import CarouselSlides from "../../components/CarouselSlides"
 
 import './style.scss';
 
@@ -24,7 +25,13 @@ const SectionProcedimientos = (props) => {
                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
 
-            <CarouselSlidesCursos />
+            <CarouselSlides 
+                data={data} 
+                cardWidth="254" 
+                cardHeight="424"
+                cardGap="30"
+                carsStyle="carousel-card-style-01"
+            />
        
         </div>
 
