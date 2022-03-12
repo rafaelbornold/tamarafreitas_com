@@ -36,3 +36,6 @@ yarn-error.log*
 # ftp settings
 /.vscode
 .vscode/*
+
+#others
+stock.tamarafreitas.es

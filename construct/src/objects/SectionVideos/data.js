@@ -39,49 +39,6 @@ const data = [
       mediaType: "video",
       viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
     },
-    {
-      title: "Video 5",
-      background: require('../../images/bgpadrao.png'),
-      text: "react-touch-carousel is released under MIT license",
-      mediaType: "video",
-      viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
-    },
-    {
-      title: "Video 5",
-      background: require('../../images/bgpadrao.png'),
-      text: "react-touch-carousel is released under MIT license",
-      mediaType: "video",
-      viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
-    },
-    {
-      title: "Video 5",
-      background: require('../../images/bgpadrao.png'),
-      text: "react-touch-carousel is released under MIT license",
-      mediaType: "video",
-      viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
-    },
-    {
-      title: "Video 5",
-      background: require('../../images/bgpadrao.png'),
-      text: "react-touch-carousel is released under MIT license",
-      mediaType: "video",
-      viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
-    },
-    {
-      title: "Video 5",
-      background: require('../../images/bgpadrao.png'),
-      text: "react-touch-carousel is released under MIT license",
-      mediaType: "video",
-      viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
-    },
-    {
-      title: "Video 5",
-      background: require('../../images/bgpadrao.png'),
-      text: "react-touch-carousel is released under MIT license",
-      mediaType: "video",
-      viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
-    },
-  
   ];
   
   export default data;

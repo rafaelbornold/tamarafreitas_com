@@ -27,12 +27,12 @@ const CarouselSlides = (props) => {
   const enableAutoplay = false;
   const cardSize = cardWidth + cardGap;
   const cardPadCount = enableLoop ? 4 : 0;
-  var carousel_maxWidth = 973;
+  var carousel_maxWidth = 852;
   var carouselWidth = clamp(window.innerWidth, 0, carousel_maxWidth);
   
 
   function log(text) {
-    document.getElementById("console").innerText = text;
+    // document.getElementById("console").innerText = text;
   }
   
   function CarouselContainer(props) {
@@ -69,32 +69,47 @@ const CarouselSlides = (props) => {
     const translateX =
       (cursor - cardPadCount) * cardSize + (carouselWidth - cardSize) / 2;
     return (
+      <>
       <NonPassiveTouchTarget
         className={cx("carousel-container", {
           "is-active": active,
-          "is-dragging": dragging
+          "is-dragging": dragging,
         })}
+        style={{ maxWidth: carousel_maxWidth }}
       >
         <NonPassiveTouchTarget
           className="carousel-track"
           style={{ transform: `translate3d(${translateX}px, 0, 0)` }}
           {...rest}
         />
-  
-        <div className="carousel-pagination-wrapper">
-          <ol className="carousel-pagination">
-            {data.map((_, index) => (
-              <li key={index} className={current === index ? "current" : ""} />
-            ))}
-          </ol>
-        </div>
       </NonPassiveTouchTarget>
+        
+      <div className="carousel-pagination-wrapper">
+
+        <button className="carousel-pagination-button--left" onClick={() => {myRef.current.prev();}}>
+          <i className="carousel-pagination-button-arrow carousel-pagination-button-arrow--left" />
+        </button>
+
+        <ol className="carousel-pagination">
+          {data.map((_, index) => (
+              <li key={index} className={current === index ? "current " + (index) : ""} />
+          ))}
+        </ol>
+
+        <button className="carousel-pagination-button--right" onClick={() => {myRef.current.next();}}>
+          <i className="carousel-pagination-button-arrow carousel-pagination-button-arrow--right" />
+        </button>
+
+      </div>
+
+
+
+      </>
     );
   }
   
   const Container = touchWithMouseHOC(CarouselContainer);
   
-
   const myRef = React.useRef();
 
   function renderCard(index, modIndex) {
@@ -103,19 +118,20 @@ const CarouselSlides = (props) => {
       <div
         key={index}
         className="carousel-card"
-        style={{ margin: `0 ${(cardGap/2)}px 0 ${(cardGap/2)}px` }}
+        style={{ margin: `10px ${(cardGap/2)}px` }}
         onClick={() => {
           log(`clicked card ${1 + modIndex} - Media: ${item.mediaType} / src: ${item.viewSrc}`);
           ViewMedia(item.viewSrc, item.mediaType);
           }
         }      
       >
-        <div
-          className="carousel-card-inner"
-          style={{ backgroundImage: `url(${item.background})` , width: cardWidth , height: cardHeight }}
-        >
-          <div className="carousel-title">{item.title}</div>
-          <div className="carousel-text">{item.text}</div>
+        <div className="carousel-card-inner-wrap" style={{ width: cardWidth , height: cardHeight }}>
+          
+          <div className="carousel-card-inner-content"  style={{ backgroundImage: `url(${item.background})`}}>
+            <div className="carousel-title">{item.title}</div>
+            <div className="carousel-text">{item.text}</div>
+          </div>
+          
         </div>
         
       </div>
@@ -143,15 +159,7 @@ const CarouselSlides = (props) => {
       onDragCancel={() => log("dragCancel")}
     />
     <div id="console" />
-    <button
-      onClick={() => {
-        myRef.current.next();
-      }}
-    >
-      next card
-    </button>
-
-  </div>
+    </div>
 
     );
 }
