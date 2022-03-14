@@ -14,4 +14,4 @@ const WrapperHeader = (props) => {
      );
 }
  
-export default WrapperHeader ;
+export default WrapperHeader;

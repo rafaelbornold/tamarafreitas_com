@@ -36,6 +36,14 @@ const FormacionDetails = (props) => {
       var HeaderSecondary_text = "FORMACIÓN - ADVANCED MICROBLADING";
       break;
 
+    case "DuoMasterClass": 
+      var HeaderSecondary_text = "FORMACIÓN - DUO MASTER CLASS";
+      break;
+
+    case "MasterClass": 
+      var HeaderSecondary_text = "FORMACIÓN - MASTER CLASS";
+      break;
+
   }
 
   return (

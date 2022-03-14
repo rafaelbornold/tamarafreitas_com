@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-// import { BenefitsIntensiveMicroblading , BenefitsLashLiftingPro , BenefitsAdvancedMicroblading } from "./data";
-
 import { benefits } from "./data";
 
 
@@ -14,8 +12,8 @@ import './style.scss';
 const SectionFormacionBeneficios = (props) => {
 
     var formacion = props.formacion;
-    
     var data = benefits[formacion];
+    console.log(data);
 
     return ( 
 

@@ -27,6 +27,8 @@ const MainRoutes = () => {
                     <Route path="/formaciones/LashLiftingPro" element={<FormacionDetails formacion="LashLiftingPro" />} />
                     <Route path="/formaciones/IntensiveMicroblading" element={<FormacionDetails formacion="IntensiveMicroblading" />} />
                     <Route path="/formaciones/AdvancedMicroblading" element={<FormacionDetails formacion="AdvancedMicroblading" />} />
+                    <Route path="/formaciones/DuoMasterClass" element={<FormacionDetails formacion="DuoMasterClass" />} />
+                    <Route path="/formaciones/MasterClass" element={<FormacionDetails formacion="MasterClass" />} />
                     
                     <Route path="/procedimientos" element={<Procedimientos />} />
                     <Route path="/procedimientos/DepilacionConHilo" element={<ProcedimientoDetails procedimiento="DepilacionConHilo" />} />

@@ -116,3 +116,82 @@ content["LashLiftingPro"] = [
     },
 
 ];
+
+content["DuoMasterClass"] = [
+
+    {
+        
+        title: '¿Lorem ipsum sit? 33',
+        
+        description: 
+
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+
+    },
+
+    {
+        title: '¿Lorem ipsum sit?',
+        
+        description: 
+
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+
+    },
+    {
+        title: '¿Lorem ipsum sit?',
+        
+        description: 
+
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+
+    },
+    {
+        title: '¿Lorem ipsum sit?',
+        
+        description: 
+
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+
+    },
+
+];
+
+
+content["MasterClass"] = [
+
+    {
+        
+        title: '¿Lorem ipsum sit? 33',
+        
+        description: 
+
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+
+    },
+
+    {
+        title: '¿Lorem ipsum sit?',
+        
+        description: 
+
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+
+    },
+    {
+        title: '¿Lorem ipsum sit?',
+        
+        description: 
+
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+
+    },
+    {
+        title: '¿Lorem ipsum sit?',
+        
+        description: 
+
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+
+    },
+
+];
