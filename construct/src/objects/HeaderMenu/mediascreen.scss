@@ -9,8 +9,15 @@
 
     .menu{
         justify-content: flex-start;
+        align-items: flex-start;
         position: absolute;
-        border-radius: 15px;
+        border-radius: 0px 0 0 5px;
+        height: 536px;
+
+        -webkit-box-shadow: -7px 0px 56px -18px rgba(0,0,0,0.71);
+        -moz-box-shadow: -7px 0px 56px -18px rgba(0,0,0,0.71);
+        box-shadow: -7px 0px 56px -18px rgba(0,0,0,0.71);
+
     }
 
     .header_display{

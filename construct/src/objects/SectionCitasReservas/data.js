@@ -89,7 +89,7 @@ content[0] = [
     
             {//Reservas
         
-                title: "RESERCAS",
+                title: "RESERVAS",
     
                 texts: 
                 [

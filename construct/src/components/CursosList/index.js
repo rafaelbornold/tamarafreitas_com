@@ -9,6 +9,9 @@ import './style.scss'
 
 const CursosList = (props) => {
 
+
+
+
       if (props.view == "table"){
 
             return ( 
@@ -50,32 +53,32 @@ const CursosList = (props) => {
                               <span></span>
                         </div>
                     </div>
-                    <div className="cursos_list-table-tr">   
-                          <div className="cursos_list-table-td fecha"><p><span>10/set</span><span>11/set</span><span>12/set</span><span>13/set</span></p></div>  
+                    <article className="cursos_list-table-tr">   
+                          <div className="cursos_list-table-td fecha"><p><span>10/sep - 13/sep</span></p></div>  
                           <div className="cursos_list-table-td hora"><p><span>8:00 - 17:00</span></p></div>  
                           <div className="cursos_list-table-td maestro"><p><span>Tamara Freitas</span></p></div>  
                           <div className="cursos_list-table-td curso"><p><span>Intensive Microblading</span></p></div>  
                           <div className="cursos_list-table-td ubicacion"><p><span>Valencia/ESP</span></p></div>
                           <div className="cursos_list-table-td vermais"><p> <Button name="btn-01" width="130px" type="route" text="VER MAIS" link="/formaciones" target="_self" /></p></div>
-                    </div> 
-                    <div className="cursos_list-table-tr">   
-                          <div className="cursos_list-table-td fecha"><p><span>10/set</span></p></div>  
+                    </article> 
+                    <article className="cursos_list-table-tr">   
+                          <div className="cursos_list-table-td fecha"><p><span>10/sep</span></p></div>  
                           <div className="cursos_list-table-td hora"><p><span>8:00 - 17:00</span></p></div>  
                           <div className="cursos_list-table-td maestro"><p><span>Tamara Freitas</span></p></div>  
                           <div className="cursos_list-table-td curso"><p><span>Lash Lifting</span></p></div>  
                           <div className="cursos_list-table-td ubicacion"><p><span>Valencia/ESP</span></p></div>
                           <div className="cursos_list-table-td vermais"><p> <Button name="btn-01" width="130px" type="route" text="VER MAIS" link="/formaciones" target="_self" /></p></div>
-                    </div> 
-                    <div className="cursos_list-table-tr">   
-                          <div className="cursos_list-table-td fecha"><p><span>10/set</span></p></div>  
+                    </article> 
+                    <article className="cursos_list-table-tr">   
+                          <div className="cursos_list-table-td fecha"><p><span>10/sep</span></p></div>  
                           <div className="cursos_list-table-td hora"><p><span>8:00 - 17:00</span></p></div>  
                           <div className="cursos_list-table-td maestro"><p><span>Tamara Freitas</span></p></div>  
                           <div className="cursos_list-table-td curso"><p><span>Depilación con hilo</span></p></div>  
                           <div className="cursos_list-table-td ubicacion"><p><span>Valencia/ESP</span></p></div>
                           <div className="cursos_list-table-td vermais"><p> <Button name="btn-01" width="130px" type="route" text="VER MAIS" link="/formaciones" target="_self" /></p></div>
-                    </div> 
-                    <div className="cursos_list-table-tr">   
-                          <div className="cursos_list-table-td fecha"><p><span>10/set</span><span>11/set</span><span>12/set</span><span>13/set</span></p></div>  
+                    </article> 
+                    <article className="cursos_list-table-tr">   
+                          <div className="cursos_list-table-td fecha"><p><span>10/sep - 13/sep</span><span>(2022)</span></p></div>  
                           <div className="cursos_list-table-td hora"><p><span>8:00 - 17:00</span></p></div>  
                           <div className="cursos_list-table-td maestro"><p><span>Tamara Freitas</span></p></div>  
                           <div className="cursos_list-table-td curso"><p><span>Advanced Microblading</span></p></div>  
@@ -85,7 +88,7 @@ const CursosList = (props) => {
                               <Button name="btn-01" width="130px" type="route" text="VER MÁS" link="/formaciones" target="_self" />
                             </p>
                           </div>
-                    </div> 
+                    </article> 
                 </div>
                 {/* <div className="cursos_list-table-wrapper-button">
                   <Button name="btn-03" width="160px" type="route" text="VER TODO" link="/something"/>
@@ -130,7 +133,7 @@ const CursosList = (props) => {
                               </div>  
 
                               <div className="cursos_list-block-wrapper-button">
-                                    <Button name="btn-01" width="85%" type="route" text="VER MÁS" link="formaciones"/>
+                                    <Button name="btn-01" width="85%" type="route" text="VER MÁS" link="formaciones/IntensiveMicroblading"/>
                               </div>
                         </div>
                   </article>
@@ -139,7 +142,7 @@ const CursosList = (props) => {
                         <div className="cursos_list-block-th-wrap">
                               <div className="cursos_list-block-th th-curso">                          
                                     <IconLink link="" target="" src="mini-star"/>
-                                    <span>Intensive Microblading</span>
+                                    <span>Advanced Microblading</span>
                               </div>  
 
                               <div className="cursos_list-block-th th-maestro">                          
@@ -163,7 +166,7 @@ const CursosList = (props) => {
                               </div>  
 
                               <div className="cursos_list-block-wrapper-button">
-                                    <Button name="btn-01" width="85%" type="route" text="VER MÁS" link="formaciones"/>
+                                    <Button name="btn-01" width="85%" type="route" text="VER MÁS" link="formaciones/AdvancedMicroblading"/>
                               </div>
                         </div>
                   </article>
