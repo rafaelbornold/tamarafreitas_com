@@ -17,16 +17,16 @@ const SectionFAQ_formaciones = (props) => {
 
     return ( 
 
-    <section className="section-FAQ_formaciones-main">
+    <section className="section-FAQ_procedimientos-main">
 
-        <div className="container section-FAQ_formaciones-wrap">
+        <div className="container section-FAQ_procedimientos-wrap">
 
-            <div className="section-FAQ_formaciones-title">
+            <div className="section-FAQ_procedimientos-title">
                 <BigTitle text="PREGUNTAS FRECUENTES"/>
             </div>
 
-            <div className="section-FAQ_formaciones-list-wrap">
-                <div className="section-FAQ_formaciones-list-content">
+            <div className="section-FAQ_procedimientos-list-wrap">
+                <div className="section-FAQ_procedimientos-list-content">
 
                 {data.map((module, n) => {
                 return (

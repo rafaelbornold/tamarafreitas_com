@@ -151,11 +151,11 @@ content["ProximosCursos"] = [
         linkVerMas : formaciones["IntensiveMicroblading"].linkVerMas,
         
         fechas: [
-            {fecha: new Date(2022, 2, 7)},
-            {fecha: new Date(2022, 2, 8)},
-            {fecha: new Date(2022, 2, 9)},
-            {fecha: new Date(2022, 2,10)},
-            {fecha: new Date(2022, 2,11)},
+            {fecha: new Date("2022/02/07")},
+            {fecha: new Date("2022/02/08")},
+            {fecha: new Date("2022/02/09")},
+            {fecha: new Date("2022/02/10")},
+            {fecha: new Date("2022/02/11")},
         ],
         
         hora      : '08:00 - 17:00',
@@ -168,11 +168,11 @@ content["ProximosCursos"] = [
         linkVerMas : formaciones["LashLiftingPro"].linkVerMas,
         
         fechas: [
-            {fecha: new Date(2022, 2,14)},
-            {fecha: new Date(2022, 2,15)},
-            {fecha: new Date(2022, 2,16)},
-            {fecha: new Date(2022, 2,17)},
-            {fecha: new Date(2022, 2,18)},
+            {fecha: new Date("2022/02/14")},
+            {fecha: new Date("2022/02/15")},
+            {fecha: new Date("2022/02/16")},
+            {fecha: new Date("2022/02/17")},
+            {fecha: new Date("2022/02/18")},
         ],
         
         hora      : '08:00 - 17:00',
@@ -185,9 +185,9 @@ content["ProximosCursos"] = [
         linkVerMas : formaciones["AdvancedMicroblading"].linkVerMas,
         
         fechas: [
-            {fecha: new Date(2022, 2,21)},
-            {fecha: new Date(2022, 2,22)},
-            {fecha: new Date(2022, 2,23)},
+            {fecha: new Date("2022/02/21")},
+            {fecha: new Date("2022/02/22")},
+            {fecha: new Date("2022/02/23")},
         ],
         
         hora      : '08:00 - 17:00',
@@ -200,11 +200,11 @@ content["ProximosCursos"] = [
         linkVerMas : formaciones["IntensiveMicroblading"].linkVerMas,
         
         fechas: [
-            {fecha: new Date(2022, 3, 7)},
-            {fecha: new Date(2022, 3, 8)},
-            {fecha: new Date(2022, 3, 9)},
-            {fecha: new Date(2022, 3,10)},
-            {fecha: new Date(2022, 3,11)},
+            {fecha: new Date("2022/03/07")},
+            {fecha: new Date("2022/03/08")},
+            {fecha: new Date("2022/03/09")},
+            {fecha: new Date("2022/03/10")},
+            {fecha: new Date("2022/03/11")},
         ],
         
         hora      : '08:00 - 17:00',
@@ -217,10 +217,10 @@ content["ProximosCursos"] = [
         linkVerMas : formaciones["DuoMasterClass"].linkVerMas,
         
         fechas: [
-            {fecha: new Date(2022, 3,14)},
-            {fecha: new Date(2022, 3,15)},
-            {fecha: new Date(2022, 3,16)},
-            {fecha: new Date(2022, 3,17)},
+            {fecha: new Date("2022/03/14")},
+            {fecha: new Date("2022/03/15")},
+            {fecha: new Date("2022/03/16")},
+            {fecha: new Date("2022/03/17")},
         ],
         
         hora      : '08:00 - 17:00',
@@ -233,7 +233,7 @@ content["ProximosCursos"] = [
         linkVerMas : formaciones["MasterClass"].linkVerMas,
         
         fechas: [
-            {fecha: new Date(2022, 3,21)},
+            {fecha: new Date("2022/03/21")},
         ],
         
         hora      : '08:00 - 17:00',
