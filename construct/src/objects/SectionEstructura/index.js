@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 
-import BigTitle from '../../components/BigTitle';
-import VideosEstructura from '../../components/VideosEstructura';
+import './style.scss';
 
+import { content } from '../../databases/estructuraAcademia/data';
+
+import BigTitle from '../../components/BigTitle';
 import ReactPlayer from 'react-player';
 
-import VideoLink from "../../videos/Tamara_videoInicial_01_original_sierra.mp4";
-
-
-import './style.css';
 
 const SectionEstructura = () => {
+
+    const data = content[0];
+
     return ( 
 
     <section className="estructura-main">
@@ -25,30 +26,30 @@ const SectionEstructura = () => {
                 <div className="estructura-video-left">
 
                     <ReactPlayer
-                        url={VideoLink}
+                        url={data[1].videoLink}
                         className='react-player'
                         loop muted playsinline controls
                         width='100%'
                         height='100%'
-                        />
+                    />
 
                 </div>
 
                 <div className="estructura-video-right">
 
                     <ReactPlayer
-                            url={VideoLink}
-                            className='react-player'
-                            loop muted playsinline controls
-                            width='100%'
-                            height='100%'
-                            />
+                        url={data[2].videoLink}
+                        className='react-player'
+                        loop muted playsinline controls
+                        width='100%'
+                        height='100%'
+                    />
 
                 </div>
             </div>
 
             <div className="estructura-content">
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. </p>
+                <p> {data[0].content} </p>
             </div>
 
        

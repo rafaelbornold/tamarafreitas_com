@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-import { content } from "./data";
-
+import { content } from "../../databases/procedimientos/faq/data";
 
 import BigTitle from '../../components/BigTitle';
 import ListShowHide from '../../components/ListShowHide';

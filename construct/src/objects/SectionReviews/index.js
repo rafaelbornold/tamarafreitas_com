@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import  data   from './data';
+import  { content }   from '../../databases/reviews/data';
 
 import BigTitle from '../../components/BigTitle';
 import CarouselSlides from "../../components/CarouselSlides"
@@ -9,6 +9,9 @@ import CarouselSlides from "../../components/CarouselSlides"
 import './style.scss';
 
 const SectionReviews = () => {
+
+    const data = content[0];
+
     return ( 
 
     <section className="reviews-main">

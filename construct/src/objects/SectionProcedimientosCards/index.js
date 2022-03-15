@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { content } from "./data";
+import { content } from "../../databases/procedimientos/cards/data";
 
 import ProcedimientoCard from "../../components/ProcedimientoCard"
 
@@ -10,8 +10,6 @@ import './style.scss';
 const SectionProcedimientosCards = () => {
 
     var data = content["procedimientos"];
-
-    console.log(data[1]);
     
     return ( 
 

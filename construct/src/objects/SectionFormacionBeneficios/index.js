@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { benefits } from "./data";
+import { content } from "../../databases/formaciones/beneficios/data";
 
 
 import BigTitle from '../../components/BigTitle';
@@ -12,8 +12,7 @@ import './style.scss';
 const SectionFormacionBeneficios = (props) => {
 
     var formacion = props.formacion;
-    var data = benefits[formacion];
-    console.log(data);
+    var data = content[formacion];
 
     return ( 
 

@@ -1,51 +1,36 @@
 import React, { useState } from 'react';
-import StatisticalNumbers from '../../components/StatisticalNumbers';
 
 import './style.scss';
 
+import { content } from '../../databases/stastisticalNumbers/data'
+
+import StatisticalNumbers from '../../components/StatisticalNumbers';
+
+
 const SectionStatisticalNumbers = () => {
+
+    const data = content[0];
+
     return ( 
 
     <section className="section_statistical_numbers-main">
 
         <div className="container section_statistical_numbers-wrapper">
             
-            <StatisticalNumbers 
-                number="2021"  
-                unit="Procedimientos"
-                action="realizados"
-            />
+            {data.map((module, n) => {
+                        
+                return (
 
-            
-            <StatisticalNumbers 
-                number="35,2"  
-                numberAdd="mil"  
-                unit="Seguidores"
-                action="no instagram"
-            />
-        
-            
-            <StatisticalNumbers 
-                number="2021"  
-                unit="Cursos"
-                action="impartidos"
-            />
-        
-            
-            <StatisticalNumbers 
-                number="2021"  
-                unit="certificados"
-                action="de especialización"
-            />
-        
-                    
-            <StatisticalNumbers 
-                number="2021"  
-                unit="Horas"
-                action="de classe"
-            />
-        
+                    <StatisticalNumbers 
+                        number={data[n].number}
+                        numberAdd={data[n].numberAdd}
+                        unit={data[n].unit}
+                        action={data[n].action}
+                    />
+    
+                );
 
+            })}
 
 
         </div>

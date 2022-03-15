@@ -1,6 +1,6 @@
-export const benefits = new Object();
+export const content = new Object();
 
-benefits["IntensiveMicroblading"] = [
+content["IntensiveMicroblading"] = [
 
         {
             
@@ -55,7 +55,7 @@ benefits["IntensiveMicroblading"] = [
     
 ];
 
-benefits["LashLiftingPro"] = [
+content["LashLiftingPro"] = [
 
     {
         
@@ -110,7 +110,7 @@ benefits["LashLiftingPro"] = [
 
 ];
 
-benefits["AdvancedMicroblading"] = [
+content["AdvancedMicroblading"] = [
 
     {
         
@@ -165,7 +165,7 @@ benefits["AdvancedMicroblading"] = [
 
 ];
 
-benefits["DuoMasterClass"] = [
+content["DuoMasterClass"] = [
 
     {
         
@@ -220,7 +220,7 @@ benefits["DuoMasterClass"] = [
 
 ];
 
-benefits["MasterClass"] = [
+content["MasterClass"] = [
 
     {
         

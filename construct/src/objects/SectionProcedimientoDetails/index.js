@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { content } from "./data";
+import { content } from "../../databases/procedimientos/details/data";
 
 import BigTitle from '../../components/BigTitle';
 
@@ -12,8 +12,6 @@ const SectionProcedimientoDetails = (props) => {
     
     var procedimiento = props.procedimiento;
     var data = content[procedimiento];
-
-    console.log(data);
     
     return ( 
 

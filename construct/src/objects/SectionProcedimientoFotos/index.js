@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import { content } from "./data";
+import { content } from "../../databases/procedimientos/fotosCarousel/data";
+import { procedimientos } from "../../databases/procedimientos/data";
 
-import Button from "../../components/Button";
 import BigTitle from '../../components/BigTitle';
 import CarouselSlides from "../../components/CarouselSlides"
 
@@ -10,8 +10,9 @@ import './style.scss';
 
 const SectionProcedimientoFotos = (props) => {
     
-    var procedimiento = props.procedimiento;
-    var data = content["data"];
+    const procedimiento = props.procedimiento;
+    const procedimientoTitle = procedimientos[procedimiento].title;
+    const data = content[procedimiento];
 
     return ( 
 
@@ -20,7 +21,7 @@ const SectionProcedimientoFotos = (props) => {
         <div className="container section-procedimiento_fotos-title-wrapper">
 
             <div className="section-procedimiento_fotos-title">
-                <BigTitle text={"FOTOS "+ procedimiento}/>
+                <BigTitle text={"FOTOS "+ procedimientoTitle}/>
             </div>
 
             <CarouselSlides 

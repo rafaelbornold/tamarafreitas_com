@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { contenido } from "./data";
+import { content } from "../../databases/formaciones/contenido/data";
 
 
 import BigTitle from '../../components/BigTitle';
@@ -13,7 +13,7 @@ const SectionFormacionBeneficios = (props) => {
     
     var formacion = props.formacion;
 
-    var data = contenido[formacion];
+    var data = content[formacion];
 
     return ( 
 

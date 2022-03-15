@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
 
-import { content } from "./data";
+import { content } from "../../databases/procedimientos/videosCarousel/data";
+import { procedimientos } from "../../databases/procedimientos/data";
 
-import Button from "../../components/Button";
+
 import BigTitle from '../../components/BigTitle';
 import CarouselSlides from "../../components/CarouselSlides"
-
-import ReactPlayer from 'react-player';
-
-
 
 import './style.scss';
 
 const SectionProcedimientoFotos = (props) => {
     
-    var procedimiento = props.procedimiento;
-    var data = content["data"];
+    const procedimiento = props.procedimiento;
+    const procedimientoTitle = procedimientos[procedimiento].title;
+    const data = content[procedimiento];
     
     return ( 
 
@@ -24,7 +22,7 @@ const SectionProcedimientoFotos = (props) => {
         <div className="container section-procedimiento_videos-title-wrapper">
 
             <div className="section-procedimiento_videos-title">
-                <BigTitle text={"VIDEOS "+procedimiento}/>
+                <BigTitle text={"VIDEOS "+procedimientoTitle}/>
             </div>
 
             <CarouselSlides 

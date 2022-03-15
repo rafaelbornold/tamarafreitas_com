@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { content } from "./data";
+import { content } from "../../databases/citasReservas/data";
 
 import CitasReservasCard from "../../components/CitasReservasCard"
 
@@ -11,8 +11,6 @@ import './mediascreen.scss';
 const SectionCitasReservas = () => {
 
     var data = content[0];
-
-    console.log(data[1]);
     
     return ( 
 

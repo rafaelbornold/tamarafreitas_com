@@ -21,7 +21,9 @@ export function ViewMedia(src, mediaType){
                 /> 
                 ,
                 document.getElementById('FullOpenMedia-OpenMedia-img')
-                );   
+                ); 
+
+            screenOpen() 
 
             break;
         
@@ -33,10 +35,18 @@ export function ViewMedia(src, mediaType){
                 ,
                 document.getElementById('FullOpenMedia-OpenMedia-img')
                 ); 
-                  
+
+            screenOpen() 
+
             break;
+
         
     }
+
+}
+
+
+function screenOpen() {
 
     document.querySelector('.FullOpenMedia-fullscreen').style.display = "block";
 

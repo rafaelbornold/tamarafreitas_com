@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { content } from "./data";
+import { content } from "../../databases/formaciones/data";
 
 import './style.scss';
 
@@ -10,7 +10,7 @@ import FormacionModule from '../../components/FormacionModule';
 const SectionFormaciones = () => {
 
     const data = content["FormacionModule"];
-    console.log(content);
+
     return ( 
 
     <section className="section_formaciones-main">

@@ -1,45 +1,47 @@
 import React, { useState } from 'react';
 
-import { content } from "./data";
-
 import BigTitle from '../../components/BigTitle';
 
 import './style.scss';
 import './mediascreen.scss';
 
 
-const SectionMission = () => {
+const Sectionmision = () => {
     
-    var data = content[0];
+    const title = "NUESTRA MISIÓN";
+    const image = require('../../images/landscape/IMG-20200812-WA0021.JPG');
+
     
     return ( 
 
-    <section className="section-mission-main">
+    <section className="section-mision-main">
                
-               <div className="section-mission-bigtitle-01-wrap">
-                <BigTitle text={data[0].title} />
+               <div className="section-mision-bigtitle-01-wrap">
+                <BigTitle text={title} />
                 </div>
 
-        <div className="container section-mission-wrapper">
+        <div className="container section-mision-wrapper">
             
-            <div className="section-mission-content">
-                <div className="section-mission-bigtitle-02-wrap">
-                    <BigTitle text={data[0].title} />
+            <div className="section-mision-content">
+                <div className="section-mision-bigtitle-02-wrap">
+                    <BigTitle text={title} />
                 </div>
-                <article className="article-mission-wrap">
+                <article className="article-mision-wrap">
                     
-                    {data[0].description.map((module, n) => {
-                          return (
-                              <p key={n}>{data[0].description[n]}</p>
-                          );
-                      })}
+                    <p> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cill.
+                    </p>
+                    <p> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    </p>
+
 
                 </article>
             </div>
 
-            <div className="section-mission-img">
-                <div className="image-section-mission-wrapper">
-                  <div className="image-section-mission-picture" style={{backgroundImage: 'url(' + data[0].image + ')'}}></div>
+            <div className="section-mision-img">
+                <div className="image-section-mision-wrapper">
+                  <div className="image-section-mision-picture" style={{backgroundImage: 'url(' + image + ')'}}></div>
                 </div>
             </div>
 
@@ -50,4 +52,4 @@ const SectionMission = () => {
      );
 }
  
-export default SectionMission ;
+export default Sectionmision ;

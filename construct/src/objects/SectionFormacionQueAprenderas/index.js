@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 
-import  data   from './data';
+import  { content }   from '../../databases/formaciones/queAprenderas/data';
 
 import BigTitle from '../../components/BigTitle';
 import CarouselSlides from "../../components/CarouselSlides"
 
 import './style.scss';
 
-const SectionCursos = (props) => {
+const SectionFormacionQueAprenderas = (props) => {
+
+    var formacion = props.formacion;
+
+    const data = content[formacion];
+
     return ( 
 
     <section className="section-formacion_que_aprenderas-main">
@@ -24,7 +29,7 @@ const SectionCursos = (props) => {
                 cardHeight="424"
                 cardGap="30"
                 carsStyle="carousel-card-style-01"
-                formacion={props.formacion}
+                formacion={formacion}
             />
         </div>
 
@@ -33,4 +38,4 @@ const SectionCursos = (props) => {
      );
 }
  
-export default SectionCursos ;
+export default SectionFormacionQueAprenderas ;

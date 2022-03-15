@@ -4,7 +4,7 @@ content["IntensiveMicroblading"] = [
 
         {
             
-            image: require('../../images/bgpadrao.png'),
+            image: require('../../../images/bgpadrao.png'),
             
             descriptionRight: 
     
@@ -23,7 +23,7 @@ content["AdvancedMicroblading"] = [
 
     {
         
-        image: require('../../images/bgpadrao.png'),
+        image: require('../../../images/bgpadrao.png'),
             
         descriptionRight: 
 
@@ -41,7 +41,7 @@ content["LashLiftingPro"] = [
 
     {
         
-        image: require('../../images/bgpadrao.png'),
+        image: require('../../../images/bgpadrao.png'),
             
         descriptionRight: 
 
@@ -59,7 +59,7 @@ content["DuoMasterClass"] = [
 
     {
         
-        image: require('../../images/bgpadrao.png'),
+        image: require('../../../images/bgpadrao.png'),
             
         descriptionRight: 
 
@@ -77,7 +77,7 @@ content["MasterClass"] = [
 
     {
         
-        image: require('../../images/bgpadrao.png'),
+        image: require('../../../images/bgpadrao.png'),
             
         descriptionRight: 
 

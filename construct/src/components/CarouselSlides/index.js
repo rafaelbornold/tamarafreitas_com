@@ -20,7 +20,6 @@ import CarouselCardInner from "./CarouselCardInner";
 const CarouselSlides = (props) => {
 
   var data = props.data;
-  console.log((parseInt(props.maxWidthSlide) / 100));
   var maxWidthSlide = !props.maxWidthSlide ? 852 : props.maxWidthSlide;
   var cardWidth = parseInt(props.cardWidth);
   var cardHeight = parseInt(props.cardHeight);
@@ -124,7 +123,7 @@ const CarouselSlides = (props) => {
         className="carousel-card"
         style={{ margin: `10px ${(cardGap/2)}px` }}
         onClick={() => {
-          log(`clicked card ${1 + modIndex} - Media: ${item.mediaType} / src: ${item.viewSrc}`);
+          //log(`clicked card ${1 + modIndex} - Media: ${item.mediaType} / src: ${item.viewSrc}`);
           ViewMedia(item.viewSrc, item.mediaType);
           }
         }      

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { content } from "./data";
+import { content } from "../../databases/formaciones/faq/data";
 
 
 import BigTitle from '../../components/BigTitle';

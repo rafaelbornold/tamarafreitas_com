@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 
 import './style.scss';
 
-import  data   from './data';
+import  { content }   from '../../databases/videos/data';
 
 import BigTitle from '../../components/BigTitle';
 import CarouselSlides from "../../components/CarouselSlides"
 
 
 const SectionVideos = () => {
+
+    const data = content["Carousel"];
+
     return ( 
 
     <section className="videos-main">

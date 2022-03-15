@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { content } from "../../objects/SectionFormaciones/data";
+import { content } from "../../databases/formaciones/data";
 
 import IconLink from '../IconLink';
 import ComponentCursoBlock from './ComponentCursoBlock';

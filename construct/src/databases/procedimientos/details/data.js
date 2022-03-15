@@ -3,7 +3,7 @@ export const content = new Object();
 content["DepilacionConHilo"] = [
     
         {
-            image: require('../../images/bgpadrao.png'),
+            image: require('../../../images/bgpadrao.png'),
     
             title: "DEPILACIÓN CON HILO",
 
@@ -21,10 +21,10 @@ content["DepilacionConHilo"] = [
     
   ];
 
-  content["DisenoDeCejas"] = [
+content["DisenoDeCejas"] = [
     
     {
-        image: require('../../images/bgpadrao.png'),
+        image: require('../../../images/bgpadrao.png'),
 
         title: "Diseño de Cejas",
 
@@ -40,10 +40,12 @@ content["DepilacionConHilo"] = [
 
     },
 
-];content["Pestanas"] = [
+];
+
+content["Pestanas"] = [
     
     {
-        image: require('../../images/bgpadrao.png'),
+        image: require('../../../images/bgpadrao.png'),
 
         title: "Pestañas",
 
@@ -59,10 +61,12 @@ content["DepilacionConHilo"] = [
 
     },
 
-];content["Micropigmentacion"] = [
+];
+
+content["Micropigmentacion"] = [
     
     {
-        image: require('../../images/bgpadrao.png'),
+        image: require('../../../images/bgpadrao.png'),
 
         title: "Micropigmentación",
 
@@ -78,10 +82,12 @@ content["DepilacionConHilo"] = [
 
     },
 
-];content["Microblading"] = [
+];
+
+content["Microblading"] = [
     
     {
-        image: require('../../images/bgpadrao.png'),
+        image: require('../../../images/bgpadrao.png'),
 
         title: "Microblading",
 

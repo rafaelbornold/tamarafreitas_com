@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import  data   from './data';
+import  { content }   from '../../databases/procedimientos/data';
 
 import BigTitle from '../../components/BigTitle';
 import CarouselSlides from "../../components/CarouselSlides"
@@ -8,6 +8,8 @@ import CarouselSlides from "../../components/CarouselSlides"
 import './style.scss';
 
 const SectionProcedimientos = (props) => {
+
+    const data = content["Carousel"];
 
     var backgroundClass = !props.backgroundClass ? "rosa-medio__branco-escuro" : props.backgroundClass;
 

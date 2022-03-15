@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { details } from "./data";
+import { formaciones , content } from "../../databases/formaciones/data";
 
 
 import './style.scss';
@@ -10,15 +10,15 @@ const SectionFormacionDetails = (props) => {
 
     var formacion = props.formacion;
 
-    var sticker = details[formacion][0].sticker;
+    var sticker = formaciones[formacion].sticker;
 
-    var descripcion = details[formacion][0].description;
+    var descripcion = formaciones[formacion].fullDescription;
 
-    var plazas = details[formacion][0].plazas;
+    var plazas = formaciones[formacion].plazas;
 
-    var horarios = details[formacion][0].horarios;
-    var maestro = details[formacion][0].maestro;
-    var ubicacion = details[formacion][0].ubicacion;  
+    var horarios = formaciones[formacion].hora;
+    var maestro = formaciones[formacion].maestro;
+    var ubicacion = formaciones[formacion].ubicacion;  
 
     return ( 
 
