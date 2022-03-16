@@ -30,17 +30,19 @@
         margin-top: 15px;
         padding: 0 20px 0 20px;
         display: grid;
-        grid-gap: 24px;
-        grid-template-columns: repeat(auto-fit, minmax(285px, 6fr));
+        grid-gap: 2.5%;
+        grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
         z-index: 0;
+
 
         
         .section_maestro-content{
-            grid: 4fr;      
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
+
 
             .article_maestro-wrap{
 
@@ -84,11 +86,11 @@
         }
 
         .section_maestro-img{
-            grid: 2fr;      
             display: flex;
             align-items: flex-start;
             justify-content: center;
             min-height: 275px;
+
 
             .image-section_maestro-wrapper{
 
@@ -96,19 +98,20 @@
                 display: flex;
                 align-items: flex-start;
                 width: 100%;
-                height: 100%;
+                padding-top: 100%;
+
             
                 .image-section_maestro-picture{
 
                     position: absolute;
                     bottom: 0;
                     width: 100%;
-                    height:105%;
+                    height:100%;
                 
                     background-image: url(../../images/pictures/montages/maestro.png);
                     background-size: contain;
                     background-repeat: no-repeat;
-                    background-position: center ;
+                    background-position: bottom ;
 
                 }
 

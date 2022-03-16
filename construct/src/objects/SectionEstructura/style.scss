@@ -36,9 +36,10 @@
 
 .estructura-videos-wrapper{
 
+    position: relative;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     padding-left: 25px;
     padding-right: 25px;
 
@@ -46,18 +47,33 @@
 
 .estructura-video-left{
 
+    position: relative;
     width: 100%;
+    padding-top: 56.25%;
 
-    /* background-color: green; */
+    > .react-player{
 
+        position: absolute;
+        top:0;
+        left:0;
+        }
 
 }
 
 .estructura-video-right{
 
+    position: relative;
     width: 100%;
+    padding-top: 56.25%;
 
-    /* background-color: green; */
+    > .react-player{
+
+        position: absolute;
+        top:0;
+        left:0;
+    
+
+    }
 
 
 }

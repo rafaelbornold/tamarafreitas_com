@@ -5,13 +5,25 @@ import './style.scss'
 
 const Button = (props) => {
     
-    switch (props.type){
+    const type     = props.type;
+    const name     = props.name;
+    const link     = props.link;
+    const target   = props.target; // only for redirect type
+    const width    = props.width;
+    const text     = props.text
+    const fontSize = props.fontSize;
+
+    switch (type){
 
         case "route" :
             
             return (  
             
-                <NavLink className={"button " + props.name} to={props.link} style={{width: props.width}}><span>{props.text}</span></NavLink>    
+                <NavLink className={"button " + name} to={link} style={{width: width}}>
+                    <span style={{fontSize: fontSize}}>
+                        {text}
+                     </span>
+                </NavLink>    
         
             );
             
@@ -19,7 +31,11 @@ const Button = (props) => {
 
             return (  
          
-                <a className={"button " + props.name} href={props.link} target={props.target} style={{width: props.width}}><span>{props.text}</span></a>
+                <a className={"button " + name} href={link} target={target} style={{width: width}}>
+                    <span style={{fontSize: fontSize}}>
+                        {text}
+                    </span>
+                </a>
                     
             );
 
@@ -28,7 +44,11 @@ const Button = (props) => {
         
             return (  
            
-                <NavLink className={"button " + props.name} to={props.link} style={{width: props.width}}><span>{props.text}</span></NavLink>    
+                <NavLink className={"button " + name} to={link} style={{width: width}}>
+                    <span style={{fontSize: fontSize}}>
+                        {text}
+                    </span>
+                </NavLink>    
               
             );
     

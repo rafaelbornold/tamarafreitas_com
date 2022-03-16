@@ -27,8 +27,9 @@ const SectionEstructura = () => {
 
                     <ReactPlayer
                         url={data[1].videoLink}
+                        light={require('../../videos/StudioAcademia/Studio_Inauguracion_Thumbnail-1.png')}
                         className='react-player'
-                        loop muted playsinline controls
+                        loop muted playsinline controls playing
                         width='100%'
                         height='100%'
                     />
@@ -39,8 +40,9 @@ const SectionEstructura = () => {
 
                     <ReactPlayer
                         url={data[2].videoLink}
+                        light={require('../../videos/StudioAcademia/Studio_Inauguracion_Thumbnail-2.png')}
                         className='react-player'
-                        loop muted playsinline controls
+                        loop muted playsinline controls playing
                         width='100%'
                         height='100%'
                     />

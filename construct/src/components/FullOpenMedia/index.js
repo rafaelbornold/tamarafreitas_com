@@ -25,7 +25,7 @@ export function ViewMedia(src, mediaType){
 
             screenOpen() 
 
-            break;
+        break;
         
         case "image":
 
@@ -38,7 +38,11 @@ export function ViewMedia(src, mediaType){
 
             screenOpen() 
 
-            break;
+        break;
+
+        default:
+            {}
+        break;
 
         
     }

@@ -22,6 +22,7 @@ const SectionStatisticalNumbers = () => {
                 return (
 
                     <StatisticalNumbers 
+                        key={n}
                         number={data[n].number}
                         numberAdd={data[n].numberAdd}
                         unit={data[n].unit}

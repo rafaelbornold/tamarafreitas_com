@@ -148,9 +148,9 @@ content["Carousel"] = [
         textSummary: `Lorem ipsum`,
         textContent: `Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.`,
 
-        mediaType: "video",
-        background: require('../../images/bgpadrao.png'),
-        viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+        mediaType: "link",
+        background: require('../../images/pictures/procedimientos/MicroCejas/new001/296DFE39-1982-4C42-A02C-BEE61D521674.jpeg'),
+        viewSrc: '/formaciones/IntensiveMicroblading',
   
     },
  
@@ -160,9 +160,9 @@ content["Carousel"] = [
         textSummary: `Lorem ipsum`,
         textContent: `Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.`,
 
-        mediaType: "video",
-        background: require('../../images/bgpadrao.png'),
-        viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+        mediaType: "link",
+        background: require('../../images/pictures/procedimientos/MicroCejas/new001/6D18F764-18ED-4E7F-B9EF-7203E7ED1D04.jpeg'),
+        viewSrc: '/formaciones/AdvancedMicroblading',
   
     },
     
@@ -172,9 +172,9 @@ content["Carousel"] = [
         textSummary: `Lorem ipsum`,
         textContent: `Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.`,
 
-        mediaType: "video",
-        background: require('../../images/bgpadrao.png'),
-        viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+        mediaType: "link",
+        background: require('../../images/pictures/procedimientos/LashLifting/new001/C6B9E3CB-F4C4-4CF7-8AE0-956D645C6E68.JPEG'),
+        viewSrc: '/formaciones/LashLiftingPro',
   
     },
     
@@ -184,9 +184,9 @@ content["Carousel"] = [
         textSummary: `Lorem ipsum`,
         textContent: `Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.`,
 
-        mediaType: "video",
-        background: require('../../images/bgpadrao.png'),
-        viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+        mediaType: "link",
+        background: require('../../images/pictures/procedimientos/MicroLabios/new001/PicsArt_06-25-04.42.36.jpg'),
+        viewSrc: '/formaciones/DuoMasterClass',
   
     },
     
@@ -196,9 +196,9 @@ content["Carousel"] = [
         textSummary: `Lorem ipsum`,
         textContent: `Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.`,
 
-        mediaType: "video",
-        background: require('../../images/bgpadrao.png'),
-        viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+        mediaType: "link",
+        background: require('../../images/pictures/procedimientos/DepilacionConHilo/new001/_MG_4835.jpg'),
+        viewSrc: '/formaciones/MasterClass',
   
     },
        
