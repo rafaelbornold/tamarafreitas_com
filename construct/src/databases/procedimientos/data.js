@@ -95,45 +95,45 @@ content["Carousel"] = [
     textSummary: `Lorem ipsum`,
     textContent: `Lorem ipsum dolor sit amet`,
 
-    mediaType: "video",
-    background: require('../../images/bgpadrao.png'),
-    viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+    mediaType: "link",
+    background: require('../../images/pictures/procedimientos/DepilacionConHilo/new001/_MG_4835.jpg'),
+    viewSrc: '/procedimientos/DepilacionConHilo',
   },
 
   {
     title: procedimientos["DisenoDeCejas"].title,
     textSummary: `Lorem ipsum`,
     textContent: `Lorem ipsum dolor sit amet`,
-    mediaType: "video",
-    background: require('../../images/bgpadrao.png'),
-    viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+    mediaType: "link",
+    background: require('../../images/pictures/procedimientos/Visagismo/new001/5C36E196-B6FC-4088-BE17-28D883400DED.JPEG'),
+    viewSrc: '/procedimientos/DisenoDeCejas',
   },
 
   {
     title: procedimientos["Pestanas"].title,
     textSummary: `Lorem ipsum`,
     textContent: `Lorem ipsum dolor sit amet`,
-    background: require('../../images/bgpadrao.png'),
-    mediaType: "video",
-    viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+    background: require('../../images/pictures/procedimientos/LashLifting/new001/PicsArt_02-26-06.33.00.jpg'),
+    mediaType: "link",
+    viewSrc: '/procedimientos/Pestanas',
   },
 
   {
     title: procedimientos["Micropigmentacion"].title,
     textSummary: `Lorem ipsum`,
     textContent: `Lorem ipsum dolor sit amet`,
-    background: require('../../images/bgpadrao.png'),
-    mediaType: "video",
-    viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+    background: require('../../images/pictures/procedimientos/MicroCejas/new001/296DFE39-1982-4C42-A02C-BEE61D521674.jpeg'),
+    mediaType: "link",
+    viewSrc: '/procedimientos/Micropigmentacion',
   },
 
   {
     title: procedimientos["Microblading"].title,
     textSummary: `Lorem ipsum`,
     textContent: `Lorem ipsum dolor sit amet`,
-    background: require('../../images/bgpadrao.png'),
-    mediaType: "video",
-    viewSrc: require('../../videos/Tamara_videoInicial_01_original_sierra.mp4'),
+    background: require('../../images/pictures/procedimientos/MicroLabios/new001/PicsArt_06-25-04.47.33.jpg'),
+    mediaType: "link",
+    viewSrc: '/procedimientos/Microblading',
   },
 
 ];
