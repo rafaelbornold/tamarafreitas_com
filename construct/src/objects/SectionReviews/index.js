@@ -24,11 +24,11 @@ const SectionReviews = () => {
 
             <CarouselSlides 
                 data={data} 
-                cardWidth="290" 
-                cardHeight="335"
+                cardWidth="288" 
+                cardHeight="336"
                 maxWidthSlide="100%"
                 cardGap="0"
-                carsStyle="carousel-card-style-01"
+                carsStyle="carousel-card-style-03"
             />
 
        

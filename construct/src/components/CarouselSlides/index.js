@@ -29,7 +29,7 @@ const CarouselSlides = (props) => {
   const enableLoop = true;
   const enableAutoplay = false;
   const cardSize = cardWidth + cardGap;
-  const cardPadCount = enableLoop ? 4 : 0;
+  const cardPadCount = enableLoop ? 3 : 0;
   var carousel_maxWidth = maxWidthSlide;
   var carouselWidth = clamp(window.innerWidth, 0, carousel_maxWidth);
   
@@ -117,6 +117,7 @@ const CarouselSlides = (props) => {
 
   function renderCard(index, modIndex) {
     const item = data[modIndex];
+    const ClassNameEvenOdd = (index % 2  == 0) ? "carousel-card-even_index" : "carousel-card-odd_index";
     return (
       <div
         key={index}
@@ -128,7 +129,7 @@ const CarouselSlides = (props) => {
           }
         }      
       >
-        <div className="carousel-card-inner-wrap" style={{ width: cardWidth , height: cardHeight }}>
+        <div className={`carousel-card-inner-wrap ${ClassNameEvenOdd}`} style={{ width: cardWidth , height: cardHeight }}>
           
           <CarouselCardInner 
             data={item}

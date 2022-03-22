@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import ReactDOM from 'react-dom';
 
-
 import './style.scss';
 
 export function ViewMedia(src, mediaType){
-
 
     switch (mediaType){
 
@@ -40,8 +38,22 @@ export function ViewMedia(src, mediaType){
 
         break;
 
-        default:
+        case "link":
+
+            {} // the navigate link will be handled inside the CarouselCardInner.js component
+
+        break;
+
+        case "none":
+
             {}
+
+        break;
+
+        default:
+
+            {}
+
         break;
 
         
@@ -71,14 +83,20 @@ function screenClose(e){
             document.querySelector('.FullOpenMedia-fullscreen').style.display = "none";
           }, 500);
 
+          ReactDOM.render(
+        
+            <div/> 
+            ,
+            document.getElementById('FullOpenMedia-OpenMedia-img')
+            ); 
+
+
     }
 
 }
 
 
 export const FullOpenMedia = (props) => {
-
-    var mediaType = props.mediaType;
 
     return (  
         <div className="FullOpenMedia-fullscreen" onClick={screenClose}>
@@ -89,7 +107,7 @@ export const FullOpenMedia = (props) => {
                    
                    <div id="FullOpenMedia-OpenMedia-img"></div>
                     
-                    {/* <img id="FullOpenMedia-OpenMedia-img" className=""/> */}
+                    {/* ReactPlayer or Image will be rendered here */}
 
                 </div>
             </div>

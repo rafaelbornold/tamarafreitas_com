@@ -1,9 +1,7 @@
 // $CardHeight: 350px;
 // $CardWidth: 254px;
 
-
 .carousel-container {
-
   position: relative;
   // height: $CardHeight;
   // max-width: 973px;
@@ -12,13 +10,12 @@
   touch-action: pan-y;
 
   -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-  -khtml-user-select: none;    /* Konqueror */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* Internet Explorer/Edge */
-  user-select: none;           /* Non-prefixed version, currently
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
                                   not supported by any browser */
-
 }
 
 .carousel-track {
@@ -33,11 +30,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .carousel-card-inner-wrap {
-
   display: flex;
 
   // flex-direction: column;
@@ -63,17 +58,15 @@
   // pointer-events: none;
 
   -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-  -khtml-user-select: none;    /* Konqueror */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* Internet Explorer/Edge */
-  user-select: none;           /* Non-prefixed version, currently
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
                                   not supported by any browser */
-
 }
 
 .carousel-pagination-button {
-  
   &--left {
     align-items: center;
     background: 0;
@@ -91,7 +84,6 @@
     display: flex;
     justify-content: center;
   }
-
 }
 
 .carousel-pagination-button-arrow {

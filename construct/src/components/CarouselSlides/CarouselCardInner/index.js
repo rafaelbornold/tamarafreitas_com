@@ -8,7 +8,7 @@ import './style.scss'
 const CarouselCardInner = (props) => {
     
     var item = props.data;
-    var style = props.style; // as a CSS class
+    var style = props.style; // CSS className
     const navigate = useNavigate();
 
     switch (style){
@@ -26,7 +26,6 @@ const CarouselCardInner = (props) => {
 
                     document.body.classList.add("noselect");
 
-                    console.log(e.target);
                     var ImageElement = e.target.querySelector(`.${style}-image`);
                     ImageElement.classList.add("image--hover");
 
@@ -180,6 +179,55 @@ const CarouselCardInner = (props) => {
                 );
             }
         break;
+
+        case 'carousel-card-style-03':
+            {    
+
+                function handleClick(e){
+
+                    document.body.classList.remove("noselect");
+                    
+                }
+                
+                function handleOver(e){
+
+                    document.body.classList.add("noselect");
+
+                }  
+                
+                function handleLeave(e){
+
+                    document.body.classList.remove("noselect");
+
+                }            
+
+                return (  
+
+                    <div className={"carousel-card-inner-content-wrap " + style} 
+                        onMouseOver={handleOver} 
+                        onMouseLeave={handleLeave}
+                        onTouchStart={handleOver} 
+                        onTouchEnd={handleLeave}
+                        onClick={handleClick}
+                    >
+   
+                        <div className={`${style}-content`}>
+
+                            <h6>{item.title}</h6>
+                            <p>{item.textContent}</p>
+                            <div className={`${style}-sticker_image`}>
+                                <img src={item.sticker} />
+                            </div>
+
+                        </div>
+      
+                    </div>
+
+                );
+            }
+        break;
+
+
 
     }
 

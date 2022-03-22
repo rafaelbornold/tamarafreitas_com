@@ -4,8 +4,7 @@ import ReactPlayer from 'react-player';
 import Button from "../../components/Button";
 
 import ImagePreLoad from "../../videos/video_preload.jpg";
-import VideoLink from "../../videos/HomeVideo/Tamara_videoInicial_01_original_sierra.mp4";
-
+import VideoLink from "../../videos/HomeVideo/20220322-110005-742.MP4";
 
 import './style.css';
 
