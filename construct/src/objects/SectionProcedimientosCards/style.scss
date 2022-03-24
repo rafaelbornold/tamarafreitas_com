@@ -14,7 +14,6 @@
 
     display: flex;
     flex-direction: column;
-    gap: 17px;
     padding: 0 20px 0 20px;
 
 
@@ -32,12 +31,18 @@
     }
 }
 
+.divAntes{
 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 .section-procedimientos_cards-card-wrap{
 
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: flex-start;
 }

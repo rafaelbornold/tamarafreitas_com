@@ -13,6 +13,74 @@ const CarouselCardInner = (props) => {
 
     switch (style){
 
+
+        case 'carousel-card-style-00':
+            {    
+
+                function handleClick(e){
+
+                    document.body.classList.remove("noselect");
+                    
+                }
+                
+                function handleOver(e){
+
+                    document.body.classList.add("noselect");
+
+                    var ImageElement = e.target.querySelector(`.${style}-image`);
+                    ImageElement.classList.add("image--hover");
+
+                    var PlaySymbolWrap = e.target.querySelector(`.${style}-play_symbol-wrap`);
+                    PlaySymbolWrap.classList.add(`${style}-play_symbol-wrap--hover`);
+
+                    var PlaySymbol = e.target.querySelector(`.${style}-play_symbol`);
+                    PlaySymbol.classList.add(`${style}-play_symbol--hover`);
+
+                    var ContentElement = e.target.querySelector(`.${style}-content`);
+                    ContentElement.classList.add(`${style}-content--bold_hover`);
+
+                }  
+                
+                function handleLeave(e){
+
+                    document.body.classList.remove("noselect");
+
+                    var ImageElement = e.target.querySelector(`.${style}-image`);
+                    ImageElement.classList.remove("image--hover");
+
+                    var PlaySymbolWrap = e.target.querySelector(`.${style}-play_symbol-wrap`);
+                    PlaySymbolWrap.classList.remove(`${style}-play_symbol-wrap--hover`);
+
+                    var PlaySymbol = e.target.querySelector(`.${style}-play_symbol`);
+                    PlaySymbol.classList.remove(`${style}-play_symbol--hover`);
+
+                    var ContentElement = e.target.querySelector(`.${style}-content`);
+                    ContentElement.classList.remove(`${style}-content--bold_hover`);
+
+                }            
+
+                return (  
+
+                    <div className={"carousel-card-inner-content-wrap " + style} 
+                        onMouseOver={handleOver} 
+                        onMouseLeave={handleLeave}
+                        onTouchStart={handleOver} 
+                        onTouchEnd={handleLeave}
+                        onClick={handleClick}
+                    >
+
+                        <div className={`${style}-background`}>
+                        </div>
+
+                        <div className={`${style}-image`} style={{ backgroundImage: `url(${item.background})`}}>
+                        </div>
+                        
+                    </div>
+
+                );
+            }
+        break;
+
         case 'carousel-card-style-01':
             {    
 
@@ -267,7 +335,6 @@ const CarouselCardInner = (props) => {
                 );
             }
         break;
-
 
         case 'carousel-card-style-03':
             {    

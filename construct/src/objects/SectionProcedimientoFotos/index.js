@@ -29,7 +29,7 @@ const SectionProcedimientoFotos = (props) => {
                 cardWidth="254" 
                 cardHeight="424"
                 cardGap="30"
-                carsStyle="carousel-card-style-01"
+                carsStyle="carousel-card-style-00"
             />
               
         </div>

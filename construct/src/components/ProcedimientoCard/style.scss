@@ -1,5 +1,12 @@
 $image_width: 272px;
 
+
+.section-procedimientos_cards-card-wrap a{
+
+    margin: 0 2% 20px 2%;
+
+}
+
 .component-procedimento_card-wrap{
 
     width: $image_width;
@@ -7,9 +14,11 @@ $image_width: 272px;
     display: flex;
     flex-direction: column;
     padding:5px;
+    // margin: 0 19px 20px 19px;
 
-
+    filter: brightness(1.1) grayscale(0.5);
     cursor: pointer;
+
     transition: 1s;
 
 
@@ -23,6 +32,7 @@ $image_width: 272px;
     &:hover{
 
         background-color: var(--rosa-claro);
+        filter: brightness(1) grayscale(0);
         transition: .5s;
 
         .component-procedimento_card-pic-img{
@@ -40,17 +50,13 @@ $image_width: 272px;
     width: 100%;
     min-height: $image_width;
 
-    filter:sepia(30%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     margin-bottom: 30px;
 
-    border-radius: 5px;
-
     transition: 1s;
-
 
 }
 

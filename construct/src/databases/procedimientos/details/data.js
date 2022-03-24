@@ -24,7 +24,7 @@ content["DepilacionConHilo"] = [
 content["DisenoDeCejas"] = [
     
     {
-        image: require('../../../images/bgpadrao.png'),
+        image: require('../../../images/pictures/procedimientos/Visagismo/new002/_MG_4782.jpg'),
 
         title: "Diseño de Cejas",
 
@@ -45,7 +45,7 @@ content["DisenoDeCejas"] = [
 content["Pestanas"] = [
     
     {
-        image: require('../../../images/bgpadrao.png'),
+        image: require('../../../images/pictures/procedimientos/LashLifting/new001/PicsArt_03-01-04.31.10.jpg'),
 
         title: "Pestañas",
 

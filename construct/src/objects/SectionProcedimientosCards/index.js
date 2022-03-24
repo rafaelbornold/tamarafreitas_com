@@ -21,6 +21,7 @@ const SectionProcedimientosCards = () => {
                 <p> {data[0].description} </p>
             </div>
 
+            <div className="divAntes">
             <div className="section-procedimientos_cards-card-wrap">
 
             {data[1].map((module, n) => {
@@ -38,6 +39,7 @@ const SectionProcedimientosCards = () => {
 
             
                 
+            </div>
             </div>
 
 
