@@ -1,13 +1,26 @@
-@media screen and (max-width: 540px){
+@media screen and (max-width: 768px){
 
     .section-formacion_details-main{
     
         .section-formacion-details-wrap{
     
+            // flex-wrap: wrap;
+            flex-direction: column;
+
             .section-formacion_details-img-wrap{
     
                 padding-top: 0;
+
+                div{
+                    background: none;
+                    padding: 0 0 20px 0;
+                }
     
+            }
+
+            .section-formacion_details-description-wrap{
+                max-width: none;
+                margin: 0 0 30px 0;
             }
         }
     }

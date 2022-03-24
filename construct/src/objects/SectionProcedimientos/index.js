@@ -30,9 +30,9 @@ const SectionProcedimientos = (props) => {
             <CarouselSlides 
                 data={data} 
                 cardWidth="254" 
-                cardHeight="424"
+                cardHeight="411"
                 cardGap="30"
-                carsStyle="carousel-card-style-02"
+                carsStyle="carousel-card-style-04"
             />
        
         </div>

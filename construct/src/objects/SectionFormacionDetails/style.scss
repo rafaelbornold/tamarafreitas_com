@@ -17,22 +17,29 @@
 
         display: flex;
         justify-content: space-evenly;
-        flex-wrap: wrap;
-        gap: 30px;
+        flex-wrap: nowrap;
 
         .section-formacion_details-img-wrap{
 
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            padding-top: 20px;
+            padding-top: 5px;
+
+            div{
+
+                padding: 15px 15px;
+                background-color: white;
+
+            }
 
         }
 
         .section-formacion_details-description-wrap{
 
-            margin: 0px 0 0px 0;
+            margin: 0 20px;
             max-width: 500px;
+            flex-grow: 1;
 
             p{
 
@@ -56,6 +63,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    min-width: 200px;
 
     .section-formacion_details-infos-component{
 

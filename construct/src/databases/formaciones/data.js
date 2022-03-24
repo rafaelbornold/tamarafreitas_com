@@ -34,8 +34,8 @@ formaciones["AdvancedMicroblading"] = (
 
     {
         title: 'Advanced Microblading',
-
-        sticker: require("../../images/stickers/formaciones/1x/Asset 5.png"),
+        
+        sticker: require("../../images/stickers/formaciones/1x/Asset 3.png"),
 
         subtitle: 'LOREN IPSUM',
         summary: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.',
@@ -87,7 +87,7 @@ formaciones["DuoMasterClass"] = (
     {
         title: 'Duo Master Class',
 
-        sticker: require("../../images/stickers/formaciones/1x/Asset 2.png"),
+        sticker: require("../../images/stickers/formaciones/1x/Asset 5.png"),
 
         subtitle: 'LOREN IPSUM',
         summary: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.',
@@ -113,7 +113,7 @@ formaciones["MasterClass"] = (
     {
         title: 'Master Class',
 
-        sticker: require("../../images/stickers/formaciones/1x/Asset 2.png"),
+        sticker: require("../../images/stickers/formaciones/1x/Asset 1.png"),
 
         subtitle: 'LOREN IPSUM',
         summary: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.',
@@ -149,7 +149,7 @@ content["Carousel"] = [
         textContent: `Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.`,
 
         mediaType: "link",
-        background: require('../../images/pictures/procedimientos/MicroCejas/new001/296DFE39-1982-4C42-A02C-BEE61D521674.jpeg'),
+        background: require('../../images/pictures/procedimientos/MicroCejas/new001/AntesDepois/296DFE39-1982-4C42-A02C-BEE61D521674.jpeg'),
         viewSrc: '/formaciones/IntensiveMicroblading',
   
     },
@@ -161,7 +161,7 @@ content["Carousel"] = [
         textContent: `Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.`,
 
         mediaType: "link",
-        background: require('../../images/pictures/procedimientos/MicroCejas/new001/6D18F764-18ED-4E7F-B9EF-7203E7ED1D04.jpeg'),
+        background: require('../../images/pictures/procedimientos/MicroCejas/new001/AntesDepois/6D18F764-18ED-4E7F-B9EF-7203E7ED1D04.jpeg'),
         viewSrc: '/formaciones/AdvancedMicroblading',
   
     },
@@ -173,7 +173,7 @@ content["Carousel"] = [
         textContent: `Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.`,
 
         mediaType: "link",
-        background: require('../../images/pictures/procedimientos/LashLifting/new001/C6B9E3CB-F4C4-4CF7-8AE0-956D645C6E68.JPEG'),
+        background: require('../../images/pictures/procedimientos/LashLifting/new001/AntesDepois/C6B9E3CB-F4C4-4CF7-8AE0-956D645C6E68.JPEG'),
         viewSrc: '/formaciones/LashLiftingPro',
   
     },
@@ -185,7 +185,7 @@ content["Carousel"] = [
         textContent: `Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.`,
 
         mediaType: "link",
-        background: require('../../images/pictures/procedimientos/MicroLabios/new001/PicsArt_06-25-04.42.36.jpg'),
+        background: require('../../images/pictures/procedimientos/MicroLabios/new001/AntesDepois/PicsArt_06-25-04.42.36.jpg'),
         viewSrc: '/formaciones/DuoMasterClass',
   
     },
@@ -233,7 +233,7 @@ content["FormacionModule"] = [
         linkComprar: formaciones["AdvancedMicroblading"].linkComprar,
 
         sticker: formaciones["AdvancedMicroblading"].sticker,
-        image: require("../../images/pictures/procedimientos/MicroLabios/new001/20191101_180718.jpg"),
+        image: require("../../images/pictures/procedimientos/MicroCejas/new001/F58B4F2B-A66A-428C-92FC-5FB919D39911.jpeg"),
         
         description: 
 
@@ -250,7 +250,7 @@ content["FormacionModule"] = [
         linkComprar: formaciones["LashLiftingPro"].linkComprar,
 
         sticker: formaciones["LashLiftingPro"].sticker,
-        image: require("../../images/pictures/procedimientos/LashLifting/new001/20190909_153023.jpg"),
+        image: require("../../images/pictures/procedimientos/LashLifting/new001/20200713_144046.jpg"),
         
         description: 
         
@@ -267,7 +267,8 @@ content["FormacionModule"] = [
         linkComprar: formaciones["DuoMasterClass"].linkComprar,
 
         sticker: formaciones["DuoMasterClass"].sticker,
-        image: require("../../images/pictures/procedimientos/LashLifting/new001/20190909_153023.jpg"),
+        
+        image: require("../../images/pictures/procedimientos/MicroLabios/new001/20191101_180718.jpg"),
         
         description: 
         
@@ -284,7 +285,7 @@ content["FormacionModule"] = [
         linkComprar: formaciones["MasterClass"].linkComprar,
 
         sticker: formaciones["MasterClass"].sticker,
-        image: require("../../images/pictures/procedimientos/LashLifting/new001/20190909_153023.jpg"),
+        image: require("../../images/pictures/procedimientos/DepilacionConHilo/new001/_MG_4835.jpg"),
         
         description: 
         

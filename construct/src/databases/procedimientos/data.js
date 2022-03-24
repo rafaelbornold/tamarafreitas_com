@@ -93,7 +93,7 @@ content["Carousel"] = [
     title: procedimientos["DepilacionConHilo"].title,
 
     textSummary: `Lorem ipsum`,
-    textContent: `Lorem ipsum dolor sit amet`,
+    textContent: `Excepteur sint occaecat cupidatat non proident, sunt deserunt mollit anim id.`,
 
     mediaType: "link",
     background: require('../../images/pictures/procedimientos/DepilacionConHilo/new001/_MG_4835.jpg'),
@@ -103,17 +103,17 @@ content["Carousel"] = [
   {
     title: procedimientos["DisenoDeCejas"].title,
     textSummary: `Lorem ipsum`,
-    textContent: `Lorem ipsum dolor sit amet`,
+    textContent: `Excepteur sint occaecat cupidatat non proident, sunt deserunt mollit anim id.`,
     mediaType: "link",
-    background: require('../../images/pictures/procedimientos/Visagismo/new001/5C36E196-B6FC-4088-BE17-28D883400DED.JPEG'),
+    background: require('../../images/pictures/procedimientos/Visagismo/new001/AntesDepois/5C36E196-B6FC-4088-BE17-28D883400DED.JPEG'),
     viewSrc: '/procedimientos/DisenoDeCejas',
   },
 
   {
     title: procedimientos["Pestanas"].title,
     textSummary: `Lorem ipsum`,
-    textContent: `Lorem ipsum dolor sit amet`,
-    background: require('../../images/pictures/procedimientos/LashLifting/new001/PicsArt_02-26-06.33.00.jpg'),
+    textContent: `Excepteur sint occaecat cupidatat non proident, sunt deserunt mollit anim id.`,
+    background: require('../../images/pictures/procedimientos/LashLifting/new001/AntesDepois/PicsArt_02-26-06.33.00.jpg'),
     mediaType: "link",
     viewSrc: '/procedimientos/Pestanas',
   },
@@ -121,8 +121,8 @@ content["Carousel"] = [
   {
     title: procedimientos["Micropigmentacion"].title,
     textSummary: `Lorem ipsum`,
-    textContent: `Lorem ipsum dolor sit amet`,
-    background: require('../../images/pictures/procedimientos/MicroCejas/new001/296DFE39-1982-4C42-A02C-BEE61D521674.jpeg'),
+    textContent: `Excepteur sint occaecat cupidatat non proident, sunt deserunt mollit anim id.`,
+    background: require('../../images/pictures/procedimientos/MicroCejas/new001/AntesDepois/296DFE39-1982-4C42-A02C-BEE61D521674.jpeg'),
     mediaType: "link",
     viewSrc: '/procedimientos/Micropigmentacion',
   },
@@ -130,8 +130,8 @@ content["Carousel"] = [
   {
     title: procedimientos["Microblading"].title,
     textSummary: `Lorem ipsum`,
-    textContent: `Lorem ipsum dolor sit amet`,
-    background: require('../../images/pictures/procedimientos/MicroLabios/new001/PicsArt_06-25-04.47.33.jpg'),
+    textContent: `Excepteur sint occaecat cupidatat non proident, sunt deserunt mollit anim id.`,
+    background: require('../../images/pictures/procedimientos/MicroLabios/new001/AntesDepois/PicsArt_06-25-04.47.33.jpg'),
     mediaType: "link",
     viewSrc: '/procedimientos/Microblading',
   },

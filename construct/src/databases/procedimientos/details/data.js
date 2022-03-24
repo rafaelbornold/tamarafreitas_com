@@ -3,7 +3,7 @@ export const content = new Object();
 content["DepilacionConHilo"] = [
     
         {
-            image: require('../../../images/bgpadrao.png'),
+            image: require('../../../images/pictures/procedimientos/DepilacionConHilo/new001/_MG_4849.jpg'),
     
             title: "DEPILACIÓN CON HILO",
 

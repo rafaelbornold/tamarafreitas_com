@@ -27,7 +27,9 @@ const SectionFormacionDetails = (props) => {
         <div className="container section-formacion-details-wrap">
 
             <div className="section-formacion_details-img-wrap">
-                <img src={sticker} />
+                <div>
+                    <img src={sticker} />
+                </div>
             </div>
 
             <div className="section-formacion_details-description-wrap">

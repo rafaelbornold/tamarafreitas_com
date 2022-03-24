@@ -28,7 +28,7 @@ const SectionFormacionQueAprenderas = (props) => {
                 cardWidth="254" 
                 cardHeight="424"
                 cardGap="30"
-                carsStyle="carousel-card-style-01"
+                carsStyle="carousel-card-style-02a"
                 formacion={formacion}
             />
         </div>
