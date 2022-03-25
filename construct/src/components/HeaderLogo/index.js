@@ -1,34 +1,35 @@
-import React, { useState } from 'react';
+import P from 'prop-types';
+import React from 'react';
 
 import './style.css';
 
 import InsigniaIMG_white from '../../images/logos/insignia-png-white.png';
 import InsigniaIMG_color from '../../images/logos/insignia-png-color.png';
 
-
 const HeaderLogo = (props) => {
+  var InsigniaIMG;
 
-    var InsigniaIMG;
+  switch (props.imgColor) {
+    case 'white':
+      InsigniaIMG = InsigniaIMG_white;
+      break;
 
-    switch (props.imgColor) {
+    case 'color':
+      InsigniaIMG = InsigniaIMG_color;
+      break;
+  }
 
-        case "white":
-            InsigniaIMG = InsigniaIMG_white;
-            break;
+  return (
+    <div className="logo_header">
+      <div className="logo_img">
+        <img src={InsigniaIMG}></img>
+      </div>
+    </div>
+  );
+};
 
-        case "color":
-            InsigniaIMG = InsigniaIMG_color;
-            break;
+HeaderLogo.propTypes = {
+  imgColor: P.string,
+};
 
-    }
-
-    return (  
-        <div className="logo_header">
-            <div className="logo_img">
-                <img src={InsigniaIMG}></img>
-            </div>
-        </div>
-    );
-}
- 
 export default HeaderLogo;

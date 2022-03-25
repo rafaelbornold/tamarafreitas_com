@@ -1,50 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { content } from "../../databases/citasReservas/faq/data";
-
+import { content } from '../../databases/citasReservas/faq/data';
 
 import BigTitle from '../../components/BigTitle';
 import ListShowHide from '../../components/ListShowHide';
 
-
 import './style.scss';
 
 const SectionFAQ_citasReservas = () => {
+  var data = content[0];
 
-    var data = content[0];
-
-    return ( 
-
+  return (
     <section className="section-FAQ_citasReservas-main">
-
-        <div className="container section-FAQ_citasReservas-wrap">
-
-            <div className="section-FAQ_citasReservas-title">
-                <BigTitle text="PREGUNTAS FRECUENTES"/>
-            </div>
-
-            <div className="section-FAQ_citasReservas-list-wrap">
-                <div className="section-FAQ_citasReservas-list-content">
-
-                {data.map((module, n) => {
-                return (
-                    <ListShowHide 
-                        key={n+1}
-                        number={n+1}
-                        title={data[n].title}
-                        description={data[n].description}
-                    />
-                    );
-                    })}
-
-                </div>
-            </div>
-
+      <div className="container section-FAQ_citasReservas-wrap">
+        <div className="section-FAQ_citasReservas-title">
+          <BigTitle text="PREGUNTAS FRECUENTES" />
         </div>
 
+        <div className="section-FAQ_citasReservas-list-wrap">
+          <div className="section-FAQ_citasReservas-list-content">
+            {data.map((module, n) => {
+              return (
+                <ListShowHide key={n + 1} number={n + 1} title={data[n].title} description={data[n].description} />
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </section>
+  );
+};
 
-     );
-}
- 
-export default SectionFAQ_citasReservas ;
+export default SectionFAQ_citasReservas;

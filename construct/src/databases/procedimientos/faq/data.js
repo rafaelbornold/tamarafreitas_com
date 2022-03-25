@@ -1,196 +1,141 @@
 export const content = new Object();
 
-content["DepilacionConHilo"] = [
+content['DepilacionConHilo'] = [
+  {
+    title: '¿Lorem ipsum sit? 11',
 
-        {
-            
-            title: '¿Lorem ipsum sit? 11',
-            
-            description: 
-    
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-    
-        },
-    
-        {
-            title: '¿Lorem ipsum sit?',
-            
-            description: 
-    
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-    
-        },
-        {
-            title: '¿Lorem ipsum sit?',
-            
-            description: 
-    
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-    
-        },
-        {
-            title: '¿Lorem ipsum sit?',
-            
-            description: 
-    
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-    
-        },
-    
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
+
+  {
+    title: '¿Lorem ipsum sit?',
+
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
+  {
+    title: '¿Lorem ipsum sit?',
+
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
+  {
+    title: '¿Lorem ipsum sit?',
+
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
 ];
 
-content["DisenoDeCejas"] = [
+content['DisenoDeCejas'] = [
+  {
+    title: '¿Lorem ipsum sit? 22',
 
-    {
-        
-        title: '¿Lorem ipsum sit? 22',
-        
-        description: 
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
 
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  {
+    title: '¿Lorem ipsum sit?',
 
-    },
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
+  {
+    title: '¿Lorem ipsum sit?',
 
-    {
-        title: '¿Lorem ipsum sit?',
-        
-        description: 
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
+  {
+    title: '¿Lorem ipsum sit?',
 
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-
-    },
-    {
-        title: '¿Lorem ipsum sit?',
-        
-        description: 
-
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-
-    },
-    {
-        title: '¿Lorem ipsum sit?',
-        
-        description: 
-
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-
-    },
-   
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
 ];
 
-content["Pestanas"] = [
+content['Pestanas'] = [
+  {
+    title: '¿Lorem ipsum sit? 33',
 
-    {
-        
-        title: '¿Lorem ipsum sit? 33',
-        
-        description: 
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
 
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  {
+    title: '¿Lorem ipsum sit?',
 
-    },
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
+  {
+    title: '¿Lorem ipsum sit?',
 
-    {
-        title: '¿Lorem ipsum sit?',
-        
-        description: 
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
+  {
+    title: '¿Lorem ipsum sit?',
 
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-
-    },
-    {
-        title: '¿Lorem ipsum sit?',
-        
-        description: 
-
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-
-    },
-    {
-        title: '¿Lorem ipsum sit?',
-        
-        description: 
-
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-
-    },
-
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
 ];
 
-content["Micropigmentacion"] = [
+content['Micropigmentacion'] = [
+  {
+    title: '¿Lorem ipsum sit? 33',
 
-    {
-        
-        title: '¿Lorem ipsum sit? 33',
-        
-        description: 
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
 
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  {
+    title: '¿Lorem ipsum sit?',
 
-    },
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
+  {
+    title: '¿Lorem ipsum sit?',
 
-    {
-        title: '¿Lorem ipsum sit?',
-        
-        description: 
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
+  {
+    title: '¿Lorem ipsum sit?',
 
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-
-    },
-    {
-        title: '¿Lorem ipsum sit?',
-        
-        description: 
-
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-
-    },
-    {
-        title: '¿Lorem ipsum sit?',
-        
-        description: 
-
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-
-    },
-
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
 ];
 
-content["Microblading"] = [
+content['BrowLamination'] = [
+  {
+    title: '¿Lorem ipsum sit? 33',
 
-    {
-        
-        title: '¿Lorem ipsum sit? 33',
-        
-        description: 
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
 
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  {
+    title: '¿Lorem ipsum sit?',
 
-    },
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
+  {
+    title: '¿Lorem ipsum sit?',
 
-    {
-        title: '¿Lorem ipsum sit?',
-        
-        description: 
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
+  {
+    title: '¿Lorem ipsum sit?',
 
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-
-    },
-    {
-        title: '¿Lorem ipsum sit?',
-        
-        description: 
-
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-
-    },
-    {
-        title: '¿Lorem ipsum sit?',
-        
-        description: 
-
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
-
-    },
-
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.',
+  },
 ];

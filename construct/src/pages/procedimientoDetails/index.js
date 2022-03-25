@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
- 
+import P from 'prop-types';
+import React from 'react';
+
 import './style.scss';
 
-import HeaderMenu from "../../objects/HeaderMenu";
+import HeaderMenu from '../../objects/HeaderMenu';
 import FooterMenu from '../../objects/FooterMenu';
 import FooterEnd from '../../objects/FooterEnd';
 import HeaderSecondary from '../../objects/HeaderSecondary';
@@ -14,52 +15,57 @@ import SectionProcedimientoFotos from '../../objects/SectionProcedimientoFotos';
 import SectionProcedimientoVideos from '../../objects/SectionProcedimientoVideos';
 import SectionFAQ_procedimientos from '../../objects/SectionFAQ_procedimientos';
 
-
 const ProcedimientoDetails = (props) => {
-
   var procedimiento = props.procedimiento;
+  var HeaderSecondary_text;
 
-  switch (procedimiento){
-
-    case "DepilacionConHilo": 
-      var HeaderSecondary_text = "PROCEDIMIENTOS - Depilación con Hilo";
+  switch (procedimiento) {
+    case 'DepilacionConHilo':
+      HeaderSecondary_text = 'PROCEDIMIENTOS - Depilación con Hilo';
       break;
 
-    case "DisenoDeCejas": 
-      var HeaderSecondary_text = "PROCEDIMIENTOS - Diseño de Cejas";
+    case 'DisenoDeCejas':
+      HeaderSecondary_text = 'PROCEDIMIENTOS - Diseño de Cejas';
       break;
 
-    case "Pestanas": 
-      var HeaderSecondary_text = "PROCEDIMIENTOS - Pestañas";
+    case 'Pestanas':
+      HeaderSecondary_text = 'PROCEDIMIENTOS - Pestañas';
       break;
 
-
-    case "Micropigmentacion": 
-      var HeaderSecondary_text = "PROCEDIMIENTOS - Micropigmentación";
+    case 'Micropigmentacion':
+      HeaderSecondary_text = 'PROCEDIMIENTOS - Micropigmentación';
       break;
 
-
-    case "Microblading": 
-      var HeaderSecondary_text = "PROCEDIMIENTOS - Microblading";
+    case 'BrowLamination':
+      HeaderSecondary_text = 'PROCEDIMIENTOS - Brow Laminarion';
       break;
-
   }
 
   return (
-    <>    
-    <HeaderMenu classNameIndex="menuIndexBehindMain" imgColor="color" />
-    <HeaderSecondary text={HeaderSecondary_text}/>
-    <SectionProcedimientoDetails procedimiento={procedimiento} />
-    <SectionProcedimientoFotos procedimiento={procedimiento} />
-    <SectionProcedimientoVideos procedimiento={procedimiento} />
-    <SectionFAQ_procedimientos procedimiento={procedimiento} />
-    <SectionReviews />
-    <SectionCursos />
-    <SectionProximosCursos />
-    <FooterMenu />
-    <FooterEnd text1="© 2021 Tamara Freitas Studio Academy." text2="  Reservados todos los derechos."/>
+    <>
+      <HeaderMenu
+        classNameIndex="menuIndexBehindMain"
+        imgColor="color"
+      />
+      <HeaderSecondary text={HeaderSecondary_text} />
+      <SectionProcedimientoDetails procedimiento={procedimiento} />
+      <SectionProcedimientoFotos procedimiento={procedimiento} />
+      <SectionProcedimientoVideos procedimiento={procedimiento} />
+      <SectionFAQ_procedimientos procedimiento={procedimiento} />
+      <SectionReviews />
+      <SectionCursos />
+      <SectionProximosCursos />
+      <FooterMenu />
+      <FooterEnd
+        text1="© 2021 Tamara Freitas Studio Academy."
+        text2="  Reservados todos los derechos."
+      />
     </>
   );
-}
+};
+
+ProcedimientoDetails.propTypes = {
+  procedimiento: P.string,
+};
 
 export default ProcedimientoDetails;

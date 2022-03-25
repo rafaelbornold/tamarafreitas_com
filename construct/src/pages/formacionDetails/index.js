@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
- 
+import P from 'prop-types';
+import React from 'react';
+
 import './style.scss';
 
-import HeaderMenu from "../../objects/HeaderMenu";
+import HeaderMenu from '../../objects/HeaderMenu';
 import FooterMenu from '../../objects/FooterMenu';
 import FooterEnd from '../../objects/FooterEnd';
 import HeaderSecondary from '../../objects/HeaderSecondary';
@@ -17,53 +18,60 @@ import SectionFormacionContenidoDelPrograma from '../../objects/SectionFormacion
 import SectionFormacionQueAprenderas from '../../objects/SectionFormacionQueAprenderas';
 import SectionFAQ_formaciones from '../../objects/SectionFAQ_formaciones';
 
-
 const FormacionDetails = (props) => {
-
   var formacion = props.formacion;
+  var HeaderSecondary_text;
 
-  switch (formacion){
-
-    case "LashLiftingPro": 
-      var HeaderSecondary_text = "FORMACIÓN - LASHLIFTING PRO";
+  switch (formacion) {
+    case 'LashLiftingPro':
+      HeaderSecondary_text = 'FORMACIÓN - LASHLIFTING PRO';
       break;
 
-    case "IntensiveMicroblading": 
-      var HeaderSecondary_text = "FORMACIÓN - INTENSIVE MICROBLADING";
+    case 'IntensiveMicroblading':
+      HeaderSecondary_text = 'FORMACIÓN - INTENSIVE MICROBLADING';
       break;
 
-    case "AdvancedMicroblading": 
-      var HeaderSecondary_text = "FORMACIÓN - ADVANCED MICROBLADING";
+    case 'AdvancedMicroblading':
+      HeaderSecondary_text = 'FORMACIÓN - ADVANCED MICROBLADING';
       break;
 
-    case "DuoMasterClass": 
-      var HeaderSecondary_text = "FORMACIÓN - DUO MASTER CLASS";
+    case 'DuoMasterClass':
+      HeaderSecondary_text = 'FORMACIÓN - DUO MASTER CLASS';
       break;
 
-    case "MasterClass": 
-      var HeaderSecondary_text = "FORMACIÓN - MASTER CLASS";
+    case 'MasterClass':
+      HeaderSecondary_text = 'FORMACIÓN - MASTER CLASS';
       break;
-
   }
 
   return (
-    <>    
-    <HeaderMenu classNameIndex="menuIndexBehindMain" imgColor="color" />
-    <HeaderSecondary text={HeaderSecondary_text}/>
-    <SectionFormacionDetails formacion={props.formacion}/>
-    <SectionMaestro />
-    <SectionFormacionBeneficios formacion={props.formacion} />
-    <SectionFormacionContenido formacion={props.formacion} />
-    <SectionFormacionKitCompleto formacion={props.formacion} />
-    <SectionFormacionContenidoDelPrograma formacion={props.formacion} />
-    <SectionFormacionQueAprenderas formacion={props.formacion} />
-    <SectionFAQ_formaciones formacion={props.formacion} />
-    <SectionProximosCursos />
-    <SectionReviews />
-    <FooterMenu />
-    <FooterEnd text1="© 2021 Tamara Freitas Studio Academy." text2="  Reservados todos los derechos."/>
+    <>
+      <HeaderMenu
+        classNameIndex="menuIndexBehindMain"
+        imgColor="color"
+      />
+      <HeaderSecondary text={HeaderSecondary_text} />
+      <SectionFormacionDetails formacion={props.formacion} />
+      <SectionMaestro />
+      <SectionFormacionBeneficios formacion={props.formacion} />
+      <SectionFormacionContenido formacion={props.formacion} />
+      <SectionFormacionKitCompleto formacion={props.formacion} />
+      <SectionFormacionContenidoDelPrograma formacion={props.formacion} />
+      <SectionFormacionQueAprenderas formacion={props.formacion} />
+      <SectionFAQ_formaciones formacion={props.formacion} />
+      <SectionProximosCursos />
+      <SectionReviews />
+      <FooterMenu />
+      <FooterEnd
+        text1="© 2021 Tamara Freitas Studio Academy."
+        text2="  Reservados todos los derechos."
+      />
     </>
   );
-}
+};
+
+FormacionDetails.propTypes = {
+  formacion: P.string,
+};
 
 export default FormacionDetails;

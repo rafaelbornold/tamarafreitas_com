@@ -1,19 +1,23 @@
-import React, { useState } from 'react';
+import P from 'prop-types';
+import React from 'react';
 
 import './style.scss';
 
 const ImageModule = (props) => {
+  var src = props.src;
 
-    var src = props.src;
-
-    return (  
-
-    <div style={{backgroundImage: 'url(' + src + ')'}} className="component_image_module-pic-img" >
-        <div className="component_image_module-pic-img-border"></div>
+  return (
+    <div
+      className="component_image_module-pic-img"
+      style={{ backgroundImage: 'url(' + src + ')' }}
+    >
+      <div className="component_image_module-pic-img-border"></div>
     </div>
+  );
+};
 
+ImageModule.propTypes = {
+  src: P.string,
+};
 
-    );
-}
- 
 export default ImageModule;

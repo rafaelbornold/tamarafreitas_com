@@ -1,64 +1,51 @@
-import React, { useState } from 'react';
+import P from 'prop-types';
+import React from 'react';
 
-import { content } from "../../databases/formaciones/kitCompleto/data";
-
+import { content } from '../../databases/formaciones/kitCompleto/data';
 
 import BigTitle from '../../components/BigTitle';
 
-
 import './style.scss';
-import './mediascreen.scss'
+import './mediascreen.scss';
 import ImageModule from '../../components/ImageModules';
 
 const SectionFormacionKitCompleto = (props) => {
-    
-    var formacion = props.formacion;
+  var formacion = props.formacion;
 
-    var image = content[formacion][0].image;
-    var descriptionRight = content[formacion][0].descriptionRight;
-    var descriptionBottom = content[formacion][0].descriptionBottom;
+  var image = content[formacion][0].image;
+  var descriptionRight = content[formacion][0].descriptionRight;
+  var descriptionBottom = content[formacion][0].descriptionBottom;
 
-    return ( 
-
+  return (
     <section className="section-kit_completo-main">
-
-        <div className="container section-kit_completo-wrap">
-
-            <div className="section-kit_completo-title">
-                <BigTitle text="KIT COMPLETO" fontSize="40px"/>
-            </div>
-
-            <div className="section-kit_completo-content-wrap">
-
-                <div className="section-kit_completo-content-img-wrap">
-                   <ImageModule src={image} />
-                </div>
-
-                <div className="section-kit_completo-content-description-right">
-                
-                   <p>
-                   {descriptionRight}
-                   </p>
-
-                </div>
-
-
-            </div>
-
-            <div className="section-kit_completo-content-description-bottom">
-                
-                <p>
-                {descriptionBottom}
-                </p>
-
-             </div>
-
-
+      <div className="container section-kit_completo-wrap">
+        <div className="section-kit_completo-title">
+          <BigTitle
+            text="KIT COMPLETO"
+            fontSize="40px"
+          />
         </div>
 
-    </section>
+        <div className="section-kit_completo-content-wrap">
+          <div className="section-kit_completo-content-img-wrap">
+            <ImageModule src={image} />
+          </div>
 
-     );
-}
- 
-export default SectionFormacionKitCompleto ;
+          <div className="section-kit_completo-content-description-right">
+            <p>{descriptionRight}</p>
+          </div>
+        </div>
+
+        <div className="section-kit_completo-content-description-bottom">
+          <p>{descriptionBottom}</p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+SectionFormacionKitCompleto.propTypes = {
+  formacion: P.string,
+};
+
+export default SectionFormacionKitCompleto;

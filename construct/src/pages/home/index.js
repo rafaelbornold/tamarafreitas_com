@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
- 
+import React from 'react';
+
 import './style.css';
 
-import HeaderMenu from "../../objects/HeaderMenu";
-import FooterSocialMedias from "../../objects/FooterSocialMedias";
+import HeaderMenu from '../../objects/HeaderMenu';
 import FooterMenu from '../../objects/FooterMenu';
 import FooterEnd from '../../objects/FooterEnd';
 import ArticleHomeVideo from '../../contents/ArticleHomeVideo';
@@ -18,31 +17,26 @@ import SectionProximosCursos from '../../objects/SectionProximosCursos';
 import SectionReviews from '../../objects/SectionReviews';
 import SectionStatisticalNumbers from '../../objects/SectionStatisticalNumbers';
 
-
-
 const Home = () => {
-
-  const [message, setMessage] = useState('Hello World');
-
   return (
-    <>    
-    <HeaderMenu classNameIndex="" imgColor="white"/>
-    <HeaderMenu classNameIndex="menuIndexBehindMain" imgColor="color" />
-    <ArticleHomeVideo />
-    <HorizontalSeparator />
-    <SectionSobreResume />
-    <SectionEstructura />
-    <SectionCursos />
-    <SectionVideos />
-    <SectionBoletinInformativo />
-    <SectionProcedimientos />
-    <SectionProximosCursos />
-    <SectionReviews />
-    <SectionStatisticalNumbers />
-    <FooterMenu />
-    <FooterEnd text1="© 2021 Tamara Freitas Studio Academy." text2="  Reservados todos los derechos."/>
+    <>
+      <HeaderMenu classNameIndex="" imgColor="white" />
+      <HeaderMenu classNameIndex="menuIndexBehindMain" imgColor="color" />
+      <ArticleHomeVideo />
+      <HorizontalSeparator />
+      <SectionSobreResume />
+      <SectionEstructura />
+      <SectionCursos />
+      <SectionVideos />
+      <SectionBoletinInformativo />
+      <SectionProcedimientos />
+      <SectionProximosCursos />
+      <SectionReviews />
+      <SectionStatisticalNumbers />
+      <FooterMenu />
+      <FooterEnd text1="© 2021 Tamara Freitas Studio Academy." text2="  Reservados todos los derechos." />
     </>
   );
-}
+};
 
 export default Home;
