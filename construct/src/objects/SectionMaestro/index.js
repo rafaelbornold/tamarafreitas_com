@@ -15,9 +15,7 @@ const SectionMaestro = () => {
       </div>
       <div className="container section_maestro-wrapper">
         <div className="section_maestro-img">
-          <div className="image-section_maestro-wrapper">
-            <div className="image-section_maestro-picture"></div>
-          </div>
+          <img src={require('../../images/pictures/montages/maestro.png')} />
         </div>
         <div className="section_maestro-content">
           <div className="section_maestro-bigtitle-02-wrap">

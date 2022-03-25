@@ -1,36 +1,28 @@
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
+  .section_maestro-bigtitle-01-wrap {
+    display: block;
+  }
 
-    .section_maestro-bigtitle-01-wrap{
-        display: block;
-    }
-    
-    .section_maestro-bigtitle-02-wrap{
-        display: none;
-    }
-    
-    .section_maestro-wrapper{
-        
-        .section_maestro-content{           
-                
-            order: 2;
+  .section_maestro-bigtitle-02-wrap {
+    display: none;
+  }
 
-        }
+  .section_maestro-wrapper {
+    .section_maestro-content {
+      order: 2;
 
-
-        .image-section_maestro-picture{
-
-            padding-top:100%;
-        }
-        
-        .section_maestro-img{
-        
-            order: 1;
-            border-bottom: 1px solid var(--cinza-dark);
-
-        }
-
+      .article_maestro-wrap {
+        margin-bottom: 30px;
+      }
     }
 
+    .image-section_maestro-picture {
+      padding-top: 100%;
+    }
 
-
+    .section_maestro-img {
+      order: 1;
+      border-bottom: 1px solid var(--cinza-dark);
+    }
+  }
 }

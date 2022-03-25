@@ -37,7 +37,7 @@ const ProcedimientoDetails = (props) => {
       break;
 
     case 'BrowLamination':
-      HeaderSecondary_text = 'PROCEDIMIENTOS - Brow Laminarion';
+      HeaderSecondary_text = 'PROCEDIMIENTOS - Brow Lamination';
       break;
   }
 

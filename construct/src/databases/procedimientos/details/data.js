@@ -53,7 +53,7 @@ content['Pestanas'] = [
 
 content['Micropigmentacion'] = [
   {
-    image: require('../../../images/bgpadrao.png'),
+    image: require('../../../images/pictures/procedimientos/MicroCejas/new001/F58B4F2B-A66A-428C-92FC-5FB919D39911.jpeg'),
 
     title: 'Micropigmentación y Microblading',
 
@@ -70,7 +70,7 @@ content['Micropigmentacion'] = [
 
 content['BrowLamination'] = [
   {
-    image: require('../../../images/bgpadrao.png'),
+    image: require('../../../images/pictures/procedimientos/BrowLamination/new001/AntesDepois/E9D5B3DB-E81F-4DE7-9F7C-BCBEDD19E3EA.jpeg'),
 
     title: 'Laminado de Cejas',
 
