@@ -31,9 +31,7 @@ const ListShowHide = (props) => {
             </figure>
           </div>
         </div>
-        <div className="component-formacion_benefits-content-description">
-          <p>{description}</p>
-        </div>
+        <div className="component-formacion_benefits-content-description">{description}</div>
       </div>
     </article>
   );
@@ -42,7 +40,7 @@ const ListShowHide = (props) => {
 ListShowHide.propTypes = {
   number: P.number,
   title: P.string,
-  description: P.string,
+  description: P.object,
 };
 
 export default ListShowHide;

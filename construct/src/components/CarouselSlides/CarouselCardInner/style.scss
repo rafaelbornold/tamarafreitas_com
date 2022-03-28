@@ -61,7 +61,6 @@
 
     transition: 0.2s;
   }
-
 }
 
 ///////////////////////////////////
@@ -425,7 +424,8 @@
     justify-content: center;
 
     width: 100%;
-    height: 40px;
+    min-height: 50px;
+    padding: 5px 20px 5px 20px;
     margin-top: 85px;
 
     text-transform: uppercase;
@@ -435,7 +435,7 @@
   }
 
   .title--hover {
-    margin-top: 50px;
+    margin-top: 40px;
 
     transition: 0.2s;
   }
@@ -572,8 +572,7 @@
 
         div {
           img {
-            filter: invert(50%) sepia(23%) saturate(657%) hue-rotate(307deg)
-              brightness(106%) contrast(79%);
+            filter: invert(50%) sepia(23%) saturate(657%) hue-rotate(307deg) brightness(106%) contrast(79%);
           }
         }
       }
@@ -658,15 +657,13 @@
     pointer-events: none;
 
     h6 {
-      font-family: "AceSans";
+      font-family: 'AceSans';
       color: white;
       text-align: center;
       margin: 18px 16px 16px 16px;
       text-transform: capitalize;
       font-size: 20px;
     }
-
-
   }
 
   .title--hover {
@@ -686,7 +683,7 @@
     z-index: -20;
 
     h4 {
-      font-family: "AppleGaramond";
+      font-family: 'AppleGaramond';
       font-weight: bold;
       font-size: 20px;
       letter-spacing: 0.5px;

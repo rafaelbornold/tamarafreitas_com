@@ -28,9 +28,7 @@ const SectionFormacionDetails = (props) => {
           </div>
         </div>
 
-        <div className="section-formacion_details-description-wrap">
-          <p>{descripcion}</p>
-        </div>
+        <div className="section-formacion_details-description-wrap">{descripcion}</div>
 
         <div className="section-formacion_details-infos-component-wrap">
           <div className="section-formacion_details-infos-component">

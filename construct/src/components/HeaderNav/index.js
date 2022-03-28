@@ -33,38 +33,59 @@ const HeaderTitle = () => {
       <nav className="menu">
         <ul>
           <li>
-            <NavLink to="/home" className={({ isActive }) => (isActive ? ' nav-link-active' : '')}>
+            <NavLink
+              to="/home"
+              className={({ isActive }) => (isActive ? ' nav-link-active' : '')}
+            >
               <span>Home</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/sobre" className={({ isActive }) => (isActive ? ' nav-link-active' : '')}>
+            <NavLink
+              to="/sobre"
+              className={({ isActive }) => (isActive ? ' nav-link-active' : '')}
+            >
               <span>Sobre</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/formaciones" className={({ isActive }) => (isActive ? ' nav-link-active' : '')}>
+            <NavLink
+              to="/formaciones"
+              className={({ isActive }) => (isActive ? ' nav-link-active' : '')}
+            >
               <span>Cursos y Formaciones</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/procedimientos" className={({ isActive }) => (isActive ? ' nav-link-active' : '')}>
+            <NavLink
+              to="/procedimientos"
+              className={({ isActive }) => (isActive ? ' nav-link-active' : '')}
+            >
               <span>Procedimientos</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/citasReservas" className={({ isActive }) => (isActive ? ' nav-link-active' : '')}>
+            <NavLink
+              to="/citasReservas"
+              className={({ isActive }) => (isActive ? ' nav-link-active' : '')}
+            >
               <span>Citas Y Reservas</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/faq" className={({ isActive }) => (isActive ? ' nav-link-active' : '')}>
+            <NavLink
+              to="/faq"
+              className={({ isActive }) => (isActive ? ' nav-link-active' : '')}
+            >
               <span>FAQ</span>
             </NavLink>
           </li>
         </ul>
       </nav>
-      <div className="hamburger-box" onClick={HamburgerClick}>
+      <div
+        className="hamburger-box"
+        onClick={HamburgerClick}
+      >
         <div className="hamburger-btn hamburger-not-active">
           <span></span>
           <span></span>

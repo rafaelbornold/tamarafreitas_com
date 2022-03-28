@@ -31,14 +31,10 @@ const SectionFormacionKitCompleto = (props) => {
             <ImageModule src={image} />
           </div>
 
-          <div className="section-kit_completo-content-description-right">
-            <p>{descriptionRight}</p>
-          </div>
+          <div className="section-kit_completo-content-description-right">{descriptionRight}</div>
         </div>
 
-        <div className="section-kit_completo-content-description-bottom">
-          <p>{descriptionBottom}</p>
-        </div>
+        <div className="section-kit_completo-content-description-bottom">{descriptionBottom}</div>
       </div>
     </section>
   );
