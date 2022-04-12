@@ -24,7 +24,7 @@ function getDB($table){
         case 'repaso':
             $table = '02_ReservasRepaso_MayoJunioJulio_2022';
             break;
-    }           
+    }
 
     return $table;
 }
@@ -39,14 +39,14 @@ $dbconnect = mysqli_connect(SERVER,USER,PASSWORD,DBNAME);
 
 
 if ( isset($_SESSION['TABLE'])) {
-    
+
     if (isset($_REQUEST['table'])) {
 
-        if ($_SESSION['TABLE'] != $_REQUEST['table']) { 
+        if ($_SESSION['TABLE'] != $_REQUEST['table']) {
             $_SESSION['TABLE'] = $_REQUEST['table'];
-        } 
+        }
     }
-    
+
 } else {
     $_SESSION['TABLE'] = 'nuevo';
 }
@@ -61,39 +61,39 @@ if ( ! isset($_REQUEST['pesquisa']) ){
 
     $dbquery_consulta = "SELECT * FROM ".TABLE." WHERE CONCAT_WS('', nombre, apellido, nif, email, telefono, dispManana, dispTarde, procedimiento, periodo, precioReserva, pago) like '%".$_REQUEST['pesquisa']."%' ORDER BY periodo, nombre, apellido, nif";
 
-    if ( strtolower(trim($_REQUEST['pesquisa'])) == "manana" OR 
-         strtolower(trim($_REQUEST['pesquisa'])) == "mañana" 
+    if ( strtolower(trim($_REQUEST['pesquisa'])) == "manana" OR
+         strtolower(trim($_REQUEST['pesquisa'])) == "mañana"
          ){
             $dbquery_consulta = "SELECT * FROM ".TABLE." WHERE dispManana='SI' ORDER BY periodo, nombre, apellido, nif";
     }
 
-   if ( strtolower(trim($_REQUEST['pesquisa'])) == "tarde" ){ 
+   if ( strtolower(trim($_REQUEST['pesquisa'])) == "tarde" ){
       $dbquery_consulta = "SELECT * FROM ".TABLE." WHERE dispTarde='SI' ORDER BY periodo, nombre, apellido, nif";
     }
 
-    if ( strtolower(trim($_REQUEST['pesquisa'])) == "solo manana" OR 
-         strtolower(trim($_REQUEST['pesquisa'])) == "solo mañana" 
+    if ( strtolower(trim($_REQUEST['pesquisa'])) == "solo manana" OR
+         strtolower(trim($_REQUEST['pesquisa'])) == "solo mañana"
          ){
             $dbquery_consulta = "SELECT * FROM ".TABLE." WHERE dispManana='SI' AND dispTarde='NO' ORDER BY periodo, nombre, apellido, nif";
     }
 
-    if ( strtolower(trim($_REQUEST['pesquisa'])) == "solo tarde" ){ 
+    if ( strtolower(trim($_REQUEST['pesquisa'])) == "solo tarde" ){
         $dbquery_consulta = "SELECT * FROM ".TABLE." WHERE dispManana='NO' AND dispTarde='SI' ORDER BY periodo, nombre, apellido, nif";
     }
-  
-    if ( strtolower(trim($_REQUEST['pesquisa'])) == "manana o tarde" OR 
+
+    if ( strtolower(trim($_REQUEST['pesquisa'])) == "manana o tarde" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "mañana o tarde" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "mañana y tarde" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "manana y tarde" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "mañana tarde" OR
-         strtolower(trim($_REQUEST['pesquisa'])) == "manana tarde" 
-         
+         strtolower(trim($_REQUEST['pesquisa'])) == "manana tarde"
+
          ){
             $dbquery_consulta = "SELECT * FROM ".TABLE." WHERE dispManana='SI' AND dispTarde='SI' ORDER BY periodo, nombre, apellido, nif";
     }
 
-    if ( strtolower(trim($_REQUEST['pesquisa'])) == "nao pago" OR 
-         strtolower(trim($_REQUEST['pesquisa'])) == "não pago" OR        
+    if ( strtolower(trim($_REQUEST['pesquisa'])) == "nao pago" OR
+         strtolower(trim($_REQUEST['pesquisa'])) == "não pago" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "nao pagos" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "não pagos" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "no pago" OR
@@ -111,10 +111,36 @@ if ( ! isset($_REQUEST['pesquisa']) ){
          strtolower(trim($_REQUEST['pesquisa'])) == "não confirmados" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "nao confirmados" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "no confirmados" OR
-         strtolower(trim($_REQUEST['pesquisa'])) == "no confirmado" 
+         strtolower(trim($_REQUEST['pesquisa'])) == "no confirmado"
          ){
             $dbquery_consulta = "SELECT * FROM ".TABLE." WHERE pago='PENDIENTE' OR pago='PROCESSO INICIADO' ORDER BY periodo, nombre, apellido, nif";
     }
+
+    if ( strtolower(trim($_REQUEST['pesquisa'])) == "refund" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "refunded" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "devolvido" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "devolvidos" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "reembolsado" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "reembolsados" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "devuelto" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "devueltos" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "devolução" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "devolucao" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "devoluções" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "devolucoes" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "estorno" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "estornos" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "estornado" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "estornados" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "inversión" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "inversion" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "contracargo" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "contracargos" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "inversiones" OR
+      strtolower(trim($_REQUEST['pesquisa'])) == "inversiónes"
+      ){
+      $dbquery_consulta = "SELECT * FROM ".TABLE." WHERE pago='refund' ORDER BY periodo, nombre, apellido, nif";
+}
 
 
 }
@@ -167,11 +193,11 @@ function RegistrosNaoPagos(){
     <title>Consultar e Exportar Base de Dados (ABRIL - MAYO - JUNIO - JULIO)</title>
 </head>
 <body>
-    
-<div class="container">  
-   <br/>  
-   <br/>  
-   <h2 align="center">Consultar e Exportar Base de Dados (ABRIL - MAYO - JUNIO - JULIO)</h2><br/> 
+
+<div class="container">
+   <br/>
+   <br/>
+   <h2 align="center">Consultar e Exportar Base de Dados (ABRIL - MAYO - JUNIO - JULIO)</h2><br/>
 
     <div class="barra_infos_registros">
         <select name="table" id="selectedTable" class="selectedTable">
@@ -187,27 +213,27 @@ function RegistrosNaoPagos(){
 
             <form class="form_pesquisa" method="GET" action="consulta1.php">
                 <input class="campo_pesquisa" id="campo_pesquisa" type="text" name="pesquisa"  placeholder="Pesquisar"
-                <?php 
+                <?php
                     if ( isset($_REQUEST['pesquisa']) AND $_REQUEST['pesquisa'] != "" ){
                         echo('value='.$_REQUEST['pesquisa']);
-                        } 
-                ?> 
+                        }
+                ?>
                         >
                 <button class="btn_pesquisar" type="submit">PESQUISAR</button>
                 <button class="btn_limpar" type="submit" onclick="clearSearch()">LIMPAR PESQUISA</button>
                 <input type="hidden" name="login" value="AcessoTamaraFreitas">
             </form>
-            
+
         </div>
     </div>
         <br>
         <div class="box_registros">
             <p class="registros_encontrados">
-            <?php 
+            <?php
             if ( isset($_REQUEST['pesquisa']) AND $_REQUEST['pesquisa'] != "" ){
                 echo('Pesquisa: "'.$_REQUEST['pesquisa'].'" | ');
-                } 
-                ?> 
+                }
+                ?>
             ** Encontrados <?php echo($RegistrosEncontrados)  ?> Registros
             </p>
             <!-- <form method="post" action="export.php">
@@ -215,13 +241,13 @@ function RegistrosNaoPagos(){
                 <input class="btn_export" type="submit" name="export" value="EXPORTAR PESQUISA (.XLS)"/>
              </form> -->
         </div>
-   <div class="tabela">  
+   <div class="tabela">
         <div class="tabela_conteudo">
-            <div class="tr">  
-                <div class="th id">ID</div>  
-                <div class="th nombre">NOMBRE</div>  
-                <div class="th apellido">APELLIDO</div>  
-                <div class="th nif">NIF</div>  
+            <div class="tr">
+                <div class="th id">ID</div>
+                <div class="th nombre">NOMBRE</div>
+                <div class="th apellido">APELLIDO</div>
+                <div class="th nif">NIF</div>
                 <div class="th email">EMAIL</div>
                 <div class="th tel">TEL</div>
                 <div class="th disponibilidade">DISPONIBILIDAD</div>
@@ -231,8 +257,8 @@ function RegistrosNaoPagos(){
                 <div class="th created">ALTERACIÓN</div>
             </div>
             <?php
-                while($row = mysqli_fetch_array($command_consulta))  
-                {   
+                while($row = mysqli_fetch_array($command_consulta))
+                {
                     // MASCARAS
                     $manana = "";
                     $tarde = "";
@@ -240,41 +266,42 @@ function RegistrosNaoPagos(){
                     if ( $row["dispTarde"] == "SI") {$tarde = "TARDE";}
                     if ( $row["pago"] == "PAGO CONFIRMADO") {$pago = "✅";}
                     if ( $row["pago"] != "PAGO CONFIRMADO") {$pago = "❌";}
-                    
-                    preg_match_all('/\((.*?)\)/', $row["periodo"], $mesReduzido); 
+                    if ( $row["pago"] == "refund") {$pago = "↩️";}
+
+                    preg_match_all('/\((.*?)\)/', $row["periodo"], $mesReduzido);
                     $periodo = $mesReduzido[1][0];
 
                     // MASCARAS
 
-                    echo '  
-            <div class="tr">   
-                <div class="td id">'.$row["id"].'</div>  
-                <div class="td nombre">'.$row["nombre"].'</div>  
-                <div class="td apellido">'.$row["apellido"].'</div>  
-                <div class="td nif">'.$row["nif"].'</div>  
-                <div class="td email">'.$row["email"].'</div>  
+                    echo '
+            <div class="tr">
+                <div class="td id">'.$row["id"].'</div>
+                <div class="td nombre">'.$row["nombre"].'</div>
+                <div class="td apellido">'.$row["apellido"].'</div>
+                <div class="td nif">'.$row["nif"].'</div>
+                <div class="td email">'.$row["email"].'</div>
                 <div class="td tel">'.$row["telefono"].'</div>
                 <div class="td disponibilidade">'.$manana.' '.$tarde.'</div>
                 <div class="td procedimiento">'.$row["procedimiento"].'</div>
                 <div class="td periodo">'.$periodo.'</div>
                 <div class="td pago">'.$pago.'</div>
                 <div class="td created">'.$row["modified"].'</div>
-            </div> 
+            </div>
             <div class="tr_det">
                 <div class="detalhes">
                     <div class="det_titulos">
-                        <div class="det nif_det">NIF:</div>  
-                        <div class="det email_det">E-MAIL:</div>  
+                        <div class="det nif_det">NIF:</div>
+                        <div class="det email_det">E-MAIL:</div>
                         <div class="det tel_det">TEL:</div>
                         <div class="det disponibilidade_det">DISPONIBILIDAD:</div>
                         <div class="det procedimiento_det">PROCEDIMIENTO:</div>
                         <div class="det periodo_det">PERÍODO:</div>
                         <div class="det pago_det">PAGO:</div>
                         <div class="det created_det">ULTIMA ALTERAÇÃO:</div>
-                    </div> 
+                    </div>
                     <div class="det_infos">
-                        <div class="det nif_det">'.$row["nif"].'</div>  
-                        <div class="det email_det">'.$row["email"].'</div>  
+                        <div class="det nif_det">'.$row["nif"].'</div>
+                        <div class="det email_det">'.$row["email"].'</div>
                         <div class="det tel_det">'.$row["telefono"].'</div>
                         <div class="det disponibilidade_det">'.$manana.' '.$tarde.'</div>
                         <div class="det procedimiento_det">'.$row["procedimiento"].'</div>
@@ -291,9 +318,9 @@ function RegistrosNaoPagos(){
                     <div class="det periodo_det">.</div>
                     <div class="det pago_det">.</div>
                     <div class="det created_det">.</div>
-            </div>  
+            </div>
 
-                        ';  
+                        ';
                 }
             ?>
         </div>
@@ -304,9 +331,9 @@ function RegistrosNaoPagos(){
         </form> -->
         <br>
         <br>
-   </div>  
-</div>  
-    
+   </div>
+</div>
+
 
 <script src="./js/consulta1.js"></script>
 </body>

@@ -12,8 +12,8 @@ if ( !isset($_REQUEST['login']) OR $_REQUEST['login'] != "AcessoTamaraFreitas" )
 require_once('./config/config.php');
 
 $conexoes = 0;
-function setConnection(){ 
-            
+function setConnection(){
+
     try {
         $connection = new \PDO("mysql:host=".SERVER.";dbname=".DBNAME,USER,PASSWORD);
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -49,14 +49,14 @@ $dbconnect = mysqli_connect(SERVER,USER,PASSWORD,DBNAME);
 
 
 if ( isset($_SESSION['TABLE'])) {
-    
+
     if (isset($_REQUEST['condicionBasica'])) {
 
-        if ($_SESSION['TABLE'] != $_REQUEST['condicionBasica']) { 
+        if ($_SESSION['TABLE'] != $_REQUEST['condicionBasica']) {
             $_SESSION['TABLE'] = $_REQUEST['condicionBasica'];
-        } 
+        }
     }
-    
+
 } else {
     $_SESSION['TABLE'] = 'nuevo';
 }
@@ -72,39 +72,39 @@ if ( ! isset($_REQUEST['pesquisa']) ){
     $dbquery_consulta = "SELECT * FROM ".TABLE_RESERVAS." WHERE CondicionBasica = '".$_SESSION['TABLE']."' AND (CONCAT_WS('', nombre, apellido, nif, email, telefono, dispManana, dispTarde, procedimiento, ano, mesNumero, mesNombre, CondicionBasica, CondicionEspecifica, precioReserva, precioProcedimiento, paymentStatus) like '%".$pesquisaReplace."%') ORDER BY mesNumero, nombre, apellido, nif";
 
 
-    if ( strtolower(trim($_REQUEST['pesquisa'])) == "manana" OR 
-         strtolower(trim($_REQUEST['pesquisa'])) == "mañana" 
+    if ( strtolower(trim($_REQUEST['pesquisa'])) == "manana" OR
+         strtolower(trim($_REQUEST['pesquisa'])) == "mañana"
          ){
             $dbquery_consulta = "SELECT * FROM ".TABLE_RESERVAS." WHERE dispManana = 1 AND CondicionBasica = '".$_SESSION['TABLE']."' ORDER BY mesNumero, nombre, apellido, nif";
     }
 
-   if ( strtolower(trim($_REQUEST['pesquisa'])) == "tarde" ){ 
+   if ( strtolower(trim($_REQUEST['pesquisa'])) == "tarde" ){
       $dbquery_consulta = "SELECT * FROM ".TABLE_RESERVAS." WHERE dispTarde = 1 AND CondicionBasica = '".$_SESSION['TABLE']."' ORDER BY mesNumero, nombre, apellido, nif";
     }
 
-    if ( strtolower(trim($_REQUEST['pesquisa'])) == "solo manana" OR 
-         strtolower(trim($_REQUEST['pesquisa'])) == "solo mañana" 
+    if ( strtolower(trim($_REQUEST['pesquisa'])) == "solo manana" OR
+         strtolower(trim($_REQUEST['pesquisa'])) == "solo mañana"
          ){
             $dbquery_consulta = "SELECT * FROM ".TABLE_RESERVAS." WHERE dispManana = 1 AND dispTarde = 0 AND CondicionBasica = '".$_SESSION['TABLE']."' ORDER BY mesNumero, nombre, apellido, nif";
     }
 
-    if ( strtolower(trim($_REQUEST['pesquisa'])) == "solo tarde" ){ 
+    if ( strtolower(trim($_REQUEST['pesquisa'])) == "solo tarde" ){
         $dbquery_consulta = "SELECT * FROM ".TABLE_RESERVAS." WHERE dispManana = 0 AND dispTarde = 1 AND CondicionBasica = '".$_SESSION['TABLE']."' ORDER BY mesNumero, nombre, apellido, nif";
     }
-  
-    if ( strtolower(trim($_REQUEST['pesquisa'])) == "manana o tarde" OR 
+
+    if ( strtolower(trim($_REQUEST['pesquisa'])) == "manana o tarde" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "mañana o tarde" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "mañana y tarde" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "manana y tarde" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "mañana tarde" OR
-         strtolower(trim($_REQUEST['pesquisa'])) == "manana tarde" 
-         
+         strtolower(trim($_REQUEST['pesquisa'])) == "manana tarde"
+
          ){
             $dbquery_consulta = "SELECT * FROM ".TATABLE_RESERVASBLE." WHERE dispManana = 1 AND dispTarde = 0 AND CondicionBasica = '".$_SESSION['TABLE']."' ORDER BY mesNumero, nombre, apellido, nif ";
     }
 
-    if ( strtolower(trim($_REQUEST['pesquisa'])) == "nao pago" OR 
-         strtolower(trim($_REQUEST['pesquisa'])) == "não pago" OR        
+    if ( strtolower(trim($_REQUEST['pesquisa'])) == "nao pago" OR
+         strtolower(trim($_REQUEST['pesquisa'])) == "não pago" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "nao pagos" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "não pagos" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "no pago" OR
@@ -122,19 +122,19 @@ if ( ! isset($_REQUEST['pesquisa']) ){
          strtolower(trim($_REQUEST['pesquisa'])) == "não confirmados" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "nao confirmados" OR
          strtolower(trim($_REQUEST['pesquisa'])) == "no confirmados" OR
-         strtolower(trim($_REQUEST['pesquisa'])) == "no confirmado" 
+         strtolower(trim($_REQUEST['pesquisa'])) == "no confirmado"
          ){
             $dbquery_consulta = "SELECT * FROM ".TABLE_RESERVAS." WHERE paymentStatus = '' AND CondicionBasica = '".$_SESSION['TABLE']."' ORDER BY mesNumero, nombre, apellido, nif";
     }
 
-        if ( strtolower(trim($_REQUEST['pesquisa'])) == "pago" OR 
-         strtolower(trim($_REQUEST['pesquisa'])) == "pagos"        
+        if ( strtolower(trim($_REQUEST['pesquisa'])) == "pago" OR
+         strtolower(trim($_REQUEST['pesquisa'])) == "pagos"
          ){
             $dbquery_consulta = "SELECT * FROM ".TABLE_RESERVAS." WHERE paymentStatus = 'succeeded' AND CondicionBasica = '".$_SESSION['TABLE']."' ORDER BY mesNumero, nombre, apellido, nif";
     }
 
-        if ( strtolower(trim($_REQUEST['pesquisa'])) == "refund" OR 
-        strtolower(trim($_REQUEST['pesquisa'])) == "refunded" OR        
+        if ( strtolower(trim($_REQUEST['pesquisa'])) == "refund" OR
+        strtolower(trim($_REQUEST['pesquisa'])) == "refunded" OR
         strtolower(trim($_REQUEST['pesquisa'])) == "devolvido" OR
         strtolower(trim($_REQUEST['pesquisa'])) == "devolvidos" OR
         strtolower(trim($_REQUEST['pesquisa'])) == "reembolsado" OR
@@ -154,12 +154,12 @@ if ( ! isset($_REQUEST['pesquisa']) ){
         strtolower(trim($_REQUEST['pesquisa'])) == "contracargo" OR
         strtolower(trim($_REQUEST['pesquisa'])) == "contracargos" OR
         strtolower(trim($_REQUEST['pesquisa'])) == "inversiones" OR
-        strtolower(trim($_REQUEST['pesquisa'])) == "inversiónes" 
+        strtolower(trim($_REQUEST['pesquisa'])) == "inversiónes"
         ){
         $dbquery_consulta = "SELECT * FROM ".TABLE_RESERVAS." WHERE paymentStatus = 'refund' AND CondicionBasica = '".$_SESSION['TABLE']."' ORDER BY mesNumero, nombre, apellido, nif";
     }
 
-    
+
 
 }
 
@@ -212,11 +212,11 @@ function RegistrosNaoPagos($connection){
     <title>Consultar e Exportar Base de Dados (JULIO - AGOSTO - SEPTIEMBRE)</title>
 </head>
 <body>
-    
-<div class="container">  
-   <br/>  
-   <br/>  
-   <h2 align="center">Consultar e Exportar Base de Dados (JULIO - AGOSTO - SEPTIEMBRE)</h2><br/> 
+
+<div class="container">
+   <br/>
+   <br/>
+   <h2 align="center">Consultar e Exportar Base de Dados (JULIO-2022 EM DIANTE)</h2><br/>
 
     <div class="barra_infos_registros">
         <select name="table" id="selectedTable" class="selectedTable">
@@ -232,28 +232,28 @@ function RegistrosNaoPagos($connection){
 
             <form class="form_pesquisa" method="GET" action="consulta.php">
                 <input class="campo_pesquisa" id="campo_pesquisa" type="text" name="pesquisa"  placeholder="Pesquisar"
-                <?php 
+                <?php
 
                     if ( isset($pesquisaDigitada) AND $pesquisaDigitada != "" ){
                         echo('value="'.$pesquisaDigitada.'"');
-                        } 
-                ?> 
+                        }
+                ?>
                         >
                 <button class="btn_pesquisar" type="submit">PESQUISAR</button>
                 <button class="btn_limpar" type="submit" onclick="clearSearch()">LIMPAR PESQUISA</button>
                 <input type="hidden" name="login" value="AcessoTamaraFreitas">
             </form>
-            
+
         </div>
     </div>
         <br>
         <div class="box_registros">
             <p class="registros_encontrados">
-            <?php 
+            <?php
             if ( isset($_REQUEST['pesquisa']) AND $_REQUEST['pesquisa'] != "" ){
                 echo('Pesquisa: "'.$_REQUEST['pesquisa'].'" | ');
-                } 
-                ?> 
+                }
+                ?>
             ** Encontrados <?php echo($RegistrosEncontrados)  ?> Registros
             </p>
             <!-- <form method="post" action="export.php">
@@ -261,13 +261,13 @@ function RegistrosNaoPagos($connection){
                 <input class="btn_export" type="submit" name="export" value="EXPORTAR PESQUISA (.XLS)"/>
              </form> -->
         </div>
-   <div class="tabela">  
+   <div class="tabela">
         <div class="tabela_conteudo">
-            <div class="tr">  
-                <div class="th id">ID</div>  
-                <div class="th nombre">NOMBRE</div>  
-                <div class="th apellido">APELLIDO</div>  
-                <div class="th nif">NIF</div>  
+            <div class="tr">
+                <div class="th id">ID</div>
+                <div class="th nombre">NOMBRE</div>
+                <div class="th apellido">APELLIDO</div>
+                <div class="th nif">NIF</div>
                 <div class="th email">EMAIL</div>
                 <div class="th tel">TEL</div>
                 <div class="th disponibilidade">DISPONIBILIDAD</div>
@@ -277,8 +277,8 @@ function RegistrosNaoPagos($connection){
                 <div class="th created">ALTERACIÓN</div>
             </div>
             <?php
-                $i=0; foreach($command_consulta as $value) 
-                {   
+                $i=0; foreach($command_consulta as $value)
+                {
                     // MASCARAS
                     $manana = "";
                     $tarde = "";
@@ -287,40 +287,40 @@ function RegistrosNaoPagos($connection){
                     if ( $command_consulta[$i]["paymentStatus"] == "succeeded") {$pago = "✅";}
                     if ( $command_consulta[$i]["paymentStatus"] == "") {$pago = "❌";}
                     if ( $command_consulta[$i]["paymentStatus"] == "refund") {$pago = "↩️";}
-                    
+
                     $periodo = $command_consulta[$i]["mesNombre"]." (".$command_consulta[$i]["ano"].")";
 
                     // MASCARAS
 
-                    echo '  
-                        <div class="tr">   
-                            <div class="td id">'.$command_consulta[$i]["id"].'</div>  
-                            <div class="td nombre">'.$command_consulta[$i]["nombre"].'</div>  
-                            <div class="td apellido">'.$command_consulta[$i]["apellido"].'</div>  
-                            <div class="td nif">'.$command_consulta[$i]["nif"].'</div>  
-                            <div class="td email">'.$command_consulta[$i]["email"].'</div>  
+                    echo '
+                        <div class="tr">
+                            <div class="td id">'.$command_consulta[$i]["id"].'</div>
+                            <div class="td nombre">'.$command_consulta[$i]["nombre"].'</div>
+                            <div class="td apellido">'.$command_consulta[$i]["apellido"].'</div>
+                            <div class="td nif">'.$command_consulta[$i]["nif"].'</div>
+                            <div class="td email">'.$command_consulta[$i]["email"].'</div>
                             <div class="td tel">'.$command_consulta[$i]["telefono"].'</div>
                             <div class="td disponibilidade">'.$manana.' '.$tarde.'</div>
                             <div class="td procedimiento">'.$command_consulta[$i]["procedimiento"].'</div>
                             <div class="td periodo">'.$periodo.'</div>
                             <div class="td pago">'.$pago.'</div>
                             <div class="td created">'.$command_consulta[$i]["modified"].'</div>
-                        </div> 
+                        </div>
                         <div class="tr_det">
                             <div class="detalhes">
                                 <div class="det_titulos">
-                                    <div class="det nif_det">NIF:</div>  
-                                    <div class="det email_det">E-MAIL:</div>  
+                                    <div class="det nif_det">NIF:</div>
+                                    <div class="det email_det">E-MAIL:</div>
                                     <div class="det tel_det">TEL:</div>
                                     <div class="det disponibilidade_det">DISPONIBILIDAD:</div>
                                     <div class="det procedimiento_det">PROCEDIMIENTO:</div>
                                     <div class="det periodo_det">PERÍODO:</div>
                                     <div class="det pago_det">PAGO:</div>
                                     <div class="det created_det">ULTIMA ALTERAÇÃO:</div>
-                                </div> 
+                                </div>
                                 <div class="det_infos">
-                                    <div class="det nif_det">'.$command_consulta[$i]["nif"].'</div>  
-                                    <div class="det email_det">'.$command_consulta[$i]["email"].'</div>  
+                                    <div class="det nif_det">'.$command_consulta[$i]["nif"].'</div>
+                                    <div class="det email_det">'.$command_consulta[$i]["email"].'</div>
                                     <div class="det tel_det">'.$command_consulta[$i]["telefono"].'</div>
                                     <div class="det disponibilidade_det">'.$manana.' '.$tarde.'</div>
                                     <div class="det procedimiento_det">'.$command_consulta[$i]["procedimiento"].'</div>
@@ -337,9 +337,9 @@ function RegistrosNaoPagos($connection){
                                 <div class="det periodo_det">.</div>
                                 <div class="det pago_det">.</div>
                                 <div class="det created_det">.</div>
-                        </div>  
+                        </div>
 
-                        ';  
+                        ';
                     $i++;
                 }
             ?>
@@ -351,10 +351,10 @@ function RegistrosNaoPagos($connection){
         </form>
         <br> -->
         <br>
-   </div>  
+   </div>
 
-</div>  
-    
+</div>
+
 
 <script src="./js/consulta.js"></script>
 </body>

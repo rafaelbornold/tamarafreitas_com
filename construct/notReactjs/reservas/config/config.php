@@ -5,7 +5,7 @@
 //////////////////////////////////////////////////////////////////////////////////////
 
 // DADOS DO DATABASE
-     
+
     // define('SERVER','127.0.0.1:3306'); //hostinger
     // define('SERVER','sql262.main-hosting.eu'); // hostinger remoto
     // define('PASSWORD','2mJ/xAm2oKJ'); //hostinger
@@ -28,7 +28,7 @@
 
 //// DEFININDO VARIAVEIS GLOBAIS
 
-    
+
 $ALL_PROCEDURES = [
 
     'nuevo' => [

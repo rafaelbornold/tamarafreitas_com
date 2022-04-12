@@ -11,20 +11,20 @@ $registers = $jsonObj->registers;
 
 
 function escribirProcedimientos(array $registers): string {
-        
+
     $procedimientos = "";
     $i=0; foreach($registers as $value){
 
         if ($i == 0) {
-            $procedimientos .= strtoupper($registers[$i]);  
+            $procedimientos .= strtoupper($registers[$i]);
         };
-        if ($i >= 1) {   
-            $q=$i+1;     
+        if ($i >= 1) {
+            $q=$i+1;
            if ($q == count($registers)){
              $procedimientos .= " y ".strtoupper($registers[$i]);
            } else{
              $procedimientos .= " , ".strtoupper($registers[$i]);
-           } 
+           }
 
         };
         $i++;
@@ -34,8 +34,8 @@ function escribirProcedimientos(array $registers): string {
 }
 
 
-function setConnection(){ 
-        
+function setConnection(){
+
     try {
         $connection = new \PDO("mysql:host=".SERVER.";dbname=".DBNAME,USER,PASSWORD);
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -61,13 +61,15 @@ $GlobalConnection = setConnection();
 
 function verifyRegisterPayments($register, $connection){
 
-    $sql = "SELECT * FROM ".TABLE_RESERVAS." WHERE nif = :_nif AND procedimiento = :_procedimiento AND paymentStatus = :_paymentStatus";
-    
+    $sql = "SELECT * FROM ".TABLE_RESERVAS." WHERE nif = :_nif AND procedimiento = :_procedimiento AND mesNumero = :_mesNumero AND ano = :_ano AND paymentStatus = :_paymentStatus";
+
     try {
         $stmt = $connection->prepare($sql);
         $stmt->bindValue(":_nif", $register->nif, \PDO::PARAM_STR);
         $stmt->bindValue(":_procedimiento", $register->procedure, \PDO::PARAM_STR);
         $stmt->bindValue(":_paymentStatus", 'succeeded', \PDO::PARAM_STR);
+        $stmt->bindValue(":_mesNumero", $register->mesNumero, \PDO::PARAM_STR);
+        $stmt->bindValue(":_ano", $register->ano, \PDO::PARAM_STR);
         $stmt->execute();
 
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -90,9 +92,9 @@ function verifyRegisterPayments($register, $connection){
             case (count($result) >= 1):
                 die("ERROR 002 verifyRegisterPayment - Encontrado mais de um registro com o mesmo pagamento - Algo deu errado !");
                 break;
-    
+
         }
-    
+
 }
 
 

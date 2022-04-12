@@ -29,10 +29,22 @@ require_once("./classes/class_procedure.php");
 //////////////////////////////////////////////////////////////////////////////////////
 
 $dateNow = new \DateTime('now', new DateTimeZone('Europe/Madrid'));
-$dateLimit = new \DateTime('Apr 05 2022 10:00:00', new DateTimeZone('Europe/Madrid'));
+$dateLimit = new \DateTime('Apr 12 2022 10:00:00', new DateTimeZone('Europe/Madrid'));
 
 if ($dateNow < $dateLimit){
-    header("Location: index.html");
+
+  if (isset($_REQUEST["permit"])){
+
+    if ($_REQUEST["permit"] != "rafaelbornold"){
+
+      header("Location: index.html");
+
+    }
+
+} else {
+  header("Location: index.html");
+}
+
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -45,7 +57,7 @@ if ( isset($_SESSION['reload']) ){
         $_SESSION['reload'] = 0 ;
         header("Location: index.php");
     }
-    
+
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -54,11 +66,11 @@ if ( isset($_SESSION['reload']) ){
 
 if (isset($_REQUEST["checkout"])){
 
-    if ($_REQUEST["checkout"] === "Finished" 
-        && isset($_REQUEST["nif_session"])  
+    if ($_REQUEST["checkout"] === "Finished"
+        && isset($_REQUEST["nif_session"])
         && isset($_REQUEST["payment_intent"]) ){
-        
-            $_SESSION['reload'] = 1;
+
+            // $_SESSION['reload'] = 1;
 
         }
 
@@ -68,9 +80,12 @@ if (isset($_REQUEST["checkout"])){
 //////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 
+
+
 $plazas = new Plazas($PROCEDURE_DATAS["CondicionBasica"], 0, 0, 0);
 
 $periodosDisponibles = $plazas->getTodosPeriodosDisponibles();
+
 
 $DesableFields   = (count($periodosDisponibles) == 0) ? "disabled"          : "";
 
@@ -92,13 +107,14 @@ $allProceduresPrices = $procedure->getAllProceduresPrices();
 
 
 $i=0; foreach($allProceduresPrices as $key => $value){
-    
+
     $proceduresResumedPrices[$allProceduresPrices[$i]['Procedimiento']][$allProceduresPrices[$i]['CondicionEspecifica']] = $allProceduresPrices[$i]['PrecioProcedimiento'];
-    $i++;    
+    $i++;
 
 }
 
-$dataProximaReserva = "05/04/22 las 10h00";
+// $dataProximaReserva = "XX/XX/22 las 10h00";
+$dataProximaReserva = "";
 
 //////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
@@ -125,7 +141,7 @@ $dataProximaReserva = "05/04/22 las 10h00";
 
 
     <link rel="shortcut icon" href="./images/logo_redondo_fundo_claro.png"/>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -191,8 +207,10 @@ $dataProximaReserva = "05/04/22 las 10h00";
     ");
     }
     ?>
-    
-    <div id="payment-message" class='hidden'></div>
+
+    <div class="payment-message-header">
+      <div id="payment-message" class='hidden'></div>
+    </div>
 
     <header>
 
@@ -202,11 +220,11 @@ $dataProximaReserva = "05/04/22 las 10h00";
             </section>
             <section class="main2">
                 <div class="main2_container">
-                
+
                     <h3>DISPONIBLE EN <p id="clock">-</p> </h3>
-                
+
                     <div class="main2_content">
-                        
+
                         <?php // paragrafos em caso de clientes REPASO
 
                             if ($PROCEDURE_DATAS["CondicionBasica"] == 'repaso'){
@@ -238,7 +256,7 @@ $dataProximaReserva = "05/04/22 las 10h00";
                             <div class="p3">
                                 <div>
                                     <p style="margin: 0; padding: 0;"><span>Consultar los precios abajo</span></p>
-                                    <p style="margin: 5px 0 0 0; padding: 0; text-align: left;"><span style="font-size: 17px; margin: 0; padding: 0;">RESERVA €<?php echo($precioReserva); ?>,00</span></p>                                 
+                                    <p style="margin: 5px 0 0 0; padding: 0; text-align: left;"><span style="font-size: 17px; margin: 0; padding: 0;">RESERVA €<?php echo($precioReserva); ?>,00</span></p>
                                     <span style="font-size: 10px; margin-left: 0px; margin-top: 0px;"> por procedimiento</span>
 
                                 </div>
@@ -248,41 +266,45 @@ $dataProximaReserva = "05/04/22 las 10h00";
                     </div>
 
                 </div>
-            </section>  
-           </div> 
+            </section>
+           </div>
     </header>
 
     <article id="principal">
-        <div class="container display1">        
+        <div class="container display1">
             <section>
-                <div class="wrapper A1">        
+                <div class="wrapper A1">
 
-                        <?php //paragrafo condicional a disponibilidade de vagas
+                        <?php
 
+                            //paragrafo condicional a disponibilidade de vagas
                             if ($numPlazas > 0){
                                 echo('
-                                
+
                                 <p>
                                     <h4>Llegó el gran día !</h4>
                                 </p>
                                 <p>
-                                    Queda abierta la reserva de plazas para hacer el procedimiento de Micropigmenteción con Tamara Freitas. </strong>
+                                    Queda abierta la reserva de plazas para '.
+                                    ($CbClientas = $PROCEDURE_DATAS["CondicionBasica"] == 'nuevo' ? 'el procedimiento de Micropigmentación' : '<strong>REPASO</strong> de tu procedimiento de Micropigmentación')
+                                    .' <strong>con Tamara Freitas.</strong>
                                 </p>
-                                <p>
+                                '. ($dataProximaReserva != '' ?
+                                '<p>
                                     Las reservas para '.
-                                    $CbClientas = $PROCEDURE_DATAS["CondicionBasica"] == 'nuevo' ? 'REPASO' : 'CLIENTES NUEVAS'
-                                    .' deben ser realizadas el dia '.$dataProximaReserva.'.
-                                </p>
+                                    ($CbClientas = $PROCEDURE_DATAS["CondicionBasica"] == 'nuevo' ? 'REPASO' : 'CLIENTES NUEVAS')
+                                    .' deben ser realizadas el dia <strong>'.$dataProximaReserva.'</strong>.
+                                </p>' : ''). '
                                 <p>
                                     <h4>Aprovecha la oportunidad</h4>
                                 </p>
                                 <p>
-                                    ¡Sólo quedan <strong> '.$numPlazas.' Plazas </strong> disponibles para el mes de <strong>'.$periodoActual.'</strong> ! No dejes escapar la tuya!
+                                    ¡Sólo quedan <strong> '.$numPlazas.' Plaza(s) </strong> disponibles para el mes de <strong>'.$periodoActual.'</strong> ! No dejes escapar la tuya!
                                 </p>
 
                                 ');
                             }
-                            
+
                         ?>
 
                         <?php // paragrafos em caso de clientes REPASO
@@ -320,7 +342,7 @@ $dataProximaReserva = "05/04/22 las 10h00";
                                     Debes contar los meses a partir de la fecha de tu último tratamiento.
                                 </p>
                                 <p>
-                                    <strong>LOS PRECIOS DE REPASO SON APENAS PARA CLIENTAS ANTIGUAS DEL STUDIO TAMARA FREITAS</strong>, clientas de otros centros deben hacer la reserva de un TRATAMIENTO NUEVO en el día '.$dataProximaReserva.'. 
+                                    <strong>LOS PRECIOS DEL REPASO SON SOLO PARA CLIENTAS QUE REALIZARÓN SU PROCEDIMIENTO EN EL STUDIO TAMARA FREITAS</strong>, las clientas que hicieron la micro en otro lugar tienen que hacer la reserva para un tratamiento nuevo, cuya agenda será abierta el próximo '.$dataProximaReserva.'.
                                 </p>
                                 <p>
                                     <strong>🏅 Método exclusivo Tamara Freitas </strong>
@@ -332,7 +354,7 @@ $dataProximaReserva = "05/04/22 las 10h00";
                                     Recibirás un correo de confirmación al email que hayas indicado.
                                 </p>
                                 <p>
-                                    Debes hacer un registro individual por cada persona que quiera obtener su plaza. 
+                                    Debes hacer un registro individual por cada persona que quiera obtener su plaza.
                                 </p>
                                 <p class="uppercase">
                                     <strong>Leed bien las contraindicaciones y políticas de cancelación.</strong>
@@ -384,7 +406,7 @@ $dataProximaReserva = "05/04/22 las 10h00";
                                     Recibirás un correo de confirmación al email que hayas indicado.
                                 </p>
                                 <p>
-                                    Debes hacer un registro individual por cada persona que quiera obtener su plaza. 
+                                    Debes hacer un registro individual por cada persona que quiera obtener su plaza.
                                 </p>
                                 <p class="uppercase">
                                     <strong>Leed bien las contraindicaciones y políticas de cancelación.</strong>
@@ -403,7 +425,7 @@ $dataProximaReserva = "05/04/22 las 10h00";
                         </p>
                         <div class="uppercase">
                             <p>
-                            ⚠️ Si tienes un procedimiento ANTERIOR / ANTIGUO es necesario enviar una foto o reservar cita para evaluación <strong>ANTES DE REALIZAR NINGUNA RESERVA</strong> y con antelación. Sólo se puede hacer la micro si el pigmento está muy muy claro, prácticamente transparente. 
+                            ⚠️ Si tienes un procedimiento ANTERIOR / ANTIGUO es necesario enviar una foto o reservar cita para evaluación <strong>ANTES DE REALIZAR NINGUNA RESERVA</strong> y con antelación. Sólo se puede hacer la micro si el pigmento está muy muy claro, prácticamente transparente.
                             </p>
                             <p>
                             ✅ <strong>TEMPORALES:</strong> EMBARAZO, HERPES SIMPLE O ZOSTER, CONJUNTIVITIS, DEBILIDAD INMUNOLÓGICA, INFILTRACIONES MEDICO ESTÉTICAS RECIENTES, INTERVENCIONES QUIRÚRGICAS ESTÉTICAS RECIENTES, QUIMIOTERAPIA O RADIOTERAPIA, INFECCIÓN LOCAL, CICATRICES NO ESTABILIZADAS, AFECCIONES DE LA PIEL EN LA ZONA DE APLICACIÓN (DERMATITIS LOCAL, HEMATOMA, QUEMADURAS SOLARES, ÚLCERAS DE PIEL) E INFECCIONES BACTERIANAS, FÚNGICAS O VÍRICAS.
@@ -419,35 +441,37 @@ $dataProximaReserva = "05/04/22 las 10h00";
                                 <h4>Política de Cancelación</h4>
                             </p>
                             <p>
-                            ⁃ Las cancelaciones deben ser avisadas con <strong>48 HORAS</strong> de antelación y importe será reembolsado íntegramente, o la clienta puede reservar una nueva cita conforme disponibilidad de agenda si no puede asistir por algún motivo y no quiere cancelar su procedimiento.
+                            ⁃ Las cancelaciones deben ser avisadas con <strong>48 HORAS</strong> de antelación y de ese modo el importe sera reembolsado íntegramente, o la clienta puede reservar una nueva cita conforme disponibilidad de agenda si no puede asistir por algún motivo y no quiere cancelar su procedimiento.
                             </p>
-                            <p>            
+                            <p>
                             Para la no asistencia o cancelación de cita <strong>con menos de 48h</strong> de antelación el importe <strong>NO SERÁ REEMBOLSADO</strong>.
                             </p>
                             <p>
                             ⁃ El importe pagado es transferible a otra persona con aviso previo.
                             </p>
                             <p>
-                            ⁃ Una vez realizado el pago de la reserva de cita, <strong>el importe restante deberá ser abonado en el día del procedimiento, en efectivo o tarjeta.</strong>                                   
+                            ⁃ Una vez realizado el pago de la reserva de cita, <strong>el importe restante deberá ser abonado en el día del procedimiento, en efectivo o tarjeta.</strong>
                             </p>
                         </div>
                         <div class="plazas">
                             <p>
                             <h4>FORMULARIO DE INSCRIPCIÓN</h4>
                             </p>
-                            <h5>PLAZAS DISPONIBLES: 
+                            <h5>PLAZAS DISPONIBLES:
                                 <span>
-                                    <?php $infoPlazasDisponibles = $numPlazas == 0 ? $periodoActual : $numPlazas." plazas para ".$periodoActual;
+                                    <?php $infoPlazasDisponibles = $numPlazas == 0 ? $periodoActual : $numPlazas." plaza(s) para ".$periodoActual;
                                      echo($infoPlazasDisponibles); ?>
                                 </span></h5>
                         </div>
-                        
+
                         <div id="forms">
-                            
-                        <div id="payment-message" class='hidden'></div>
+
+                        <div class="payment-message-form">
+                          <div id="payment-message" class='hidden'></div>
+                        </div>
 
                             <div class="wrapper_form">
-                                <form method="POST" action="javascript:void(0);" class="form_up" id="register-form" >
+                                <form method="POST" action="javascript:void(0);" id="register-form" class="form_up">
 
                                     <div class="form_left" id="form_left">
                                         <input type="text" id="nombre" name="nombre" required placeholder="Nombre"<?php echo $DesableFields ?>>
@@ -457,7 +481,7 @@ $dataProximaReserva = "05/04/22 las 10h00";
                                         <input type="tel" id="telefono" name="telefono" onblur="TelAdjust()" required placeholder="Teléfono"<?php echo $DesableFields ?>>
                                     </div>
                                     <div class="form_right" id="form_right">
-                                        
+
                                         <div class="box_checkboxes<?php echo $DesableFields ?>"  id="divDisponibilidad">
                                             <span class="box_checkboxes_label">Tengo disponibilidad por la:</span>
                                             <label class="wrapper_checkbox">Mañana
@@ -506,24 +530,24 @@ $dataProximaReserva = "05/04/22 las 10h00";
                                 </form>
                                 <form method="POST" action="javascript:void(0);" class="form_down" id="payment-form" >
                                         <div class = "container_form">
-                                            
-                                            <div id="payment_infos"> 
+
+                                            <div id="payment_infos">
                                                 <p id="registerName"></p>
                                                 <p id="email_payment"></p>
                                                 <p id="reservation_amount"></p>
                                                 <p id="procedures"></p>
                                                 <p id="reservationPeriod"></p>
                                             </div>
-                                                                                    
+
                                             <div id="payment-element">
-                                                <div style="margin: 10px 0 10px 0;">Cargando el formulario de pago</div> 
+                                                <div style="margin: 10px 0 10px 0;">Cargando el formulario de pago</div>
                                                 <div class="spinnerElement"></div>
                                             </div>
 
                                             <button class="submitButton" id="submit" disabled>
                                                 <div class="spinner hidden" id="spinner"></div>
                                                 <span id="button-text">PAGAR</span>
-                                            </button> 
+                                            </button>
                                             <br />
                                         </div>
                                 </form>
@@ -552,7 +576,7 @@ $dataProximaReserva = "05/04/22 las 10h00";
                             </video>
                             <img id="video_cover" src="./videos/video_preload.jpg">
                         </div>
-                    </div>     
+                    </div>
                 </div>
             </section>
         </div>
@@ -593,7 +617,7 @@ $dataProximaReserva = "05/04/22 las 10h00";
 
                 </div>
 
-            </div>  
+            </div>
             <div class="footer2_content_right">
                     <div class="fcr1"><p>+34 662 29 61 24</p></div>
                     <div class="fcr2"></div>
@@ -601,7 +625,7 @@ $dataProximaReserva = "05/04/22 las 10h00";
                     <div class="fcr4"></div>
                     <div class="fcr5"></div>
                     <div class="fcr6"></div>
-            </div>    
+            </div>
         </div>
     </section>
     <section class="footer3">

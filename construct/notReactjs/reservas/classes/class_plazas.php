@@ -21,8 +21,8 @@ class Plazas implements \JsonSerializable{
 
      }
 
-    private function setConnection(){ 
-            
+    private function setConnection(){
+
         try {
             $connection = new \PDO("mysql:host=".SERVER.";dbname=".DBNAME,USER,PASSWORD);
             $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -40,7 +40,7 @@ class Plazas implements \JsonSerializable{
 
         $connection = $this->setConnection();
         $sql = "SELECT * FROM ".TABLE_PLAZAS." WHERE condicionBasica = :_condicionBasica AND ano = :_ano AND mesNumero = :_mesNumero";
-        
+
         try {
             $stmt = $connection->prepare($sql);
             $stmt->bindValue(":_condicionBasica", $this->condicionBasica, \PDO::PARAM_STR);
@@ -74,11 +74,11 @@ class Plazas implements \JsonSerializable{
 
     public function getMesNumero(){ return $this->mesNumero; }
 
-    private function setMesNombre(): self { 
+    private function setMesNombre(): self {
 
         $connection = $this->setConnection();
         $sql = "SELECT * FROM ".TABLE_PLAZAS." WHERE mesNumero = :_mesNumero";
-        
+
         try {
             $stmt = $connection->prepare($sql);
             $stmt->bindValue(":_mesNumero", $this->mesNumero, \PDO::PARAM_STR);
@@ -112,12 +112,12 @@ class Plazas implements \JsonSerializable{
     public function getPlazas(){ return $this->plazas; }
 
     public function getCondicionBasica(){ return $this->condicionBasica; }
-    
-    public function setTodosPeriodosDisponibles(): self { 
+
+    public function setTodosPeriodosDisponibles(): self {
 
         $connection = $this->setConnection();
         $sql = "SELECT * FROM ".TABLE_PLAZAS." WHERE condicionBasica = :_condicionBasica AND plazas >= 1 ORDER BY mesNumero";
-        
+
         try {
             $stmt = $connection->prepare($sql);
             $stmt->bindValue(":_condicionBasica", $this->condicionBasica, \PDO::PARAM_STR);
@@ -151,7 +151,7 @@ class Plazas implements \JsonSerializable{
 
     public function jsonSerialize() {
         $vars = get_object_vars($this);
-        return $vars;    
+        return $vars;
     }
 
 
