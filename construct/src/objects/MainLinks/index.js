@@ -55,7 +55,14 @@ const MainLinks = () => {
               />
             </li>
             <li>
-              <Button name="btn-01" width="80%" type="route" text="Website" link="/home" target="_self" />
+              <Button
+                name="btn-01"
+                width="80%"
+                type="route"
+                text="Website"
+                link="/home"
+                target="_self"
+              />
             </li>
             <li>
               <Button

@@ -20,8 +20,14 @@ import SectionStatisticalNumbers from '../../objects/SectionStatisticalNumbers';
 const Home = () => {
   return (
     <>
-      <HeaderMenu classNameIndex="" imgColor="white" />
-      <HeaderMenu classNameIndex="menuIndexBehindMain" imgColor="color" />
+      <HeaderMenu
+        classNameIndex=""
+        imgColor="white"
+      />
+      <HeaderMenu
+        classNameIndex="menuIndexBehindMain"
+        imgColor="color"
+      />
       <ArticleHomeVideo />
       <HorizontalSeparator />
       <SectionSobreResume />
@@ -34,7 +40,10 @@ const Home = () => {
       <SectionReviews />
       <SectionStatisticalNumbers />
       <FooterMenu />
-      <FooterEnd text1="© 2021 Tamara Freitas Studio Academy." text2="  Reservados todos los derechos." />
+      <FooterEnd
+        text1="© 2021 Tamara Freitas Studio Academy."
+        text2="  Reservados todos los derechos."
+      />
     </>
   );
 };
