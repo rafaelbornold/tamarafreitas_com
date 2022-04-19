@@ -103,7 +103,7 @@ content['Carousel'] = [
     title: procedimientos['BrowLamination'].title,
     textSummary: `Lorem ipsum`,
     textContent: `Excepteur sint occaecat cupidatat non proident, sunt deserunt mollit anim id.`,
-    background: require('../../images/pictures/procedimientos/MicroLabios/new001/AntesDepois/PicsArt_06-25-04.47.33.jpg'),
+    background: require('../../images/pictures/procedimientos/BrowLamination/new001/AntesDepois/FB1B87D6-7265-4A83-8710-99F331ECE7CF.jpeg'),
     mediaType: 'link',
     viewSrc: '/procedimientos/BrowLamination',
   },
