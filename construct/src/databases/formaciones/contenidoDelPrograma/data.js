@@ -3,11 +3,11 @@ export const content = new Object();
 
 content['IntensiveMicroblading'] = [
   {
-    title: 'Lorem ipsum sit 11',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -16,11 +16,11 @@ content['IntensiveMicroblading'] = [
   },
 
   {
-    title: 'Lorem ipsum sit',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -28,11 +28,11 @@ content['IntensiveMicroblading'] = [
     ),
   },
   {
-    title: 'Lorem ipsum sit',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -40,11 +40,11 @@ content['IntensiveMicroblading'] = [
     ),
   },
   {
-    title: 'Lorem ipsum sit',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -55,11 +55,11 @@ content['IntensiveMicroblading'] = [
 
 content['AdvancedMicroblading'] = [
   {
-    title: 'Lorem ipsum sit 33',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -68,11 +68,11 @@ content['AdvancedMicroblading'] = [
   },
 
   {
-    title: 'Lorem ipsum sit',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -80,11 +80,11 @@ content['AdvancedMicroblading'] = [
     ),
   },
   {
-    title: 'Lorem ipsum sit',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -92,11 +92,11 @@ content['AdvancedMicroblading'] = [
     ),
   },
   {
-    title: 'Lorem ipsum sit',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -107,11 +107,11 @@ content['AdvancedMicroblading'] = [
 
 content['LashLiftingPro'] = [
   {
-    title: 'Lorem ipsum sit 22',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -120,11 +120,11 @@ content['LashLiftingPro'] = [
   },
 
   {
-    title: 'Lorem ipsum sit',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -132,11 +132,11 @@ content['LashLiftingPro'] = [
     ),
   },
   {
-    title: 'Lorem ipsum sit',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -144,11 +144,11 @@ content['LashLiftingPro'] = [
     ),
   },
   {
-    title: 'Lorem ipsum sit',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -159,11 +159,11 @@ content['LashLiftingPro'] = [
 
 content['DuoMasterClass'] = [
   {
-    title: 'Lorem ipsum sit 22',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -172,11 +172,11 @@ content['DuoMasterClass'] = [
   },
 
   {
-    title: 'Lorem ipsum sit',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -184,11 +184,11 @@ content['DuoMasterClass'] = [
     ),
   },
   {
-    title: 'Lorem ipsum sit',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -196,11 +196,11 @@ content['DuoMasterClass'] = [
     ),
   },
   {
-    title: 'Lorem ipsum sit',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -211,11 +211,11 @@ content['DuoMasterClass'] = [
 
 content['MasterClass'] = [
   {
-    title: 'Lorem ipsum sit 22',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -224,11 +224,11 @@ content['MasterClass'] = [
   },
 
   {
-    title: 'Lorem ipsum sit',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -236,11 +236,11 @@ content['MasterClass'] = [
     ),
   },
   {
-    title: 'Lorem ipsum sit',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>
@@ -248,11 +248,11 @@ content['MasterClass'] = [
     ),
   },
   {
-    title: 'Lorem ipsum sit',
+    title: <div style={{ color: 'red' }}>Lorem ipsum sit</div>,
 
     description: (
       <>
-        <p>
+        <p style={{ color: 'red' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
         </p>

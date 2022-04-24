@@ -1,7 +1,7 @@
 import P from 'prop-types';
 import React from 'react';
 
-import { formaciones } from '../../databases/formaciones/data';
+import { formaciones } from '../../databases/formaciones/home/data';
 
 import './style.scss';
 import './mediascreen.scss';

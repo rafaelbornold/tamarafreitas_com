@@ -4,8 +4,8 @@ import React from 'react';
 import './style.scss';
 import './mediascreen.scss';
 
-import BigTitle from '../BigTitle';
-import Button from '../Button';
+import BigTitle from '../../BigTitle';
+import Button from '../../Button';
 
 const CitasResercasCard = (props) => {
   var title = props.title;

@@ -14,13 +14,25 @@ const SectionBoletinInformativo = () => {
         </div>
 
         <div className="boletin-content">
-          <p> Duis aute irure dolor in reprehenderit in voluptate velit. </p>
+          <p style={{ color: 'red' }}> Duis aute irure dolor in reprehenderit in voluptate velit. </p>
         </div>
 
         <div className="boletin-form-wrapper">
           <form className="boletin-form">
-            <input type="email" id="email" name="email" required placeholder="Tu correo eletrónico" />
-            <Button name="btn-03" width="160px" type="route" text="REGISTRARSE" link="" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Tu correo eletrónico"
+            />
+            <Button
+              name="btn-03"
+              width="160px"
+              type="route"
+              text="REGISTRARSE"
+              link=""
+            />
           </form>
         </div>
       </div>

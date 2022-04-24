@@ -21,12 +21,12 @@ const Sectionmision = () => {
             <BigTitle text={title} />
           </div>
           <article className="article-mision-wrap">
-            <p>
+            <p style={{ color: 'red' }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
               ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cill.
             </p>
-            <p>
+            <p style={{ color: 'red' }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             </p>
           </article>
@@ -34,7 +34,10 @@ const Sectionmision = () => {
 
         <div className="section-mision-img">
           <div className="image-section-mision-wrapper">
-            <div className="image-section-mision-picture" style={{ backgroundImage: 'url(' + image + ')' }}></div>
+            <div
+              className="image-section-mision-picture"
+              style={{ backgroundImage: 'url(' + image + ')' }}
+            ></div>
           </div>
         </div>
       </div>

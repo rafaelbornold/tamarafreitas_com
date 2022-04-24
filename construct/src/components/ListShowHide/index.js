@@ -39,7 +39,7 @@ const ListShowHide = (props) => {
 
 ListShowHide.propTypes = {
   number: P.number,
-  title: P.string,
+  title: P.oneOfType([P.string, P.object]),
   description: P.object,
 };
 

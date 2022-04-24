@@ -28,16 +28,13 @@ const SectionProcedimientoDetails = (props) => {
           </div>
         </div>
 
-        <div className="section-SectionProcedimientoDetails-content">
+        <div className="section-SectionProcedimientoDetails-content-up">
           <div className="section-SectionProcedimientoDetails-bigtitle-02-wrap">
             <BigTitle text={data[0].title} />
           </div>
-          <article className="article-SectionProcedimientoDetails-wrap">
-            {data[0].description.map((module, n) => {
-              return <p key={n}>{data[0].description[n]}</p>;
-            })}
-          </article>
+          <article className="article-SectionProcedimientoDetails-wrap">{data[0].description_up}</article>
         </div>
+        <div className="section-SectionProcedimientoDetails-content-down">{data[0].description_down}</div>
       </div>
     </section>
   );

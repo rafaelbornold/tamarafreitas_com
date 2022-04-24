@@ -14,10 +14,9 @@ const SectionProximosCursos = () => {
         </div>
 
         <div className="proximos_cursos-content">
-          <p>
-            {' '}
+          <p style={{ color: 'red' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.{' '}
+            dolore magna aliqua.
           </p>
         </div>
 

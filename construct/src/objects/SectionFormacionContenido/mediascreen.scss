@@ -1,18 +1,18 @@
-@media screen and (max-width: 590px){
-
-    .section-contenido-content-list{
-    
-        height: auto;
-        justify-content: flex-start;
-        min-width: 285px;
-
-        ul{
-            width: 100%;
-
-        }
-
-    
+@media screen and (max-width: 590px) {
+  .section-contenido-content-subtitle {
+    p {
+      text-align: center;
+      margin-left: 0;
     }
+  }
+  .section-contenido-content-list {
+    height: auto;
+    justify-content: flex-start;
+    min-width: 285px;
+    padding-top: 15px;
 
-
+    ul {
+      width: 100%;
+    }
+  }
 }

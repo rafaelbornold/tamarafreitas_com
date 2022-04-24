@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { content } from '../../databases/formaciones/data';
+import { content } from '../../databases/formaciones/home/data';
 
 import './style.scss';
 
@@ -13,8 +13,7 @@ const SectionFormaciones = () => {
     <section className="section_formaciones-main">
       <div className="container section_formaciones-wrap">
         <div className="section_formaciones-text-up">
-          <p>
-            {' '}
+          <p style={{ color: 'red' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat

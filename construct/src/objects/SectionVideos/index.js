@@ -18,16 +18,21 @@ const SectionVideos = () => {
         </div>
 
         <div className="videos-content">
-          <p>
-            {' '}
+          <p style={{ color: 'red' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat. Duis aute irure dolor in reprehenderit. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia.{' '}
+            proident, sunt in culpa qui officia.
           </p>
         </div>
 
-        <CarouselSlides data={data} cardWidth="254" cardHeight="308" cardGap="30" cardStyle="carousel-card-style-01" />
+        <CarouselSlides
+          data={data}
+          cardWidth="254"
+          cardHeight="308"
+          cardGap="30"
+          cardStyle="carousel-card-style-01"
+        />
       </div>
     </section>
   );

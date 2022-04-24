@@ -20,30 +20,36 @@ const SectionFormacionBeneficios = (props) => {
           <BigTitle text="CONTENIDO" />
         </div>
 
-        <div className="section-contenido-description">
-          <p>{data[0][0].description}</p>
-        </div>
+        <div className="section-contenido-description">{data[0][0].description}</div>
 
-        <div className="section-contenido-content-wrap">
-          <div className="section-contenido-content-list">
-            {data[1].map((module, n) => {
-              return (
-                <ul key={n}>
-                  <li>
-                    {' '}
-                    <div className="ball"></div>
-                    {data[1][n].item}
-                  </li>
-                </ul>
-              );
-            })}
-          </div>
+        {data[1].map((mod, m) => {
+          return (
+            <div key={m}>
+              <div className="section-contenido-content-subtitle">
+                <p>{data[1][m][0][0].fecha}</p>
+              </div>
 
-          <div
-            className="section-contenido-content-img"
-            style={{ backgroundImage: 'url(' + data[0][0].image + ')' }}
-          ></div>
-        </div>
+              <div className="section-contenido-content-wrap">
+                <div className="section-contenido-content-list">
+                  {data[1][m][1].map((module, n) => {
+                    return (
+                      <ul key={n}>
+                        <li>
+                          <div className="ball"></div>
+                          {data[1][m][1][n].item}
+                        </li>
+                      </ul>
+                    );
+                  })}
+                </div>
+                <div
+                  className="section-contenido-content-img"
+                  style={{ backgroundImage: 'url(' + data[1][m][0][0].image + ')' }}
+                ></div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

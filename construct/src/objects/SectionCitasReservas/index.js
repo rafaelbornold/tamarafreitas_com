@@ -2,7 +2,7 @@ import React from 'react';
 
 import { content } from '../../databases/citasReservas/data';
 
-import CitasReservasCard from '../../components/CitasReservasCard';
+import CitasReservas from '../../components/CitasReservas';
 
 import './style.scss';
 import './mediascreen.scss';
@@ -19,18 +19,7 @@ const SectionCitasReservas = () => {
         <div className="section-citas_reservas-text">
           <p>{data[0].description[1]}</p>
         </div>
-
-        {data[1].map((module, n) => {
-          return (
-            <CitasReservasCard
-              key={n}
-              title={data[1][n].title}
-              texts={data[1][n].texts}
-              buttonText={data[1][n].button.text}
-              buttonLink={data[1][n].button.link}
-            />
-          );
-        })}
+        <CitasReservas />
       </div>
     </section>
   );

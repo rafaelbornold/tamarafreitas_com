@@ -12,13 +12,33 @@ const StatisticalNumbers = (props) => {
   return (
     <div className="statistical_numbers-wrap">
       <div className="statistical_numbers-number-wrap">
-        <span className="statistical_numbers-number">{number}</span>
-        <span className="statistical_numbers-numberAdd">{numberAdd}</span>
+        <span
+          className="statistical_numbers-number"
+          style={{ color: 'red' }}
+        >
+          {number}
+        </span>
+        <span
+          className="statistical_numbers-numberAdd"
+          style={{ color: 'red' }}
+        >
+          {numberAdd}
+        </span>
       </div>
       <div className="statistical_numbers-separator"></div>
       <div className="statistical_numbers-description">
-        <span className="statistical_numbers-unit">{unit}</span>
-        <span className="statistical_numbers-action">{action}</span>
+        <span
+          className="statistical_numbers-unit"
+          style={{ color: 'red' }}
+        >
+          {unit}
+        </span>
+        <span
+          className="statistical_numbers-action"
+          style={{ color: 'red' }}
+        >
+          {action}
+        </span>
       </div>
     </div>
   );

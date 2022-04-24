@@ -1,7 +1,7 @@
 import P from 'prop-types';
 import React from 'react';
 
-import { content } from '../../databases/procedimientos/data';
+import { content } from '../../databases/procedimientos/home/data';
 
 import BigTitle from '../../components/BigTitle';
 import CarouselSlides from '../../components/CarouselSlides';
@@ -21,10 +21,9 @@ const SectionProcedimientos = (props) => {
         </div>
 
         <div className="procedimientos-content">
-          <p>
-            {' '}
+          <p style={{ color: 'red' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.{' '}
+            dolore magna aliqua.
           </p>
         </div>
 

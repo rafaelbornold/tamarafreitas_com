@@ -1,7 +1,7 @@
 import P from 'prop-types';
 import React from 'react';
 
-import { content } from '../../databases/formaciones/data';
+import { content } from '../../databases/formaciones/home/data';
 
 import IconLink from '../IconLink';
 import ComponentCursoBlock from './ComponentCursoBlock';

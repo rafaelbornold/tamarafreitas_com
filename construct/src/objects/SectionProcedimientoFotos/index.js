@@ -2,7 +2,7 @@ import P from 'prop-types';
 import React from 'react';
 
 import { content } from '../../databases/procedimientos/fotosCarousel/data';
-import { procedimientos } from '../../databases/procedimientos/data';
+import { procedimientos } from '../../databases/procedimientos/home/data';
 
 import BigTitle from '../../components/BigTitle';
 import CarouselSlides from '../../components/CarouselSlides';

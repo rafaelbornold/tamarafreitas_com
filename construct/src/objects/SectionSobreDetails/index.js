@@ -15,40 +15,58 @@ const SectionSobreDetails = () => {
     <section className="section_sobre_details-main">
       <div className="container section_sobre_details-wrap">
         <div className="section_sobre_details-text-up">
-          <p>
-            {' '}
+          <p style={{ color: 'red' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.{' '}
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
           </p>
         </div>
 
         <div className="section_sobre_details-mosaic-wrap">
           <article className="section_sobre_details-mosaic">
-            <div style={{ backgroundImage: 'url(' + mosaicPic1 + ')' }} className="mosaic-pic1"></div>
-            <div style={{ backgroundImage: 'url(' + mosaicPic2 + ')' }} className="mosaic-pic2"></div>
-            <div style={{ backgroundImage: 'url(' + mosaicPic3 + ')' }} className="mosaic-pic3"></div>
-            <div style={{ backgroundImage: 'url(' + mosaicPic4 + ')' }} className="mosaic-pic4"></div>
-            <div style={{ backgroundImage: 'url(' + mosaicPic5 + ')' }} className="mosaic-pic5"></div>
-            <div style={{ backgroundImage: 'url(' + mosaicPic6 + ')' }} className="mosaic-pic6"></div>
-            <div style={{ backgroundImage: 'url(' + mosaicPic7 + ')' }} className="mosaic-pic7"></div>
+            <div
+              style={{ backgroundImage: 'url(' + mosaicPic1 + ')' }}
+              className="mosaic-pic1"
+            ></div>
+            <div
+              style={{ backgroundImage: 'url(' + mosaicPic2 + ')' }}
+              className="mosaic-pic2"
+            ></div>
+            <div
+              style={{ backgroundImage: 'url(' + mosaicPic3 + ')' }}
+              className="mosaic-pic3"
+            ></div>
+            <div
+              style={{ backgroundImage: 'url(' + mosaicPic4 + ')' }}
+              className="mosaic-pic4"
+            ></div>
+            <div
+              style={{ backgroundImage: 'url(' + mosaicPic5 + ')' }}
+              className="mosaic-pic5"
+            ></div>
+            <div
+              style={{ backgroundImage: 'url(' + mosaicPic6 + ')' }}
+              className="mosaic-pic6"
+            ></div>
+            <div
+              style={{ backgroundImage: 'url(' + mosaicPic7 + ')' }}
+              className="mosaic-pic7"
+            ></div>
           </article>
         </div>
 
         <div className="section_sobre_details-text-down">
-          <p>
-            {' '}
+          <p style={{ color: 'red' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur.{' '}
+            nulla pariatur.
           </p>
 
-          <p>
-            {' '}
+          <p style={{ color: 'red' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur.{' '}
+            nulla pariatur.
           </p>
         </div>
       </div>
