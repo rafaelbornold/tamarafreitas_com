@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import P from 'prop-types';
-import React from 'react';
+import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import BigTitle from '../../BigTitle';
@@ -12,6 +12,12 @@ const CarouselCardInner = (props) => {
   var style = props.style; // CSS className
   const navigate = useNavigate();
 
+  const ImageElement = useRef(null);
+  const PlaySymbolWrap = useRef(null);
+  const PlaySymbol = useRef(null);
+  const ContentElement = useRef(null);
+  const TitleElement = useRef(null);
+
   switch (style) {
     case 'carousel-card-style-00': {
       const handleClick = (e) => {
@@ -21,15 +27,13 @@ const CarouselCardInner = (props) => {
       const handleOver = (e) => {
         document.body.classList.add('noselect');
 
-        var ImageElement = e.target.querySelector(`.${style}-image`);
-        ImageElement.classList.add('image--hover');
+        ImageElement.current.classList.add('image--hover');
       };
 
       const handleLeave = (e) => {
         document.body.classList.remove('noselect');
 
-        var ImageElement = e.target.querySelector(`.${style}-image`);
-        ImageElement.classList.remove('image--hover');
+        ImageElement.current.classList.remove('image--hover');
       };
 
       return (
@@ -45,6 +49,7 @@ const CarouselCardInner = (props) => {
 
           <div
             className={`${style}-image`}
+            ref={ImageElement}
             style={{ backgroundImage: `url(${item.background})` }}
           ></div>
         </div>
@@ -58,34 +63,27 @@ const CarouselCardInner = (props) => {
 
       const handleOver = (e) => {
         document.body.classList.add('noselect');
+        console.log();
 
-        var ImageElement = e.target.querySelector(`.${style}-image`);
-        ImageElement.classList.add('image--hover');
+        ImageElement.current.classList.add('image--hover');
 
-        var PlaySymbolWrap = e.target.querySelector(`.${style}-play_symbol-wrap`);
-        PlaySymbolWrap.classList.add(`${style}-play_symbol-wrap--hover`);
+        PlaySymbolWrap.current.classList.add(`${style}-play_symbol-wrap--hover`);
 
-        var PlaySymbol = e.target.querySelector(`.${style}-play_symbol`);
-        PlaySymbol.classList.add(`${style}-play_symbol--hover`);
+        PlaySymbol.current.classList.add(`${style}-play_symbol--hover`);
 
-        var ContentElement = e.target.querySelector(`.${style}-content`);
-        ContentElement.classList.add(`${style}-content--bold_hover`);
+        ContentElement.current.classList.add(`${style}-content--bold_hover`);
       };
 
       const handleLeave = (e) => {
         document.body.classList.remove('noselect');
 
-        var ImageElement = e.target.querySelector(`.${style}-image`);
-        ImageElement.classList.remove('image--hover');
+        ImageElement.current.classList.remove('image--hover');
 
-        var PlaySymbolWrap = e.target.querySelector(`.${style}-play_symbol-wrap`);
-        PlaySymbolWrap.classList.remove(`${style}-play_symbol-wrap--hover`);
+        PlaySymbolWrap.current.classList.remove(`${style}-play_symbol-wrap--hover`);
 
-        var PlaySymbol = e.target.querySelector(`.${style}-play_symbol`);
-        PlaySymbol.classList.remove(`${style}-play_symbol--hover`);
+        PlaySymbol.current.classList.remove(`${style}-play_symbol--hover`);
 
-        var ContentElement = e.target.querySelector(`.${style}-content`);
-        ContentElement.classList.remove(`${style}-content--bold_hover`);
+        ContentElement.current.classList.remove(`${style}-content--bold_hover`);
       };
 
       return (
@@ -101,14 +99,24 @@ const CarouselCardInner = (props) => {
 
           <div
             className={`${style}-image`}
+            ref={ImageElement}
             style={{ backgroundImage: `url(${item.background})` }}
           ></div>
 
-          <div className={`${style}-play_symbol-wrap`}>
-            <div className={`${style}-play_symbol`}></div>
+          <div
+            className={`${style}-play_symbol-wrap`}
+            ref={PlaySymbolWrap}
+          >
+            <div
+              className={`${style}-play_symbol`}
+              ref={PlaySymbol}
+            ></div>
           </div>
 
-          <div className={`${style}-content`}>
+          <div
+            className={`${style}-content`}
+            ref={ContentElement}
+          >
             <h6>{item.textSummary}</h6>
             <p>{item.textContent}</p>
           </div>
@@ -126,14 +134,12 @@ const CarouselCardInner = (props) => {
       const handleOver = (e) => {
         document.body.classList.add('noselect');
 
-        var ImageElement = e.target.querySelector(`.${style}-image`);
-        ImageElement.classList.add('image--hover');
+        ImageElement.current.classList.add('image--hover');
 
-        var TitleElement = e.target.querySelector(`.${style}-title`);
-        TitleElement.classList.add('title--hover');
-        TitleElement.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
+        TitleElement.current.classList.add('title--hover');
+        TitleElement.current.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
 
-        var bigtitle = TitleElement.querySelector(`.bigtitle`);
+        const bigtitle = TitleElement.current.querySelector(`.bigtitle`);
         bigtitle.style.transition = 'color 0.7s, font-size 0.2s';
         bigtitle.style.color = 'var(--rosa-escuro)';
         bigtitle.style.fontSize = '26px';
@@ -142,14 +148,12 @@ const CarouselCardInner = (props) => {
       const handleLeave = (e) => {
         document.body.classList.remove('noselect');
 
-        var ImageElement = e.target.querySelector(`.${style}-image`);
-        ImageElement.classList.remove('image--hover');
+        ImageElement.current.classList.remove('image--hover');
 
-        var TitleElement = e.target.querySelector(`.${style}-title`);
-        TitleElement.classList.remove('title--hover');
-        TitleElement.style.backgroundColor = 'var(--rosa-escuro)';
+        TitleElement.current.classList.remove('title--hover');
+        TitleElement.current.style.backgroundColor = 'var(--rosa-escuro)';
 
-        var bigtitle = TitleElement.querySelector(`.bigtitle`);
+        const bigtitle = TitleElement.current.querySelector(`.bigtitle`);
         bigtitle.style.color = 'white';
         bigtitle.style.fontSize = '20px';
       };
@@ -167,10 +171,14 @@ const CarouselCardInner = (props) => {
 
           <div
             className={`${style}-image`}
+            ref={ImageElement}
             style={{ backgroundImage: `url(${item.background})` }}
           ></div>
 
-          <div className={`${style}-title`}>
+          <div
+            className={`${style}-title`}
+            ref={TitleElement}
+          >
             <BigTitle
               text={item.title}
               fontSize="20px"
@@ -178,7 +186,10 @@ const CarouselCardInner = (props) => {
             />
           </div>
 
-          <div className={`${style}-content`}>
+          <div
+            className={`${style}-content`}
+            ref={ContentElement}
+          >
             <h6>{item.textSummary}</h6>
             <div className="barra"></div>
             <p>{item.textContent}</p>
@@ -203,14 +214,12 @@ const CarouselCardInner = (props) => {
       const handleOver = (e) => {
         document.body.classList.add('noselect');
 
-        var ImageElement = e.target.querySelector(`.${style}-image`);
-        ImageElement.classList.add('image--hover');
+        ImageElement.current.classList.add('image--hover');
 
-        var TitleElement = e.target.querySelector(`.${style}-title`);
-        TitleElement.classList.add('title--hover');
-        TitleElement.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
+        TitleElement.current.classList.add('title--hover');
+        TitleElement.current.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
 
-        var bigtitle = TitleElement.querySelector(`.bigtitle`);
+        const bigtitle = TitleElement.current.querySelector(`.bigtitle`);
         bigtitle.style.transition = 'color 0.7s, font-size 0.2s';
         bigtitle.style.color = 'var(--rosa-escuro)';
         bigtitle.style.fontSize = '26px';
@@ -219,14 +228,12 @@ const CarouselCardInner = (props) => {
       const handleLeave = (e) => {
         document.body.classList.remove('noselect');
 
-        var ImageElement = e.target.querySelector(`.${style}-image`);
-        ImageElement.classList.remove('image--hover');
+        ImageElement.current.classList.remove('image--hover');
 
-        var TitleElement = e.target.querySelector(`.${style}-title`);
-        TitleElement.classList.remove('title--hover');
-        TitleElement.style.backgroundColor = 'var(--rosa-escuro)';
+        TitleElement.current.classList.remove('title--hover');
+        TitleElement.current.style.backgroundColor = 'var(--rosa-escuro)';
 
-        var bigtitle = TitleElement.querySelector(`.bigtitle`);
+        const bigtitle = TitleElement.current.querySelector(`.bigtitle`);
         bigtitle.style.color = 'white';
         bigtitle.style.fontSize = '20px';
       };
@@ -244,10 +251,14 @@ const CarouselCardInner = (props) => {
 
           <div
             className={`${style}-image`}
+            ref={ImageElement}
             style={{ backgroundImage: `url(${item.background})` }}
           ></div>
 
-          <div className={`${style}-title`}>
+          <div
+            className={`${style}-title`}
+            ref={TitleElement}
+          >
             <BigTitle
               text={item.title}
               fontSize="20px"
@@ -255,7 +266,10 @@ const CarouselCardInner = (props) => {
             />
           </div>
 
-          <div className={`${style}-content`}>
+          <div
+            className={`${style}-content`}
+            ref={ContentElement}
+          >
             <h6>{item.textSummary}</h6>
             <div className="barra"></div>
             <p>{item.textContent}</p>
@@ -292,7 +306,10 @@ const CarouselCardInner = (props) => {
           onTouchEnd={handleLeave}
           onClick={handleClick}
         >
-          <div className={`${style}-content`}>
+          <div
+            className={`${style}-content`}
+            ref={ContentElement}
+          >
             <h6>{item.title}</h6>
             <p>{item.textContent}</p>
             <div className={`${style}-sticker_image`}>
@@ -313,23 +330,17 @@ const CarouselCardInner = (props) => {
       const handleOver = (e) => {
         document.body.classList.add('noselect');
 
-        var ImageElement = e.target.querySelector(`.${style}-image`);
-        ImageElement.classList.add('image--hover');
+        ImageElement.current.classList.add('image--hover');
 
-        var TitleElement = e.target.querySelector(`.${style}-title`);
-        TitleElement.classList.add('title--hover');
-        // TitleElement.style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+        TitleElement.current.classList.add('title--hover');
       };
 
       const handleLeave = (e) => {
         document.body.classList.remove('noselect');
 
-        var ImageElement = e.target.querySelector(`.${style}-image`);
-        ImageElement.classList.remove('image--hover');
+        ImageElement.current.classList.remove('image--hover');
 
-        var TitleElement = e.target.querySelector(`.${style}-title`);
-        TitleElement.classList.remove('title--hover');
-        // TitleElement.style.backgroundColor = "var(--rosa-escuro)";
+        TitleElement.current.classList.remove('title--hover');
       };
 
       return (
@@ -345,14 +356,21 @@ const CarouselCardInner = (props) => {
 
           <div
             className={`${style}-image`}
+            ref={ImageElement}
             style={{ backgroundImage: `url(${item.background})` }}
           ></div>
 
-          <div className={`${style}-title`}>
+          <div
+            className={`${style}-title`}
+            ref={TitleElement}
+          >
             <h6 className={`${style}-item_title`}>{item.title}</h6>
           </div>
 
-          <div className={`${style}-content`}>
+          <div
+            className={`${style}-content`}
+            ref={ContentElement}
+          >
             <h4>{item.title}</h4>
             <p>{item.textContent}</p>
           </div>
