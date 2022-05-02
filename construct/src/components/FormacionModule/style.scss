@@ -1,5 +1,4 @@
-.component_formacion-module{
-
+.component_formacion-module {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -8,98 +7,66 @@
   height: 100%;
   padding: 20px;
   background-color: var(--rosa-claro);
+  margin: 8px;
 
-
-  .component_formacion-module-content-header2-wrap{
-      
+  .component_formacion-module-content-header2-wrap {
     display: none;
-    width: 95%
-
+    width: 95%;
   }
 
-
-  .component_formacion-module-pic-wrap{
-
+  .component_formacion-module-pic-wrap {
     width: 50%;
     min-width: 325px;
     padding: 0px 20px 20px 20px;
   }
 
-  .component_formacion-module-content-wrap{
-
+  .component_formacion-module-content-wrap {
     width: 50%;
     min-width: 325px;
     padding: 0 35px 32px 20px;
 
-    .component_formacion-module-content-header1-wrap{
-
+    .component_formacion-module-content-header1-wrap {
       display: block;
-
     }
 
-    .component_formacion-module-content-description-wrap{
-
+    .component_formacion-module-content-description-wrap {
       padding: 15px 0 15px 0;
 
-      p{
-
+      p {
         font-family: Arial;
         font-size: 14px;
         line-height: 22px;
         color: var(--font-black-color);
-
       }
-
     }
-
-
   }
-
-
 }
 
-
-
-.component_formacion-module-content-footer-wrap{
-
+.component_formacion-module-content-footer-wrap {
   display: flex;
   flex-direction: column;
-  // gap: 24px;
 
-  .component_formacion-module-content-footer-plazas{
-    
+  .component_formacion-module-content-footer-plazas {
     display: flex;
     margin-bottom: 24px;
-    // gap: 10px;
 
-    span{
-      
+    span {
       font-family: AppleGaramond-Bold;
       font-size: 18px;
       color: var(--font-black-color);
-
     }
 
-    img{
-
+    img {
       object-fit: contain;
       margin-right: 10px;
-
     }
-
   }
 
-  .component_formacion-module-content-footer-buttons{
-
+  .component_formacion-module-content-footer-buttons {
     display: flex;
-    // gap: 26px
 
-    a:nth-of-type(1){
+    a:nth-of-type(1) {
       margin-right: 26px;
-    }  
-
+    }
   }
-
 }
-
-

@@ -1,11 +1,10 @@
-.cursos_list-block{
-    display: none;
+.cursos_list-block {
+  display: none;
 }
 
-.cursos_list-table{
-    display: block;
+.cursos_list-table {
+  display: block;
 }
-
 
 //////////////////////////////
 //////////////////////////////
@@ -17,95 +16,95 @@
 //////////////////////////////
 //////////////////////////////
 
-
-.cursos_list-table-content{display: table;}
-.cursos_list-table-tr{display: table-row;}
-.cursos_list-table-th{display: table-cell;}
-.cursos_list-table-td{display: table-cell;}
-
-
-.cursos_list-table-content{
-    width: 90%;
-    margin: 0 auto;
-    font-size: 12px;
-    border-top: 1px solid var(--cinza-claro);
-
+.cursos_list-table-content {
+  display: table;
+}
+.cursos_list-table-tr {
+  display: table-row;
+}
+.cursos_list-table-th {
+  display: table-cell;
+}
+.cursos_list-table-td {
+  display: table-cell;
 }
 
-.cursos_list-table-tr{
+.cursos_list-table-content {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 12px;
+  border-top: 1px solid var(--cinza-claro);
+}
+
+.cursos_list-table-tr {
+  background-color: none;
+  transition: background-color 1.5s;
+
+  &:nth-child(even) {
     background-color: none;
-    transition: background-color 1.5s;
+  }
+  &:nth-child(odd) {
+    background-color: none;
+  }
 
-    &:nth-child(even){background-color:none;}
-    &:nth-child(odd){background-color:none;}
-
-    &:hover {
-        background-color: var(--rosa-claro);
-        transition: background-color 0.5s;
-    }
-
+  &:hover {
+    background-color: var(--rosa-claro);
+    transition: background-color 0.5s;
+  }
 }
 
 .cursos_list-table-th {
-    padding-top: 35px;
-    padding-bottom: 35px;
-    padding-left: 25px;
-    vertical-align: middle;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-left: 25px;
+  vertical-align: middle;
 
-    text-align: left;
+  text-align: left;
 
-    background-color: var(--branco-claro);
+  background-color: var(--branco-claro);
 
-    border-bottom: 1px solid var(--rosa-escuro);
+  border-bottom: 1px solid var(--rosa-escuro);
 
-    .cursos_list-table-th-title-wrap{
-        display: flex;
-        align-items: center;
-    }
-
-    span{
-        font-family: Arial;
-        font-weight: bold;
-        color: var(--rosa-escuro);    
-    }
+  .cursos_list-table-th-title-wrap {
+    display: flex;
+    align-items: center;
   }
 
-
-.cursos_list-table-td{
-    padding: 0 0 0 35px;
-    height: 85px;
-    vertical-align: middle;
-
-    border-bottom: 1px solid var(--rosa-escuro);
-
-        p{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            > span{
-                font-family: Arial;
-                font-weight: normal;
-                color: var(--font-black-color);
-                }
-            
-    
-        }
-
+  span {
+    font-family: Arial;
+    font-weight: bold;
+    color: var(--rosa-escuro);
+  }
 }
 
+.cursos_list-table-td {
+  padding: 0 0 0 35px;
+  height: 85px;
+  vertical-align: middle;
 
-.cursos_list-table-wrapper-button {
-    width: 100%;
-    margin-top: 35px;
+  border-bottom: 1px solid var(--rosa-escuro);
+
+  p {
     display: flex;
-    flex-wrap: wrap-reverse;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
 
+    > span {
+      font-family: Arial;
+      font-weight: normal;
+      color: var(--font-black-color);
+    }
+  }
 }
 
-
+.cursos_list-table-wrapper-button {
+  width: 100%;
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: center;
+}
 
 //////////////////////////////
 //////////////////////////////
@@ -117,89 +116,72 @@
 //////////////////////////////
 //////////////////////////////
 
-
-.cursos_list-block-content{
-
-display: flex;
-justify-content: center;
-margin-bottom: 15px;
-
+.cursos_list-block-content {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px 15px 10px;
 }
 
 .cursos_list-block-th-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    width: 312px;
-    border-radius: 10px;
-    border: 1px solid var(--rosa-escuro);
+  width: 312px;
+  border-radius: 10px;
+  border: 1px solid var(--rosa-escuro);
 
-    padding-bottom: 20px;
-
+  padding-bottom: 20px;
 }
 
-.cursos_list-block-th{
+.cursos_list-block-th {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
 
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 15px;
-    gap: 10px;
-
-    > span{
-        font-family: Arial;
-        color: var(--font-black-color);
-
-    }
-
-
+  > span {
+    font-family: Arial;
+    color: var(--font-black-color);
+    margin: 0 0 0 10px;
+  }
 }
 
-.th-curso{
-
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom: 1px solid var(--rosa-escuro);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
-    background-color: var(--cinza-claro);
+.th-curso {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 1px solid var(--rosa-escuro);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  background-color: var(--cinza-claro);
 }
 
 .cursos_list-block-wrapper-button {
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap-reverse;
-    align-items: center;
-    justify-content: center;
-
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: center;
 }
 
-
-
 //////////////////////////////
 //////////////////////////////
 //////////////////////////////
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
+  .cursos_list-block {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 10px 0 10px;
+    transition: 0.5s;
+  }
 
-    .cursos_list-block{
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        margin: 0 10px 0 10px;
-        transition: 0.5s;
-
-    }
-    
-    .cursos_list-table{
-        opacity: 0;
-        display: none;
-        transition: 0.5s;
-    }
-
+  .cursos_list-table {
+    opacity: 0;
+    display: none;
+    transition: 0.5s;
+  }
 }

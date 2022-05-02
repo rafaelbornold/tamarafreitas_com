@@ -1,10 +1,29 @@
 .component-formacion_benefits-list {
+  $screen: 768px;
+
   display: flex;
   flex-direction: column;
   width: 45%;
+  margin-bottom: 19px;
   flex-grow: 1;
 
-  // min-width: 30%;
+  &:nth-child(odd) {
+    margin-right: 4.2%;
+
+    @media screen and (max-width: $screen) {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+  &:nth-child(even) {
+    margin-left: 4.2%;
+
+    @media screen and (max-width: $screen) {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
 }
 
 .component-formacion_benefits-content {

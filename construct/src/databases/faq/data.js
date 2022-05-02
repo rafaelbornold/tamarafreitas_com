@@ -66,7 +66,7 @@ content[0] = [
   },
 
   {
-    title: '¿Lorem ipsum sit? 11',
+    title: <div style={{ color: 'red' }}>¿Lorem ipsum sit? </div>,
 
     description: (
       <div style={{ color: 'red' }}>

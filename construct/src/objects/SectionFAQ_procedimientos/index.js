@@ -8,7 +8,7 @@ import ListShowHide from '../../components/ListShowHide';
 
 import './style.scss';
 
-const SectionFAQ_formaciones = (props) => {
+const SectionFAQ_procedimientos = (props) => {
   var procedimiento = props.procedimiento;
 
   var data = content[procedimiento];
@@ -39,8 +39,8 @@ const SectionFAQ_formaciones = (props) => {
   );
 };
 
-SectionFAQ_formaciones.propTypes = {
+SectionFAQ_procedimientos.propTypes = {
   procedimiento: P.string,
 };
 
-export default SectionFAQ_formaciones;
+export default SectionFAQ_procedimientos;

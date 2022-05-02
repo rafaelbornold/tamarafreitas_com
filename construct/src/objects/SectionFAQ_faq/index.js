@@ -65,14 +65,16 @@ const SectionFAQ_faq = () => {
             text="O llámanos por Whatsapp aquí."
             fontSize="24px"
           />
-          <Button
-            name="btn-04"
-            width="130px"
-            type="redirect"
-            text="PREGUNTAR"
-            link="https://api.whatsapp.com/send?phone=34662296124&text=Hola!%20Que%20tal?"
-            target="_blank"
-          />
+          <div className="btn-whatsapp">
+            <Button
+              name="btn-04"
+              width="130px"
+              type="redirect"
+              text="PREGUNTAR"
+              link="https://api.whatsapp.com/send?phone=34662296124&text=Hola!%20Que%20tal?"
+              target="_blank"
+            />
+          </div>
         </div>
       </div>
     </section>
