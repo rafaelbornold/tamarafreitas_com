@@ -5,94 +5,65 @@
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 
-.menuIndexBehindMain{
+.menuIndexBehindMain {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  height: 70px;
 
-    opacity: 1;
-    position: fixed;
-    top: 0;
+  .stretcher {
     z-index: 3;
+    background: var(--cinza-claro);
     height: 70px;
 
-    transition: 1s;
-
-
-    .stretcher{
-        z-index: 3;
-        background: var(--cinza-claro);
-        height: 70px;
-
-        span{
-            font-family: Arial;
-            color: var(--font-black-color);
-        }
-
-        .header_display{
-
-            height: 100%;
-
-            .menu_nav_position_logo{
-
-                max-width: 100px;
-                align-items: flex-start;
-
-                .logo_header{
-
-                    padding-top: 10px;
-
-                }
-
-            }
-
-            .menu_nav_position_nav{
-
-
-                .hamburger-box{
-
-                    .hamburger-btn{
-
-                        span{
-                            
-                            background: var(--rosa-escuro);
-                            box-shadow: 0 1px 1px 0 rgba(0,0,0,0.3);
-
-                        }
-
-                    }
-
-                }
-
-                .menu{
-
-                    a:hover{
-                        background-color: var(--cinza-claro);
-                        
-                        span{
-
-                            // font-weight: bold;
-                            color: var(--rosa-escuro);
-                            border-bottom: 2px solid var(--rosa-escuro);
-                            transform: scale(1.02);
-                            transition: 0.2s;
-                        }
-                    }
-
-                    .nav-link-active{
-
-                        > span{
-
-                            border-bottom: 2px solid var(--font-black-color);
-
-                        }
-                    
-                    }
-
-                }
-
-            }
-
-        }
-
+    span {
+      font-family: Arial;
+      color: var(--font-black-color);
     }
 
-}
+    .header_display {
+      height: 100%;
 
+      .menu_nav_position_logo {
+        max-width: 100px;
+        align-items: flex-start;
+
+        .logo_header {
+          padding-top: 10px;
+        }
+      }
+
+      .menu_nav_position_nav {
+        .hamburger-box {
+          .hamburger-btn {
+            span {
+              background: var(--rosa-escuro);
+              box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+            }
+          }
+        }
+
+        .menu {
+          a:hover {
+            background-color: var(--cinza-claro);
+
+            span {
+              // font-weight: bold;
+              color: var(--rosa-escuro);
+              border-bottom: 2px solid var(--rosa-escuro);
+              transform: scale(1.02);
+              transition: 0.2s;
+            }
+          }
+
+          .nav-link-active {
+            > span {
+              border-bottom: 2px solid var(--font-black-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <>
       <HeaderMenu
-        classNameIndex=""
+        classNameIndex="menuIndexFront"
         imgColor="white"
       />
       <HeaderMenu

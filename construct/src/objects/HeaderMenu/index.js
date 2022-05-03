@@ -1,5 +1,5 @@
 import P from 'prop-types';
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import HeaderLogo from '../../components/HeaderLogo';
 import HeaderNav from '../../components/HeaderNav';
@@ -10,39 +10,28 @@ import './mediascreen.scss';
 import './menuZindex.scss';
 
 const MenuHeader = (props) => {
-  var classNameIndex = props.classNameIndex;
-  var imgColor = props.imgColor;
+  const headerElement = useRef();
+  const classNameIndex = props.classNameIndex;
+  const imgColor = props.imgColor;
 
-  // const browserPage = useLocation();
-
-  // console.log(browserPage.pathname);
-
-  // if ( browserPage.pathname != "/" ){
-
-  //     document.querySelector(`.${classNameIndex}`).style.opacity = "1";
-
-  // }
-
-  // function showMenuBehind() {
-
-  //     if (classNameIndex != '') {
-
-  //         var scrollTop =  window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
-  //         if (scrollTop >= 100) {
-
-  //             document.querySelector(`.${classNameIndex}`).style.opacity = "1";
-
-  //         }
-
-  //     }
-
-  // }
-
-  // window.addEventListener("scroll",showMenuBehind);
+  useEffect(() => {
+    if (document.querySelector('.menuIndexFront')) {
+      //have 2 menus on screen
+      setTimeout(() => {
+        headerElement.current.style.transition = '0.5s';
+        headerElement.current.style.opacity = 1;
+      }, 1000);
+    } else {
+      // have 1 menu on screen
+      headerElement.current.style.opacity = 1;
+    }
+  }, []);
 
   return (
-    <header className={classNameIndex}>
+    <header
+      className={classNameIndex}
+      ref={headerElement}
+    >
       <div className={'stretcher'}>
         <div className="container header_display">
           <div className="menu_nav_position_logo">
