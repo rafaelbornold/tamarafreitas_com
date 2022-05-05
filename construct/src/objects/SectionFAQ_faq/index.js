@@ -7,6 +7,7 @@ import ListShowHide from '../../components/ListShowHide';
 import Button from '../../components/Button';
 
 import './style.scss';
+import FaqPregunta from '../../components/FaqPregunta';
 
 const SectionFAQ_faq = () => {
   var data = content[0];
@@ -39,27 +40,7 @@ const SectionFAQ_faq = () => {
             fontSize="24px"
           />
 
-          <form
-            method="POST"
-            // action={void 0}
-            className="section-FAQ_faq-form"
-          >
-            <input
-              type="text"
-              id="pregunta"
-              name="pregunta"
-              required
-              placeholder="Ingrese su pregunta aqui."
-            />
-            <Button
-              name="btn-03"
-              width="130px"
-              type="route"
-              text="ENVIAR"
-              link=""
-              target="_self"
-            />
-          </form>
+          <FaqPregunta />
 
           <BigTitle
             text="O llámanos por Whatsapp aquí."

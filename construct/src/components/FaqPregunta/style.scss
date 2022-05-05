@@ -1,0 +1,47 @@
+.component-FaqPregunta-form {
+  width: min(max(285px, 70%), 600px);
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  flex-grow: 1;
+
+  margin: 30px 0 20px 0;
+
+  input[type='text'] {
+    height: 48px;
+    padding-left: 20px;
+    border: 1px solid var(--rosa-escuro);
+    min-width: 290px;
+    flex-grow: 1;
+    margin: 0 20px 20px 20px;
+  }
+
+  input[type='button'] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 125px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 48px;
+    margin-bottom: 20px;
+    border: 1px solid var(--rosa-escuro);
+
+    font-family: 'AceSans-Light';
+    font-size: 20px;
+    text-align: center;
+
+    background-color: var(--rosa-escuro);
+
+    color: white;
+
+    transition: 0.3s;
+
+    &:hover {
+      transition: 0.5s;
+      background-color: var(--cinza-dark);
+      color: white;
+    }
+  }
+}
