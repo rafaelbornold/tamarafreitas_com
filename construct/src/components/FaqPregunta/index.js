@@ -6,19 +6,28 @@ import emailjs from '@emailjs/browser';
 import './style.scss';
 
 const FaqPregunta = () => {
-  const [time, setTime] = useState();
+  // const [time, setTime] = useState();
+  const [inputFocus, setInputFocus] = useState();
+
   const form = useRef();
+  const inputTime = useRef();
 
   var now = new Date();
 
-  const handleClick = () => {
-    setTime(
-      `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}h (${now.getDate()}-${now.getMonth()}-${now.getFullYear()})`,
-    );
+  // const handleClick = () => {
+  //   setTime(
+  //     `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}h (${now.getDate()}-${now.getMonth()}-${now.getFullYear()})`,
+  //   );
 
-    setTimeout(() => {
-      sendEmail();
-    }, 100);
+  //   setTimeout(() => {
+  //     sendEmail();
+  //   }, 100);
+  // };
+
+  const handleClick = () => {
+    inputTime.current.value = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}h (${now.getDate()}-${now.getMonth()}-${now.getFullYear()})`;
+
+    sendEmail();
   };
 
   const sendEmail = () => {
@@ -46,31 +55,45 @@ const FaqPregunta = () => {
 
       <input
         type="hidden"
+        ref={inputTime}
         id="time"
         name="time"
-        value={time}
       />
 
       <input
-        type="hidden"
-        id="from_name"
-        name="from_name"
-        value="CARMEN MIR"
-      />
-      <input
-        type="hidden"
+        type="email"
         id="reply_to"
         name="reply_to"
-        value="carmgngmir@gmail.com"
+        required
+        placeholder="Tu correo"
       />
 
-      <input
+      <textarea
+        className={'textarea ' + inputFocus}
+        rows="2"
         type="text"
         id="message"
         name="message"
         required
         placeholder="Ingrese su pregunta aqui."
+        onFocus={() => {
+          setInputFocus('focus');
+        }}
+        onBlur={() => {
+          setInputFocus('');
+        }}
+        onChange={(e) => {
+          console.log(e.target.value);
+        }}
       />
+      <input
+        type="text"
+        id="from_name"
+        name="from_name"
+        required
+        placeholder="Tu nombre"
+      />
+
       <input
         type="button"
         value="Enviar"
@@ -78,14 +101,6 @@ const FaqPregunta = () => {
           handleClick();
         }}
       />
-      {/* <Button
-        name="btn-03"
-        width="130px"
-        type="route"
-        text="ENVIAR"
-        link=""
-        target="_self"
-      /> */}
     </form>
   );
 };
