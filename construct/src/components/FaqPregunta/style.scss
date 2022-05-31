@@ -1,3 +1,35 @@
+.component-FaqPregunta-status-wrapper {
+  display: none;
+  position: relative;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 100px;
+  width: 230px;
+
+  transition: 1s;
+}
+
+.component-FaqPregunta-status {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+
+  transition: 1s;
+
+  p {
+    font-family: 'AceSans';
+    color: var(--font-black-color);
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+  }
+}
+
 .component-FaqPregunta-form {
   width: min(max(285px, 70%), 600px);
   display: flex;

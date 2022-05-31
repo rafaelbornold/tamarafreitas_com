@@ -21,15 +21,15 @@ const SectionBoletinInformativo = () => {
     const fetchData = async () => {
       const data = { email: inputEmail.current.value };
       try {
-        const response = await fetch('http://localhost/insert.php', {
+        const response = await fetch('https://www.tamarafreitas.com/websitepreview/backend/boletim_insert.php', {
           method: 'POST',
           body: JSON.stringify(data),
         });
         const jsonResult = await response.json();
-        console.log(jsonResult);
+        // console.log(jsonResult);
         setStatus(jsonResult.status);
       } catch (e) {
-        console.log(e);
+        // console.log(e);
         setStatus(500);
         throw e;
       }
@@ -49,9 +49,9 @@ const SectionBoletinInformativo = () => {
           <p style={{ color: 'red' }}> Duis aute irure dolor in reprehenderit in voluptate velit. </p>
         </div>
 
-        <div className="boletin-form-wrapper">
+        <div className="boletin-form-status-wrapper">
           <div
-            className="status"
+            className="boletin-form-status"
             ref={divStatus}
           >
             {status === null ? (
