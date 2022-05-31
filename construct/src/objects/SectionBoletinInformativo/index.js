@@ -49,13 +49,13 @@ const SectionBoletinInformativo = () => {
           <p style={{ color: 'red' }}> Duis aute irure dolor in reprehenderit in voluptate velit. </p>
         </div>
 
-        <div className="boletin-form-status-wrapper">
+        <div className="boletin-form-wrapper">
           <div
             className="boletin-form-status"
             ref={divStatus}
           >
             {status === null ? (
-              ''
+              'aaa'
             ) : status === 'waiting' ? (
               <Spinner />
             ) : status === 200 ? (
