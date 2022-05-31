@@ -1,0 +1,24 @@
+$size: 36px;
+$color1: var(--rosa-claro);
+$color2: var(--rosa-escuro);
+
+.spinner {
+  border: 4px solid $color1;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  border-left-color: $color2;
+
+  animation: spin 1s ease infinite;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

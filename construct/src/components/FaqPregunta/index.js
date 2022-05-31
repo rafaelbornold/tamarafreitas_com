@@ -1,30 +1,20 @@
 import P from 'prop-types';
 import React, { useRef, useState } from 'react';
-// import Button from '../Button';
+
 import emailjs from '@emailjs/browser';
 
 import './style.scss';
 
 const FaqPregunta = () => {
-  // const [time, setTime] = useState();
-  const [inputFocus, setInputFocus] = useState();
+  const [classIinputFocus, setClassInputFocus] = useState();
 
   const form = useRef();
   const inputTime = useRef();
 
   var now = new Date();
 
-  // const handleClick = () => {
-  //   setTime(
-  //     `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}h (${now.getDate()}-${now.getMonth()}-${now.getFullYear()})`,
-  //   );
-
-  //   setTimeout(() => {
-  //     sendEmail();
-  //   }, 100);
-  // };
-
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
     inputTime.current.value = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}h (${now.getDate()}-${now.getMonth()}-${now.getFullYear()})`;
 
     sendEmail();
@@ -45,6 +35,9 @@ const FaqPregunta = () => {
     <form
       className="component-FaqPregunta-form"
       ref={form}
+      onSubmit={(e) => {
+        handleClick(e);
+      }}
     >
       <input
         type="hidden"
@@ -69,7 +62,7 @@ const FaqPregunta = () => {
       />
 
       <textarea
-        className={'textarea ' + inputFocus}
+        className={'textarea ' + classIinputFocus}
         rows="2"
         type="text"
         id="message"
@@ -77,13 +70,10 @@ const FaqPregunta = () => {
         required
         placeholder="Ingrese su pregunta aqui."
         onFocus={() => {
-          setInputFocus('focus');
+          setClassInputFocus('focus');
         }}
         onBlur={() => {
-          setInputFocus('');
-        }}
-        onChange={(e) => {
-          console.log(e.target.value);
+          setClassInputFocus('');
         }}
       />
       <input
@@ -95,11 +85,8 @@ const FaqPregunta = () => {
       />
 
       <input
-        type="button"
+        type="submit"
         value="Enviar"
-        onClick={() => {
-          handleClick();
-        }}
       />
     </form>
   );
